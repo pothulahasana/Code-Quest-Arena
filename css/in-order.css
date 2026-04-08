@@ -1,0 +1,122 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #061829, #0b1e3d);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #a8eaff;
+      margin-bottom: 25px;
+    }
+
+    .tree-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .level {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin: 10px 0;
+    }
+
+    .tree-node {
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, #00f2fe 0%, #00c1ff 100%);
+      color: #002b4a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+      cursor: grab;
+    }
+
+    .tree-node:active {
+      transform: scale(0.95);
+      cursor: grabbing;
+    }
+
+    .drop-zone {
+      width: 60px;
+      height: 60px;
+      border: 2px dashed #5ccfff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8px;
+      color: #ffffffaa;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .drop-zone.filled {
+      background: radial-gradient(circle, #00ffc8 0%, #00e1ff 100%);
+      color: #002633;
+      border: none;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #submit-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    #reset-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #reset-btn:hover {
+      background-color: #d73833;
+    }
+
+    .score {
+      margin-top: 15px;
+      color: #00f2fe;
+      font-size: 1.2rem;
+    }

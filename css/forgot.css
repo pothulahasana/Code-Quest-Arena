@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color:rgba(31, 64, 104,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.forgot-container {
+  width: 100%;
+  max-width: 420px;
+   background-image: linear-gradient(rgba(24, 219, 245, 0.521),#1f4068);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.forgot-box h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color:white;
+}
+
+.forgot-box p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  text-align: left;
+  font-size: 14px;
+  color: white;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  background: white;
+  color: #fff;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form button {
+  padding: 12px;
+  background:rgba(24, 219, 245, 0.5);
+   border: 1px solid rgba(255, 255, 255, 0.477);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background:rgba(24, 219, 245, 0.6);
+}
+
+.back-link {
+  margin-top: 20px;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+  color: #fff;
+}

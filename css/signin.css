@@ -1,0 +1,217 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+     
+        background-color:rgba(31, 64, 104,0.9);
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .main-container {
+      display: flex;
+      width: 900px;
+      height: 600px;
+      backdrop-filter: blur(10px);
+     
+      background-image: linear-gradient(rgba(24, 219, 245, 0.521),#1f4068);
+     
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .form-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 330px;
+      color: #fff;
+    }
+
+    form h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .input-icon {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .input-icon i {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #999;
+      font-size: 14px;
+    }
+
+    .input-icon input {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .options-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #eee;
+    }
+
+    .forgot-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      
+      background-color: rgba(24, 219, 245, 0.521);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.477);
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      
+      margin-bottom: 10px;
+    }
+
+    .signup-text {
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .signup-text a {
+      color:white;
+      text-decoration: none;
+    }
+
+    .divider {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .google-btn,
+    .facebook-btn {
+      width: 48%;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .google-btn {
+     
+      border: 1px solid #db4437;
+      
+      background-color: #DB4437;
+color: white;
+
+    }
+
+    .facebook-btn {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .google-btn i,
+    .facebook-btn i {
+      margin-right: 8px;
+    }
+
+    .image-container {
+      flex: 1;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .image-container lottie-player {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .google-btn,
+      .facebook-btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-container {
+        display: none;
+      }
+
+      form h2 {
+        font-size: 22px;
+      }
+
+      .options-row,
+      .signup-text,
+      .forgot-link {
+        font-size: 12px;
+      }
+    }

@@ -1,0 +1,128 @@
+.courses-header {
+  animation: fadeSlideDown 0.8s ease forwards;
+  opacity: 0;
+  text-align: center;
+  margin: 2rem 0;
+}
+.courses-header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color:  #00f2fe;
+  margin-bottom: 0.5rem;
+}
+.courses-header p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+}
+
+.track-group {
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideInLeftTrack 0.8s ease forwards;
+  animation-fill-mode: forwards;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+.track-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #00f2fe;
+  color: #fff;
+}
+.courses-grid {
+ margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+.course-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  max-width: 280px;
+  flex: 1 1 250px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  color: #fff;
+}
+.course-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 255, 255, 0.2);
+}
+.course-card i {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+  color: #00f2fe;
+}
+.course-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.course-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+.course-card a,
+.course-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00b894, #019875);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.course-card a:hover,
+.course-btn:hover {
+  background: linear-gradient(135deg, #01a57c, #00866a);
+  transform: scale(1.05);
+}
+.course-card.coming-soon {
+  background: transparent;
+  border: 2px dashed #334155;
+  color: #94a3b8;
+  transform: none;
+  box-shadow: none;
+}
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeftTrack {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

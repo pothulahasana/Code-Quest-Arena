@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/freepik__upload__65002.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background: linear-gradient(135deg, #132743, #1f4068); */
+  background: linear-gradient(145deg, #0a1d3a, #102944);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.quiz-container {
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 700px;
+  /* background: linear-gradient(135deg, #1f4068); */
+  /* background: linear-gradient(135deg, #1d3b62, #1f4068); */
+  border: 2px solid #00f2fe;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  /* color: #ffffff; */
+  color: #00f2fe;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.progress-bar {
+  height: 12px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  /* background: #00ffcc; */
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.option {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.option input[type="radio"] {
+  accent-color: #ffffff;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.submit-btn, .ok-btn, .back-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #142042;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 10px;
+}
+
+.submit-btn:hover, .ok-btn:hover, .back-btn:hover {
+  background: #ddd;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#result .stars {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #ffd93b;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#result .star {
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+#result .star.filled {
+  color: #ffd93b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 600px) {
+  .quiz-container {
+    width: 100%;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .question {
+    font-size: 1rem;
+  }
+  .submit-btn, .ok-btn, .back-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 15px;
+  }
+}

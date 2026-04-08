@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  
+   background-color:rgba(31, 64, 104,0.9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+ 
+   background-image: linear-gradient(rgba(24, 219, 245, 0.521),#1f4068);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  padding: 30px;
+}
+
+form {
+  width: 100%;
+  max-width: 330px;
+}
+
+form h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(24, 219, 245, 0.521);
+  border: 1px solid rgba(255, 255, 255, 0.477);
+  color: white;
+  
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0 20px;
+}
+
+.signup-text {
+  font-size: 14px;
+  color:#aaa;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-text a {
+  color:white;
+  text-decoration: none;
+}
+
+.divider {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.google-btn,
+.facebook-btn {
+  width: 48%;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.google-btn {
+  color: #fff;
+  border: 1px solid #db4437;
+  background-color: #db4437;
+}
+
+.facebook-btn {
+  background: #1877f2;
+  color: #fff;
+}
+
+.google-btn i,
+.facebook-btn i {
+  margin-right: 8px;
+}
+
+.image-container {
+  flex: 1;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .image-container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .form-container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .google-btn,
+  .facebook-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  form h2 {
+    font-size: 20px;
+  }
+
+  .input-icon input {
+    font-size: 14px;
+    padding: 9px 9px 9px 32px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .signup-text,
+  .divider {
+    font-size: 12px;
+  }
+
+  .image-container {
+    display: none;
+  }
+}
+.main-container {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+}

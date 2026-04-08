@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+}
+
+.parent {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+}
+
+.header {
+  background-image: linear-gradient(#00f2fe, #0a3d62);
+  background-color: #0a3d62;
+  width: 100%;
+}
+
+.heading h1 {
+  color: white;
+  /* color: #00f2fe; */
+  font-size: 40px;
+  margin-left: 60px;
+  margin-top: 50px;
+  /* font-family: sans-serif; */
+}
+
+.heading h2 {
+  color: white;
+  /* color: #00f2fe; */
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 60px;
+  font-family: 'Poppins', sans-serif;
+  /* padding-bottom: 70px; */
+  /* height: 400px; */
+  /* background-image: linear-gradient( #00f2fe,#0a3d62); */
+}
+
+.sidebar {
+  display: block;
+  /* display: none; */
+  background-color: #0a3d62;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 230px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 999;
+  transition: transform 0.4s ease;
+  overflow: auto;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.cross {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+  color: #ccc;
+}
+
+.menu i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+@media (min-width:769px) {
+  .main {
+    margin-left: 230px;
+  }
+}
+
+@media (max-width:426px) {
+  img {
+    width: 500px;
+  }
+}
+
+@media (max-width:769px) {
+  img {
+    width: 560px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .cross {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .heading h1 {
+    font-size: 30px;
+  }
+
+  .heading h2 {
+    font-size: 15px;
+  }
+
+  .menu i {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1025px) {
+  img {
+    width: 700px;
+  }
+
+  .menu i {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .cross {
+    display: none;
+  }
+}
+
+.line {
+  border: 1px solid #0574c3;
+}
+
+.sidebar h2 {
+  padding-top: 20px;
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #00f2fe;
+}
+
+.sidebar p {
+  margin-top: 0;
+  font-size: 0px;
+  color: #00f2fe;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: white;
+}
+
+.diff {
+  background-color: #145374;
+  border-radius: 8px;
+}
+
+.syntax {
+  background-color: #d6e0e5;
+  border-radius: 8px;
+  /* padding: 10px 0px 5px 10px; */
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.content {
+  background-color: #d6e0e5;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.content ul {
+  padding-left: 13px;
+  /* display: block; */
+}
+
+.nav-links li:hover,
+.nav-links .active {
+  background-color: #166f9e;
+  border-radius: 6px;
+  /* padding-left: 15px; */
+}
+
+.submenu li:hover {
+  padding-left: 4px;
+}
+
+.submenu {
+  display: none;
+  padding-left: 15px;
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+.submenu li {
+  font-size: 13px;
+  color: #00f2fe;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.arrow {
+  float: right;
+  transition: transform 0.1s;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.scroll-wrapper table {
+  min-width: 500px;
+  /* or whatever width fits your content */
+  border-collapse: collapse;
+}
+
+.scroll-wrapper th,
+.scroll-wrapper td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.content-section {
+  background-color: #ffffff;
+  /* White background for the card */
+  padding: 40px;
+  /* Increased padding */
+  font-family: 'Poppins', sans-serif;
+  margin: 20px;
+  display: none;
+  /* All sections hidden by default */
+  border-radius: 12px;
+  /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Subtle shadow */
+  border: 1px solid #e9ecef;
+  /* Light border */
+}
+
+.content-section h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content-section h2 {
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+.content-section p {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.content-section li {
+  color: #333;
+  font-size: 15px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.CodeMirror {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: auto;
+  max-height: none;
+  /* display: inline-block; */
+  /* overflow: visible; */
+  overflow-y: hidden;
+  font-family: monospace;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* background-color: #f5f5f5;
+      padding: 10px;
+      border-left: 4px solid #007acc;
+      margin-top: 10px; */
+.output-box {
+  display: block;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: 4px solid #007acc;
+  margin-top: 20px;
+  min-height: 20px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  border-radius: 5px;
+  transition: height 0.2s ease-in-out;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #005f9e;
+}
+
+/* img{
+           width: 150px;
+        } */
+/* This CSS adds borders and spacing to make the table readable */
+table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  /* Merges borders for a cleaner look */
+  font-family: sans-serif;
+  min-width: 800px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  /* Adds space inside each cell */
+}
+
+thead {
+  background-color: #f2f2f2;
+  /* Adds a light grey background to the header */
+}
