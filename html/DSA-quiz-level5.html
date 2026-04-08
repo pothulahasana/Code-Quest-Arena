@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 5 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 5 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 5;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "Which of the following sorting algorithms has the best average-case time complexity?",
+    options: ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"],
+    answer: 2
+  },
+  {
+    question: "What is the average time complexity of Quick Sort?",
+    options: ["O(n^2)", "O(n log n)", "O(log n)", "O(n)"],
+    answer: 1
+  },
+  {
+    question: "Which sorting algorithm is considered the fastest in practice for most cases?",
+    options: ["Quick Sort", "Bubble Sort", "Heap Sort", "Radix Sort"],
+    answer: 0
+  },
+  {
+    question: "Which sorting algorithm is stable?",
+    options: ["Quick Sort", "Heap Sort", "Merge Sort", "Selection Sort"],
+    answer: 2
+  },
+  {
+    question: "Which of the following sorting algorithms is not comparison-based?",
+    options: ["Merge Sort", "Quick Sort", "Counting Sort", "Bubble Sort"],
+    answer: 2
+  },
+  {
+    question: "In Bubble Sort, how many passes are required to sort an array of n elements (worst case)?",
+    options: ["n", "n-1", "log n", "n^2"],
+    answer: 1
+  },
+  {
+    question: "What is the worst-case time complexity of Merge Sort?",
+    options: ["O(n^2)", "O(n log n)", "O(n)", "O(log n)"],
+    answer: 1
+  },
+  {
+    question: "Which sorting algorithm uses a binary heap structure internally?",
+    options: ["Quick Sort", "Heap Sort", "Selection Sort", "Insertion Sort"],
+    answer: 1
+  },
+  {
+    question: "Which sorting algorithm divides the list into smaller sublists and merges them after sorting?",
+    options: ["Merge Sort", "Heap Sort", "Quick Sort", "Selection Sort"],
+    answer: 0
+  },
+  {
+    question: "Which sorting algorithm performs the best when the array is nearly sorted?",
+    options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Heap Sort"],
+    answer: 1
+  }
+];
+
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

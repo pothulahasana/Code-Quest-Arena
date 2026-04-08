@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>General Programming Compiler</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        #topbar {
+            background: #2c3e50;
+            color: white;
+        }
+
+        #topbar select {
+            background-color: #4a6c8e;
+            color: white;
+            border: 1px solid #5a7d9e;
+        }
+
+        #topbar button {
+            background: linear-gradient(135deg, #00b894, #019875);
+            color: white;
+        }
+
+        #topbar button:hover {
+            /* background-color: #2980b9; */
+            background: linear-gradient(135deg, #01a57c, #00866a);
+        }
+
+        #editor,
+        #right-pane {
+            border-color: #ddd;
+        }
+
+        #input-area {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        #input-area label {
+            color: #333;
+        }
+
+        #input-textarea {
+            background-color: #f9f9f9;
+            color: #333;
+            border-color: #ccc;
+        }
+
+        #input-textarea:focus {
+            border-color: #3498db;
+        }
+
+        #output {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        .output-line-number {
+            color: #777;
+        }
+
+
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #topbar {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+
+        #topbar label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #topbar select {
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            appearance: none;
+            padding-right: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 16px;
+        }
+
+
+
+        #topbar button {
+            font-size: 15px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        #main-container {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        #editor-pane {
+            width: 65%;
+            display: flex;
+        }
+
+        #editor {
+            width: 100%;
+            height: 100%;
+            border: 1px solid;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        #right-pane {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid;
+            box-sizing: border-box;
+        }
+
+        #input-area {
+            background-color: #2c3e50;
+            height: 50%;
+            padding: 10px;
+            font-family: monospace;
+            border: 1px solid;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #input-area label {
+            color: white;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #input-textarea {
+            color: white;
+            width: 100%;
+            flex-grow: 1;
+            resize: none;
+            background-color: black;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            outline: none;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        #output {
+            background-color: black;
+            color: white;
+            height: 50%;
+            padding: 10px;
+            font-family: monospace;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            border: 1px solid;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            border-top: none;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #output-content {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px;
+        }
+
+        .output-line-number {
+            text-align: right;
+            user-select: none;
+            padding-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            #topbar {
+                /* flex-direction: column; */
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            #topbar select,
+            #topbar button {
+                width: 100px;
+                box-sizing: border-box;
+            }
+
+            #topbar label {
+                margin-bottom: -5px;
+            }
+
+            #main-container {
+                flex-direction: column;
+            }
+
+            #editor-pane {
+                width: 100%;
+                height: 50vh;
+            }
+
+            #right-pane {
+                width: 100%;
+                height: 50vh;
+                border-left: none;
+                border-top: 1px solid;
+            }
+
+            #input-area {
+                border-top: none;
+                border-bottom: none;
+            }
+
+            #output {
+                border-top: none;
+                border-bottom: 1px solid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="topbar">
+        <label for="language">Language:</label>
+        <select id="language">
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+        </select>
+        <button id="runBtn">Run</button>
+        <button id="clearBtn">Clear</button>
+        
+    </div>
+
+    <div id="main-container">
+        <div id="editor-pane">
+            <div id="editor" style="height: 100%;"></div>
+        </div>
+
+        <div id="right-pane">
+            <div id="input-area">
+                <label for="input-textarea">Input:</label>
+                <textarea id="input-textarea" placeholder="Enter your program input here..."></textarea>
+            </div>
+            <div id="output">Output will appear here...</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.40.0/min/vs/loader.js"></script>
+    <script>
+        require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.40.0/min/vs' } });
+
+        let editor;
+        const defaultCodeSnippets = {
+            'c': `#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}`,
+            'cpp': `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, World!" << endl;\n    return 0;\n}`,
+            'java': `public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}`,
+            'python': `print("Hello, World!")`
+        };
+
+        function updateOutput(text) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+            if (!text || text.trim() === '') {
+                outputDiv.textContent = 'Output will appear here...';
+                return;
+            }
+
+            const lines = text.split('\n');
+            const outputContentDiv = document.createElement('div');
+            outputContentDiv.id = 'output-content';
+            outputDiv.appendChild(outputContentDiv);
+
+            lines.forEach((line, index) => {
+                const lineNumberSpan = document.createElement('span');
+                lineNumberSpan.classList.add('output-line-number');
+                lineNumberSpan.textContent = (index + 1) + '.';
+                const lineTextSpan = document.createElement('span');
+                lineTextSpan.textContent = line;
+                outputContentDiv.appendChild(lineNumberSpan);
+                outputContentDiv.appendChild(lineTextSpan);
+            });
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        }
+
+        require(['vs/editor/editor.main'], function () {
+            editor = monaco.editor.create(document.getElementById('editor'), {
+                value: defaultCodeSnippets['c'],
+                language: 'c',
+                theme: 'vs-dark',
+                automaticLayout: true,
+                minimap: { enabled: false }
+            });
+
+            const languageSelector = document.getElementById('language');
+            const runBtn = document.getElementById('runBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const toggle = document.getElementById('toggle');
+            const inputTextArea = document.getElementById('input-textarea');
+            const outputDiv = document.getElementById('output');
+
+            updateOutput('');
+
+            languageSelector.addEventListener('change', () => {
+                const lang = languageSelector.value;
+                let monacoLang = lang === 'cpp' ? 'cpp' : lang;
+                monaco.editor.setModelLanguage(editor.getModel(), monacoLang);
+                editor.setValue(defaultCodeSnippets[lang]);
+                updateOutput('');
+                inputTextArea.value = '';
+            });
+
+            runBtn.addEventListener('click', () => {
+                const code = editor.getValue();
+                const lang = languageSelector.value;
+                const input = inputTextArea.value;
+                updateOutput('Running...');
+
+                fetch(`https://compilerapi.jami.ltd/${lang}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ code, input })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.output) updateOutput(data.output);
+                    else if (data.error) updateOutput(`Error:\n${data.error}`);
+                    else updateOutput('No output returned.');
+                })
+                .catch(err => updateOutput(`Fetch error:\n${err}`));
+            });
+
+            clearBtn.addEventListener('click', () => {
+                updateOutput('');
+                inputTextArea.value = '';
+            });
+
+            
+
+        });
+    </script>
+
+
+</body>
+
+</html>

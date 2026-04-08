@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 1 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Arrays</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 1;
+    const coinsPerStar = 10;
+
+    const questions = [
+  {
+    question: "What is the index of the first element in an array?",
+    options: ["-1", "0", "1", "Depends on the language"],
+    answer: 1
+  },
+  {
+    question: "Which of the following best describes an array?",
+    options: [
+      "A dynamic data structure",
+      "A collection of data values of different types",
+      "A collection of data items of the same type stored at contiguous memory locations",
+      "A type of file"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the time complexity of accessing an element in an array by index?",
+    options: ["O(n)", "O(1)", "O(log n)", "O(n log n)"],
+    answer: 1
+  },
+  {
+    question: "How do you find the length of an array in Python?",
+    options: ["length(arr)", "count(arr)", "size(arr)", "len(arr)"],
+    answer: 3
+  },
+  {
+    question: "Which of the following is a disadvantage of arrays?",
+    options: [
+      "Fixed size",
+      "Random access",
+      "Efficient indexing",
+      "Storing elements of the same type"
+    ],
+    answer: 0
+  },
+  {
+    question: "What will be the result of this JavaScript code?\nlet arr = [1, 2, 3];\narr.push(4);\nconsole.log(arr.length);",
+    options: ["3", "4", "1", "Error"],
+    answer: 1
+  },
+  {
+    question: "What will be the output of this C code?\nint arr[] = {10, 20, 30, 40};\nprintf(\"%d\", arr[2]);",
+    options: ["10", "20", "30", "Error"],
+    answer: 2
+  },
+  {
+    question: "What will be the output of this Python code?\narr = [5, 10, 15]\nprint(arr[-1])",
+    options: ["5", "10", "15", "Error"],
+    answer: 2
+  },
+  {
+    question: "In C, what happens if you access arr[10] when the array has only 5 elements?",
+    options: [
+      "Returns 0",
+      "Returns garbage value or causes a crash",
+      "Raises a runtime error",
+      "Automatically resizes the array"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which method removes the last element of an array in JavaScript?",
+    options: ["remove()", "pop()", "shift()", "delete()"],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

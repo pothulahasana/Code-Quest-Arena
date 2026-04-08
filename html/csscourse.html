@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course Page</title>
+        <link rel="stylesheet" href="../css/course.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/material-darker.min.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <script src="../js/jscourse.js"></script>
+    </head>
+    <body>
+        <div class="parent">
+        <div class="sidebar">
+            <span class="cross" onclick="Close()">&times;</span>
+            <h2>Course Content</h2>
+             <div class="line"></div>
+        <ul class="nav-links">
+            <li onclick="toggleSubmenu(this)" class="diff">
+            Structure and Basic Styles<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('introduction')"><li>CSS Syntax</li></a>
+            <a href="#" onclick="showContent('basic_style')"><li> Basic Style Application</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+            Inline, Internal, External CSS and Selectors<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('css_inclusion')"><li> CSS Inclusion Methods</li></a>
+            <a href="#" onclick="showContent('css_selectors')"><li>CSS Selectors</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+            Basic Styles<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('text-formatting')"><li>Text Formatting</li></a>
+            <a href="#" onclick="showContent('color-properties')"><li> Color Properties</li></a>
+            <a href="#" onclick="showContent('box-model-basics')"><li>Box Model Basics</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+            Box Model, Height and Width<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('box-model-details')"><li>Box Model Details</li></a>
+             <a href="#" onclick="showContent('element-dimensions')"><li> Element Dimensions</li></a>
+             <a href="#" onclick="showContent('box-sizing')"><li>Box Sizing</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+           Display and Position<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('display-properties')"><li> Display Properties</li></a>
+            <a href="#" onclick="showContent('positioning-elements')"><li>Positioning Elements</li></a>
+            <a href="#" onclick="showContent('z-index')"><li>Z-index</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+            Flexbox and Grid Layout<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('flexbox-intro')"><li>Flexbox Introduction</li></a>
+            <a href="#" onclick="showContent('grid-intro')"><li>CSS Grid Introduction</li></a>
+            <a href="#" onclick="showContent('flex-vs-grid')"><li> Flex vs. Grid</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+             Transforms and Animations<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('css-transforms')"><li>CSS Transforms</li></a>
+            <a href="#" onclick="showContent('css-transitions')"><li>CSS Transitions</li></a>
+            <a href="#" onclick="showContent('css-animations')"><li> CSS Animations</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+            Media Queries<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('responsive-design')"><li>Responsive Design Intro</li></a>
+            <a href="#" onclick="showContent('media-query-usage')"><li>Media Query Usage</li></a>
+            <a href="#" onclick="showContent('device-specific-styles')"><li> Device-Specific Styles</li></a>
+          </ul>
+          <li onclick="showContent('tasks')" class="diff">
+            Tasks
+            </li>
+            <a href="../html/CSS-levels.html"><li style="border-bottom:3px solid #00f2fe ;" class="diff">
+             Check Your Knowledge
+            </li>
+            </a>
+         </ul>
+        </div>
+        <div class="main">
+        <div class="header">
+         <div class="heading">
+                <div class="menu" onclick="Open()"><i class="fa-solid fa-bars"></i></div>
+                <h1>Learn CSS in the Right Way</h1>
+                <h2>The only CSS guide you'll ever need.</h2>
+                <input type="button" value="Back to Home" onclick="history.back()">
+         </div>
+        </div>
+        <div id="introduction" class="content-section">
+          <h1>Structure and Basic Styles</h1>
+          <h2>➤ CSS Syntax</h2>
+          <p>CSS (Cascading Style Sheets) is used to style and visually format HTML elements. It controls how content appears: colors, fonts, spacing, layout, etc.</p>
+          <h3>Explanation of CSS Syntax:</h3>
+          <p>CSS syntax is made up of <b>selectors</b> and <b>declaration blocks</b>. A declaration block contains one or more declarations separated by semicolons.</p>
+          <div class="syntax">
+            selector { <br>
+            property: value;<br>
+          }
+          </div>
+          <h3>Example:</h3>
+          <textarea id="editor-introduction">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            h1 {
+              color: blue;
+              font-size: 24px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;CSS Syntax Demo&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-introduction" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>h1</code> is the selector — it targets all &lt;h1&gt; elements.</li>
+            <li><code>color: blue;</code> changes the text color to blue.</li>
+            <li><code>font-size: 24px;</code> sets the font size to 24 pixels.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Each declaration ends with a semicolon <code>;</code>.</li>
+            <li>The selector is followed by curly braces <code>{ }</code>.</li>
+            <li>Each property-value pair is a rule applied to the selector.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('basic_style')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="basic_style" class="content-section">
+          <h1>Structure and Basic Styles</h1>
+          <h2>➤ Basic Style Application</h2>
+          <p>CSS can be used to apply basic visual styles to HTML elements such as fonts, colors, spacing, alignment, and borders.
+            To apply CSS, you write styles using selectors and properties , then connect them to HTML using: Inline,Internal, and External.
+          </p>
+          <h3>Example:</h3>
+          <textarea id="editor-basic-style">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            p {
+              color: green;
+              font-family: Arial, sans-serif;
+              text-align: justify;
+              background-color: #f0f0f0;
+              padding: 10px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;p&gt;This paragraph is styled using basic CSS properties.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-basic-style" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>color: green;</code> — sets the text color to green.</li>
+            <li><code>font-family: Arial;</code> — applies the specified font.</li>
+            <li><code>text-align: justify;</code> — aligns text evenly on both sides.</li>
+            <li><code>background-color:</code> — sets a light background color.</li>
+            <li><code>padding:</code> — adds space inside the paragraph box.</li>
+          </ul>
+
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Basic styles enhance readability and layout.</li>
+            <li>You can apply multiple styles to one selector.</li>
+            <li>Use internal styles (as above) or external stylesheets for larger projects.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('introduction')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('css_inclusion')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="css_inclusion" class="content-section">
+          <h1>Inline, Internal, External CSS and Selectors</h1>
+          <h2>➤ CSS Inclusion Methods</h2>
+
+          <p>CSS can be applied to HTML in three ways: <b>Inline, Internal</b>, and <b>External</b>. Each method serves different use cases based on the scope and maintainability of styles.</p>
+
+          <h3>Explanation:</h3>
+          <ul>
+            <li><b>Inline CSS:</b> Applied directly within an element using the <code>style</code> attribute. Best for quick, one-off styling.</li>
+            <li><b>Internal CSS:</b> Written inside a <code>&lt;style&gt;</code> tag in the HTML <code>&lt;head&gt;</code>. Useful for single-page projects.</li>
+            <li><b>External CSS:</b> Stored in a separate <code>.css</code> file and linked using <code>&lt;link&gt;</code>. Ideal for maintaining large websites.</li>
+          </ul>
+
+          <h3>Example:</h3>
+          <textarea id="editor-inclusion-methods">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;!-- Internal CSS --&gt;
+          &lt;style&gt;
+            h1 {
+              color: blue;
+            }
+          &lt;/style&gt;
+
+          &lt;!-- External CSS --&gt;
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+          &lt;!-- Inline CSS --&gt;
+          &lt;p style="color: red;"&gt;This is red using inline CSS&lt;/p&gt;
+
+          &lt;h1&gt;This is blue using internal CSS&lt;/h1&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-inclusion-methods" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>style="color: red;"</code> changes the paragraph color using inline CSS.</li>
+            <li><code>&lt;style&gt;</code> block inside the <code>&lt;head&gt;</code> applies internal CSS to <code>&lt;h1&gt;</code>.</li>
+            <li><code>&lt;link rel="stylesheet"&gt;</code> is how you include external CSS (assumed to be in a file named <code>styles.css</code>).</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Use inline CSS only when necessary.</li>
+            <li>Internal CSS is good for small or single-page projects.</li>
+            <li>External CSS is preferred for modularity and reusability.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('basic_style')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('css_selectors')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="css_selectors" class="content-section">
+          <h1>Inline, Internal, External CSS and Selectors</h1>
+          <h2>➤ CSS Selectors</h2>
+          <p>CSS selectors are patterns used to select and style HTML elements. They allow you to target elements by tag name, class, ID, or relationships.</p>
+          <h3>Common Types of Selectors:</h3>
+          <ul>
+            <li><b>Universal Selector</b> (<code>*</code>): Targets all elements.</li>
+            <li><b>Element Selector</b> (<code>p</code>, <code>div</code>): Targets elements by tag name.</li>
+            <li><b>Class Selector</b> (<code>.classname</code>): Targets elements with a specific class.</li>
+            <li><b>ID Selector</b> (<code>#idname</code>): Targets an element with a specific ID.</li>
+            <li><b>Group Selector</b> (<code>h1, p</code>): Targets multiple elements together.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-selectors">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            * {
+              font-family: Arial;
+            }
+            p {
+              color: green;
+            }
+            .highlight {
+              background-color: yellow;
+            }
+            #main-title {
+              font-size: 28px;
+              color: blue;
+            }
+            h1, h2 {
+              text-align: center;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1 id="main-title"&gt;Main Title&lt;/h1&gt;
+          &lt;h2&gt;Subheading&lt;/h2&gt;
+          &lt;p&gt;Normal paragraph&lt;/p&gt;
+          &lt;p class="highlight"&gt;Highlighted paragraph&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+        <h3>Output Preview</h3>
+          <iframe id="preview-selectors" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>*</code>: Applies Arial font to all elements.</li>
+            <li><code>p</code>: Styles all paragraphs with green text.</li>
+            <li><code>.highlight</code>: Targets paragraphs with class "highlight" to add background color.</li>
+            <li><code>#main-title</code>: Applies blue color and large font to the element with ID "main-title".</li>
+            <li><code>h1, h2</code>: Aligns both headings to the center.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li><code>#</code> targets by ID (unique), <code>.</code> targets by class (reusable).</li>
+            <li>Use meaningful and unique IDs and classes for maintainability.</li>
+            <li>Selectors let you apply styles efficiently without repeating code.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('css_inclusion')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('text-formatting')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="text-formatting" class="content-section">
+          <h1>Basic Styles</h1>
+          <h2>➤ Text Formatting</h2>
+          <p>CSS allows you to control how text appears on your web page, including font styles, size, spacing, alignment, and decoration.</p>
+          <h3>Common Properties:</h3>
+          <ul>
+            <li><code>font-family</code>: Sets the font type.</li>
+            <li><code>font-size</code>: Controls the size of the text.</li>
+            <li><code>font-weight</code>: Specifies boldness (e.g., <code>normal</code>, <code>bold</code>, <code>400</code>, <code>700</code>).</li>
+            <li><code>text-align</code>: Aligns text (e.g., <code>left</code>, <code>center</code>, <code>right</code>).</li>
+            <li><code>text-decoration</code>: Adds lines to text (e.g., <code>underline</code>, <code>line-through</code>).</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-text-formatting">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            p {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 18px;
+              font-weight: 600;
+              text-align: justify;
+              text-decoration: underline;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;p&gt;CSS lets you control the visual appearance of text including font, size, and alignment.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+        <h3>Output Preview</h3>
+          <iframe id="preview-text-formatting" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li>The <code>font-family</code> defines a stack of preferred fonts.</li>
+            <li><code>font-weight</code> of <code>600</code> makes the text semi-bold.</li>
+            <li><code>text-align: justify</code> aligns both edges of the paragraph.</li>
+            <li><code>text-decoration: underline</code> adds an underline to the text.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Use font stacks for fallback options.</li>
+            <li>Text alignment improves readability based on design context.</li>
+            <li>Use relative units like <code>em</code> or <code>rem</code> for responsive text sizes.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('css_selectors')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('color-properties')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="color-properties" class="content-section">
+          <h2>➤ Color Properties</h2>
+          <p>CSS provides flexible ways to define color for text, backgrounds, and borders using keywords, HEX codes, RGB, RGBA, or HSL.</p>
+          <h3>Common Properties:</h3>
+          <ul>
+            <li><code>color</code>: Sets the color of the text.</li>
+            <li><code>background-color</code>: Applies color behind the element.</li>
+            <li><code>border-color</code>: Defines color for the border.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-color-properties">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            body {
+              background-color: #f0f8ff;
+            }
+            h1 {
+              color: navy;
+            }
+            p {
+              background-color: #e0ffff;
+              border: 1px solid #0077b6;
+              color: #333;
+              padding: 10px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Color Properties in CSS&lt;/h1&gt;
+          &lt;p&gt;Colors improve user experience and visual hierarchy in design.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-color-properties" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>background-color</code> on <code>body</code> adds a soft tone to the whole page.</li>
+            <li><code>color: navy</code> styles the heading text color.</li>
+            <li>HEX and named values are both valid. You can also use <code>rgba()</code> for transparency.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Use accessible color combinations for readability.</li>
+            <li>HEX is compact and widely supported; <code>rgba</code> is useful for transparency effects.</li>
+            <li>Background and border colors define visual sections clearly.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('text-formatting')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('box-model-basics')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="box-model-basics" class="content-section">
+          <h2>➤ Box Model Basics</h2>
+          <p>Every HTML element is a rectangular box consisting of content, padding, border, and margin. This is known as the <b>Box Model</b>.</p>
+          <h3> Structure:</h3>
+          <pre>
+        Content → Padding → Border → Margin
+          </pre>
+          <h3>Box Model Properties:</h3>
+          <ul>
+            <li><code>content</code>: The actual text/image or content.</li>
+            <li><code>padding</code>: Space between content and border.</li>
+            <li><code>border</code>: The boundary around the padding.</li>
+            <li><code>margin</code>: Space outside the element’s border.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-box-model">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .box {
+              width: 200px;
+              padding: 20px;
+              border: 3px solid #4a90e2;
+              margin: 30px;
+              background-color: #f7f7f7;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="box"&gt;This box demonstrates the CSS box model.&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-box-model" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation of the Example:</h3>
+          <ul>
+            <li><code>padding</code> adds space between the text and the border.</li>
+            <li><code>border</code> visually defines the box.</li>
+            <li><code>margin</code> creates space outside the box (from other elements).</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Understand the difference between margin and padding.</li>
+            <li>Use developer tools to inspect box model dimensions in the browser.</li>
+            <li><code>box-sizing: border-box;</code> helps keep width predictable by including border/padding in width.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('color-properties')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('box-model-details')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="box-model-details" class="content-section">
+          <h1>Box Model, Height and Width</h1>
+          <h2>➤ Box Model Details</h2>
+          <p>
+            The CSS Box Model is the foundation of layout design. It treats each HTML element as a rectangular box made up of 4 layers:
+          </p>
+          <ul>
+            <li><b>Content:</b> The actual text or image inside the box.</li>
+            <li><b>Padding:</b> Clears space around the content inside the box.</li>
+            <li><b>Border:</b> Wraps around the padding (if any) and content.</li>
+            <li><b>Margin:</b> Clears space outside the border, separating elements.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-box-model-details">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .box {
+              background-color: #fff3cd;
+              border: 4px solid #ffa500;
+              padding: 20px;
+              margin: 30px;
+              width: 250px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="box"&gt;
+            This box includes content, padding, a border, and margin.
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-box-model-details" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>padding: 20px</code> creates space inside the box, around content.</li>
+            <li><code>border: 4px solid</code> adds a visible edge.</li>
+            <li><code>margin: 30px</code> separates this box from other elements.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Box Model dimensions affect spacing and layout heavily.</li>
+            <li>Always account for padding and border when setting width/height.</li>
+            <li>Inspect using browser dev tools to visualize the box model.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('box-model-basics')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('element-dimensions')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="element-dimensions" class="content-section">
+          <h2>➤ Element Dimensions</h2>
+          <p>
+            CSS allows you to define the width and height of elements in absolute or relative units.
+          </p>
+          <h3>Properties:</h3>
+          <ul>
+            <li><code>width</code>: Horizontal size of the content box.</li>
+            <li><code>height</code>: Vertical size of the content box.</li>
+            <li><code>min-width</code> / <code>max-width</code>: Set boundary limits.</li>
+            <li><code>min-height</code> / <code>max-height</code>: Restrict height range.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-element-dimensions">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .container {
+              width: 300px;
+              height: 150px;
+              background-color: #d1e7dd;
+              padding: 10px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="container"&gt;
+            This element has fixed width and height.
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+            <h3>Output Preview</h3>
+          <iframe id="preview-element-dimensions" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>width</code> and <code>height</code> directly set dimensions.</li>
+            <li>Units like <code>px</code>, <code>%</code>, <code>em</code> or <code>vh</code>/<code>vw</code> are commonly used.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Relative units scale better for responsive design.</li>
+            <li>Absolute units (like px) are useful for fixed layout control.</li>
+            <li>Combine with media queries to adapt size to different devices.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('box-model-details')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('box-sizing')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="box-sizing" class="content-section">
+          <h2>➤ Box Sizing</h2>
+          <p>
+            By default, width and height only apply to the content box. Padding and border are added on top, increasing total size. 
+            <br>To avoid that, use <code>box-sizing: border-box</code>.
+          </p>
+          <h3>Example:</h3>
+          <textarea id="editor-box-sizing">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .default-box {
+              width: 200px;
+              padding: 20px;
+              border: 4px solid #000;
+              background-color: #f8d7da;
+            }
+
+            .boxed {
+              box-sizing: border-box;
+              width: 200px;
+              padding: 20px;
+              border: 4px solid #000;
+              background-color: #d1c4e9;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="default-box"&gt;Without border-box&lt;/div&gt;
+          &lt;br&gt;
+          &lt;div class="boxed"&gt;With border-box&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-box-sizing" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li>In the first box, padding and border are added outside the 200px width → actual box is larger.</li>
+            <li>With <code>box-sizing: border-box</code>, padding & border are included within the specified width.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li><code>border-box</code> makes layout more predictable and avoids layout overflow.</li>
+            <li>Common practice: apply <code>box-sizing: border-box</code> globally via <code>*</code> selector.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('element-dimensions')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('display-properties')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="display-properties" class="content-section">
+          <h1>Display and Position</h1>
+          <h2>➤ Display Properties</h2>
+          <p>
+            The <code>display</code> property determines how an HTML element is rendered in the document flow.<br>
+            It controls whether the element behaves like a block, inline, or other layout types.
+          </p>
+          <h3>Common Values:</h3>
+          <ul>
+            <li><code>block</code>: Takes full width; starts on a new line (e.g., &lt;div&gt;, &lt;p&gt;).</li>
+            <li><code>inline</code>: Takes only the required width; sits within line (e.g., &lt;span&gt;, &lt;a&gt;).</li>
+            <li><code>inline-block</code>: Like inline but supports width/height.</li>
+            <li><code>none</code>: Hides the element completely (no space).</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-display-properties">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .block {
+              display: block;
+              background-color: #ffc107;
+              padding: 10px;
+            }
+
+            .inline {
+              display: inline;
+              background-color: #4caf50;
+              color: white;
+              padding: 5px;
+            }
+
+            .inline-block {
+              display: inline-block;
+              width: 100px;
+              background-color: #17a2b8;
+              color: white;
+              padding: 10px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="block"&gt;Block Element&lt;/div&gt;
+          &lt;span class="inline"&gt;Inline 1&lt;/span&gt;
+          &lt;span class="inline"&gt;Inline 2&lt;/span&gt;
+          &lt;div class="inline-block"&gt;Inline-Block&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-display-properties" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>block</code> takes the full line and forces the next element down.</li>
+            <li><code>inline</code> allows elements to sit side by side, without block-level spacing.</li>
+            <li><code>inline-block</code> behaves inline but lets you set width/height.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li><code>display: none</code> removes an element from layout and screen.</li>
+            <li>Use <code>inline-block</code> for button rows or aligned boxes with fixed sizes.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('box-sizing')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('positioning-elements')"><button >Next &gt;</button></a>
+          </div>
+        </div>
+        <div id="positioning-elements" class="content-section">
+          <h2>➤ Positioning Elements</h2>
+          <p>
+            The <code>position</code> property controls how an element is placed in the document.<br>
+            Combined with <code>top</code>, <code>left</code>, <code>right</code>, and <code>bottom</code> properties.
+          </p>
+          <h3>Types of Position:</h3>
+          <ul>
+            <li><code>static</code>: Default flow (no offset).</li>
+            <li><code>relative</code>: Offset from its normal position.</li>
+            <li><code>absolute</code>: Positioned relative to nearest non-static ancestor.</li>
+            <li><code>fixed</code>: Positioned relative to the viewport (always stays in place).</li>
+            <li><code>sticky</code>: Acts like relative until scroll, then sticks.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-positioning-elements">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .box {
+              width: 120px;
+              height: 80px;
+              color: white;
+              padding: 10px;
+              margin: 10px;
+            }
+
+            .relative {
+              position: relative;
+              top: 20px;
+              background: #28a745;
+            }
+
+            .absolute-container {
+              position: relative;
+              height: 200px;
+              background: #f8f9fa;
+            }
+
+            .absolute {
+              position: absolute;
+              top: 30px;
+              left: 50px;
+              background: #dc3545;
+            }
+
+            .fixed {
+              position: fixed;
+              top: 10px;
+              right: 10px;
+              background: #007bff;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="box relative"&gt;Relative&lt;/div&gt;
+
+          &lt;div class="absolute-container"&gt;
+            &lt;div class="box absolute"&gt;Absolute&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="box fixed"&gt;Fixed&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-positioning-elements" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>relative</code> moves from its normal spot, keeping its space.</li>
+            <li><code>absolute</code> is removed from flow and placed based on parent.</li>
+            <li><code>fixed</code> stays visible even when scrolling.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Use <code>relative</code> to adjust position while keeping flow.</li>
+            <li><code>absolute</code> is useful for dropdowns, modals, or overlays.</li>
+            <li><code>fixed</code> is perfect for sticky navbars or "back to top" buttons.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('display-properties')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('z-index')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="z-index" class="content-section">
+          <h2>➤ Z-index</h2>
+          <p>
+            <code>z-index</code> controls stacking order of overlapping elements.<br>
+            A higher <code>z-index</code> means the element appears in front of lower ones.
+          </p>
+          <h3>Example:</h3>
+          <textarea id="editor-z-index">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .z-container {
+              position: relative;
+              height: 200px;
+            }
+
+            .box1, .box2 {
+              width: 100px;
+              height: 100px;
+              position: absolute;
+            }
+
+            .box1 {
+              background: #ffc107;
+              top: 20px;
+              left: 40px;
+              z-index: 1;
+            }
+
+            .box2 {
+              background: #17a2b8;
+              top: 40px;
+              left: 60px;
+              z-index: 2;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="z-container"&gt;
+            &lt;div class="box1"&gt;z-index: 1&lt;/div&gt;
+            &lt;div class="box2"&gt;z-index: 2&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-z-index" class="output-box" scrolling="no"></iframe>
+
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>z-index: 2</code> makes <code>.box2</code> appear above <code>.box1</code>.</li>
+            <li>Only works on elements with <code>position</code> set (relative, absolute, fixed).</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Use for overlays, modals, dropdowns, or layered UIs.</li>
+            <li>Keep z-index simple and avoid large numbers unless necessary.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('positioning-elements')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('flexbox-intro')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="flexbox-intro" class="content-section">
+          <h1>Flexbox and Grid Layout</h1>
+          <h2>➤ Flexbox Introduction</h2>
+
+          <p>
+            <b>Flexbox</b> is a one-dimensional layout method used to align and distribute space among items inside a container.
+            It works in rows or columns, making it perfect for responsive layouts.
+          </p>
+          <h3>Flex Container Properties:</h3>
+          <ul>
+            <li><code>display: flex</code> – Activates flex mode for the container.</li>
+            <li><code>flex-direction</code> – Direction of items: <code>row</code>, <code>column</code>, etc.</li>
+            <li><code>justify-content</code> – Horizontal alignment (main axis).</li>
+            <li><code>align-items</code> – Vertical alignment (cross axis).</li>
+            <li><code>gap</code> – Space between flex items.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-flexbox">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .flex-container {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              height: 200px;
+              background-color: #f0f0f0;
+            }
+
+            .flex-item {
+              background: #007bff;
+              color: white;
+              padding: 20px;
+              font-size: 18px;
+              border-radius: 8px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="flex-container"&gt;
+            &lt;div class="flex-item"&gt;Box 1&lt;/div&gt;
+            &lt;div class="flex-item"&gt;Box 2&lt;/div&gt;
+            &lt;div class="flex-item"&gt;Box 3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-flexbox" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>display: flex</code> activates Flexbox layout for the container.</li>
+            <li><code>justify-content: space-around</code> evenly distributes space between items.</li>
+            <li><code>align-items: center</code> vertically centers them inside the container.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>Flexbox is best for one-dimensional layouts (row or column).</li>
+            <li>Great for navigation bars, item alignment, and simple layouts.</li>
+            <li>Flexible and responsive by default.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('z-index')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('grid-intro')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="grid-intro" class="content-section">
+          <h2>➤ CSS Grid Introduction</h2>
+          <p>
+            <b>CSS Grid</b> is a two-dimensional layout system. It allows you to design layouts using rows and columns.
+            It's ideal for complete page layouts and dashboard-type structures.
+          </p>
+          <h3>Grid Container Properties:</h3>
+          <ul>
+            <li><code>display: grid</code> – Activates Grid layout.</li>
+            <li><code>grid-template-columns</code> – Defines number and size of columns.</li>
+            <li><code>grid-template-rows</code> – Defines row sizes.</li>
+            <li><code>gap</code> – Adds spacing between rows and columns.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-grid">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .grid-container {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 15px;
+              background-color: #f8f9fa;
+              padding: 20px;
+            }
+            .grid-item {
+              background-color: #28a745;
+              color: white;
+              padding: 20px;
+              font-size: 18px;
+              text-align: center;
+              border-radius: 6px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="grid-container"&gt;
+            &lt;div class="grid-item"&gt;1&lt;/div&gt;
+            &lt;div class="grid-item"&gt;2&lt;/div&gt;
+            &lt;div class="grid-item"&gt;3&lt;/div&gt;
+            &lt;div class="grid-item"&gt;4&lt;/div&gt;
+            &lt;div class="grid-item"&gt;5&lt;/div&gt;
+            &lt;div class="grid-item"&gt;6&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-grid" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>grid-template-columns: repeat(3, 1fr)</code> creates 3 equal-width columns.</li>
+            <li><code>gap: 15px</code> adds space between the grid items.</li>
+          </ul>
+          <h3>Key Points to Note:</h3>
+          <ul>
+            <li>CSS Grid is two-dimensional – controls both rows and columns.</li>
+            <li>Best for overall layout structures like websites and dashboards.</li>
+            <li>Supports advanced placement and alignment with minimal code.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('flexbox-intro')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('flex-vs-grid')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="flex-vs-grid" class="content-section">
+          <h2>➤ Flexbox vs Grid: Comparison</h2>
+          <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+            <thead>
+              <tr style="background:#efefef;">
+                <th>Feature</th>
+                <th>Flexbox</th>
+                <th>Grid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Layout Type</td>
+                <td>One-dimensional (row OR column)</td>
+                <td>Two-dimensional (row AND column)</td>
+              </tr>
+              <tr>
+                <td>Best Use Case</td>
+                <td>Navbars, cards in a row, simple alignment</td>
+                <td>Complex layouts, dashboards, full page designs</td>
+              </tr>
+              <tr>
+                <td>Control Over Items</td>
+                <td>Item-level control</td>
+                <td>Container-level grid layout control</td>
+              </tr>
+              <tr>
+                <td>Learning Curve</td>
+                <td>Easy to learn and apply</td>
+                <td>More advanced concepts (areas, spans)</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Summary:</h3>
+          <ul>
+            <li><b>Use Flexbox</b> when you only need layout in one direction (horizontal or vertical).</li>
+            <li><b>Use Grid</b> when working with rows and columns simultaneously.</li>
+            <li>You can combine both in complex layouts (e.g., Grid outer structure, Flex inside items).</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('grid-intro')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('css-transforms')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="css-transforms" class="content-section">
+          <h1>Transforms and Animations</h1>
+          <h2>➤ CSS Transforms</h2>
+          <p>
+            <b>CSS Transforms</b> allow elements to be visually manipulated using functions such as rotate, scale, translate, and skew. It doesn’t affect document flow—only appearance.
+          </p>
+          <h3>Common Transform Functions:</h3>
+          <ul>
+            <li><code>translate(x, y)</code> – Moves element horizontally/vertically.</li>
+            <li><code>rotate(angle)</code> – Rotates element by degrees.</li>
+            <li><code>scale(x, y)</code> – Enlarges or shrinks the element.</li>
+            <li><code>skew(x, y)</code> – Slants the element along axes.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-transforms">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .transform-box {
+              width: 150px;
+              height: 150px;
+              background-color: #ff5733;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 50px auto;
+              transform: rotate(15deg);
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="transform-box"&gt;Rotated Box&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-transforms" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>transform: rotate(15deg)</code> rotates the box by 15 degrees clockwise.</li>
+            <li>The element appears rotated, but still occupies the same original space in layout.</li>
+          </ul>
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Transforms are useful for effects like flipping cards, zooming, or rotating items.</li>
+            <li>They can be combined: <code>transform: rotate(15deg) scale(1.2);</code></li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('flex-vs-grid')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('css-transitions')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="css-transitions" class="content-section">
+          <h2>➤ CSS Transitions</h2>
+          <p>
+            <b>Transitions</b> allow you to smoothly animate property changes (like color, size, etc.) over a specific duration.
+          </p>
+          <h3>Key Properties:</h3>
+          <ul>
+            <li><code>transition-property</code> – Which property to animate.</li>
+            <li><code>transition-duration</code> – How long the transition takes.</li>
+            <li><code>transition-timing-function</code> – Easing function (e.g., ease-in, linear).</li>
+            <li><code>transition-delay</code> – Wait time before starting transition.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-transitions">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            .transition-box {
+              width: 150px;
+              height: 150px;
+              background-color: #28a745;
+              transition: background-color 0.5s ease;
+              margin: 50px auto;
+            }
+
+            .transition-box:hover {
+              background-color: #218838;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="transition-box"&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-transitions" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li>When you hover over the box, the background smoothly changes color in 0.5s.</li>
+            <li>Transition is triggered by hover (state change).</li>
+          </ul>
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Only animates numeric/interpolable properties (e.g., color, width).</li>
+            <li>You can transition multiple properties with commas.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('css-transforms')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('css-animations')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="css-animations" class="content-section">
+          <h2>➤ CSS Animations</h2>
+          <p>
+            <b>CSS Animations</b> define keyframes that describe how elements change at various points in time. They can loop and run automatically.
+          </p>
+          <h3>Main Properties:</h3>
+          <ul>
+            <li><code>@keyframes</code> – Defines the animation steps.</li>
+            <li><code>animation-name</code> – Binds the keyframes to element.</li>
+            <li><code>animation-duration</code> – Time the animation takes.</li>
+            <li><code>animation-iteration-count</code> – Number of loops.</li>
+            <li><code>animation-timing-function</code> – Speed curve (ease, linear, etc.).</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-animations">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            @keyframes slide {
+              from {
+                transform: translateX(0);
+              }
+              to {
+                transform: translateX(100px);
+              }
+            }
+
+            .animate-box {
+              width: 100px;
+              height: 100px;
+              background: #007bff;
+              animation: slide 2s infinite alternate;
+              margin: 60px auto;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="animate-box"&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-animations" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>@keyframes slide</code> defines a movement from left to right.</li>
+            <li><code>animation: slide 2s infinite alternate</code> animates it every 2 seconds, back and forth.</li>
+          </ul>
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Animations can run automatically or be triggered.</li>
+            <li>You can use multiple keyframes for complex effects.</li>
+            <li>Great for loading indicators, motion UI, attention effects.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('css-transitions')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('responsive-design')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="responsive-design" class="content-section">
+          <h1>Media Queries</h1>
+          <h2>➤ Responsive Design Intro</h2>
+          <p>
+            <b>Responsive Design</b> ensures your website looks good on all devices—desktops, tablets, and mobile phones—by adapting layout and styles based on screen size.
+          </p>
+          <h3>Why Responsive Design Matters:</h3>
+          <ul>
+            <li>Improves user experience across devices.</li>
+            <li>Reduces need for separate mobile websites.</li>
+            <li>Important for SEO and accessibility.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-responsive">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            body {
+              font-family: Arial;
+            }
+
+            .container {
+              width: 80%;
+              margin: auto;
+              background: #eee;
+              padding: 20px;
+            }
+
+            @media (max-width: 600px) {
+              .container {
+                width: 95%;
+                background: #cce5ff;
+              }
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="container"&gt;
+            This box resizes and changes color on smaller screens.
+          &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-responsive" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li>Default style sets <code>.container</code> to 80% width.</li>
+            <li>For screens ≤ 600px, it uses 95% width and a different background color.</li>
+            <li>This helps adapt design for phones or small devices.</li>
+          </ul>
+
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Responsive design uses flexible units, media queries, and fluid layouts.</li>
+            <li>Helps you build a single site for all devices.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('css-animations')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('media-query-usage')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="media-query-usage" class="content-section">
+          <h2>➤ Media Query Usage</h2>
+          <p>
+            <b>Media Queries</b> apply different CSS rules based on the characteristics of the user’s device (screen width, orientation, resolution).
+          </p>
+          <h3>Syntax:</h3>
+          <code>
+            @media media-type and (condition) { <br>
+            &nbsp;&nbsp;/* CSS Rules */ <br>
+            }
+          </code>
+          <h3>Example:</h3>
+          <textarea id="editor-mediaquery">
+        &lt;style&gt;
+          body {
+            background-color: white;
+          }
+
+          @media screen and (max-width: 768px) {
+            body {
+              background-color: lightyellow;
+            }
+          }
+
+          @media screen and (max-width: 480px) {
+            body {
+              background-color: lightcoral;
+            }
+          }
+        &lt;/style&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-mediaquery" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li>Default background is white.</li>
+            <li>On devices ≤ 768px (like tablets), it changes to light yellow.</li>
+            <li>On devices ≤ 480px (like phones), it changes to light coral.</li>
+          </ul>
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Use <code>min-width</code> for mobile-first design (scale up).</li>
+            <li>Use <code>max-width</code> for desktop-first design (scale down).</li>
+            <li>You can combine multiple conditions using <code>and</code>.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('responsive-design')"><button >Previous</button></a>
+            <a href="#" onclick="showContent('device-specific-styles')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="device-specific-styles" class="content-section">
+          <h2>➤ Device-Specific Styles</h2>
+          <p>
+            Media queries can also target specific **devices or orientations**, not just widths.
+          </p>
+          <h3>Common Use Cases:</h3>
+          <ul>
+            <li><b>Print styles:</b> for print-friendly versions.</li>
+            <li><b>Landscape/portrait:</b> detect device orientation.</li>
+            <li><b>High-resolution:</b> for retina displays.</li>
+          </ul>
+          <h3>Example:</h3>
+          <textarea id="editor-devicespecific">
+        &lt;style&gt;
+          @media print {
+            body {
+              font-size: 12pt;
+              color: black;
+            }
+          }
+
+          @media (orientation: landscape) {
+            body {
+              background-color: lightgreen;
+            }
+          }
+
+          @media (min-resolution: 2dppx) {
+            body {
+              font-weight: bold;
+            }
+          }
+        &lt;/style&gt;
+          </textarea>
+          <h3>Output Preview</h3>
+          <iframe id="preview-devicespecific" class="output-box" scrolling="no"></iframe>
+          <h3>Explanation:</h3>
+          <ul>
+            <li><code>@media print</code> styles apply only when printing the page.</li>
+            <li><code>orientation: landscape</code> applies if device is held horizontally.</li>
+            <li><code>min-resolution: 2dppx</code> targets retina/high-DPI screens.</li>
+          </ul>
+          <h3>Key Points:</h3>
+          <ul>
+            <li>Use media types like <code>screen</code>, <code>print</code>, <code>all</code>.</li>
+            <li>Combine with features like width, resolution, orientation.</li>
+            <li>Helps optimize UX for specific hardware environments.</li>
+          </ul>
+          <div class="nav-buttons">
+            <a href="#" onclick="showContent('responsive-design')"><button >Previous</button></a>
+             <a href="#" onclick="showContent('tasks')"><button >Next</button></a>
+          </div>
+        </div>
+        <div id="tasks" class="content-section">
+          <h1>CSS Tasks</h1>
+          <div class="tasks-container">
+            <a href="../pdf/csstask1.pdf" target="_blank"><div class="task-item">Task 1</div></a>
+            <a href="../pdf/csstask2.pdf" target="_blank"><div class="task-item">Task 2</div></a>
+            <a href="../pdf/csstask3.pdf" target="_blank"><div class="task-item">Task 3</div></a>
+            <a href="../pdf/csstask4.pdf" target="_blank"><div class="task-item">Task 4</div></a>
+            <a href="../pdf/csstask5.pdf" target="_blank"><div class="task-item">Task 5</div></a>
+          </div>
+          <div class="nav-buttons">
+            <a href="#"><button>🏁 End of Module</button></a>
+             <a href="../html/CSS-levels.html"><button >Take Test</button></a>
+          </div>
+      </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+      <script>
+          function Open() {
+            document.getElementsByClassName("sidebar")[0].classList.add("active");
+          }
+
+          function Close() {
+            document.getElementsByClassName("sidebar")[0].classList.remove("active");
+          }
+      </script>
+    </body>
+</html>

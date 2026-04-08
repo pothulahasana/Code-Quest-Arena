@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 8 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Graphs</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 8;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is a graph in data structures?",
+    options: [
+      "A linear data structure",
+      "A hierarchical structure",
+      "A non-linear structure consisting of nodes and edges",
+      "A sorted tree structure"
+    ],
+    answer: 2
+  },
+  {
+    question: "What are the components of a graph?",
+    options: ["Nodes and Arrays", "Vertices and Edges", "Stacks and Queues", "Heaps and Trees"],
+    answer: 1
+  },
+  {
+    question: "What type of graph has no cycles?",
+    options: ["Undirected graph", "Directed graph", "Cyclic graph", "Acyclic graph"],
+    answer: 3
+  },
+  {
+    question: "Which of the following data structures is used in Breadth-First Search (BFS)?",
+    options: ["Stack", "Queue", "Priority Queue", "Array"],
+    answer: 1
+  },
+  {
+    question: "Which algorithm is used to find the shortest path in a weighted graph with non-negative weights?",
+    options: ["Prim’s Algorithm", "Kruskal’s Algorithm", "Dijkstra’s Algorithm", "DFS"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is used to represent a sparse graph efficiently?",
+    options: ["Adjacency Matrix", "Adjacency List", "2D Array", "Hash Table"],
+    answer: 1
+  },
+  {
+    question: "In a complete graph with 'n' vertices, how many edges are there?",
+    options: ["n", "n-1", "n(n-1)/2", "2n"],
+    answer: 2
+  },
+  {
+    question: "Which traversal technique uses recursion and a stack internally?",
+    options: ["BFS", "DFS", "Level Order", "Inorder"],
+    answer: 1
+  },
+  {
+    question: "Which graph traversal is better for finding the shortest path in an unweighted graph?",
+    options: ["DFS", "BFS", "Dijkstra", "Kruskal"],
+    answer: 1
+  },
+  {
+    question: "What is a graph with direction on its edges called?",
+    options: ["Undirected Graph", "Weighted Graph", "Directed Graph", "Tree"],
+    answer: 2
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 10 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Recursion</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 10;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is recursion?",
+    options: [
+      "A loop that repeats a fixed number of times",
+      "A function calling itself",
+      "A function calling another function",
+      "A conditional statement"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the purpose of the base case in recursion?",
+    options: [
+      "To make recursive calls",
+      "To stop the recursion",
+      "To initialize variables",
+      "To call the main function"
+    ],
+    answer: 1
+  },
+  {
+    question: "What happens if a recursive function has no base case?",
+    options: [
+      "It runs infinitely causing stack overflow",
+      "It runs once and stops",
+      "It terminates immediately",
+      "It returns zero"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which data structure is mainly used to manage function calls in recursion?",
+    options: [
+      "Queue",
+      "Stack",
+      "Array",
+      "Linked List"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is tail recursion?",
+    options: [
+      "Recursive call is the last operation in the function",
+      "Function calls multiple recursive calls",
+      "Function without recursion",
+      "Recursion with loops"
+    ],
+    answer: 0
+  },
+  {
+    question: "What will be the output of the following Python code?\n\n```python\ndef factorial(n):\n  if n == 0:\n    return 1\n  return n * factorial(n - 1)\n\nprint(factorial(4))\n```",
+    options: ["24", "10", "120", "1"],
+    answer: 0
+  },
+  {
+    question: "Which of these problems is commonly solved using recursion?",
+    options: [
+      "Linear Search",
+      "Binary Search",
+      "Bubble Sort",
+      "Iterative Sum"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a disadvantage of recursion?",
+    options: [
+      "Code is harder to read",
+      "Uses more memory due to call stack",
+      "Can lead to stack overflow",
+      "All of the above"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which traversal of a binary tree uses recursion?",
+    options: [
+      "Inorder",
+      "Preorder",
+      "Postorder",
+      "All of the above"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which of these is NOT true about recursion?",
+    options: [
+      "Every recursive function must have a base case",
+      "Recursion always uses more memory than iteration",
+      "Recursion can be replaced by iteration",
+      "Recursion is only used in sorting algorithms"
+    ],
+    answer: 3
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

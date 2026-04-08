@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stack Math Puzzle with Coins</title>
+  <link rel="stylesheet" href="../css/game1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="game-container">
+    <h1><i class="fa-solid fa-gamepad"></i> Stack Math Puzzle</h1>
+    <div class="status-bar">
+      <p>Target: <span id="targetAnswer">5 3 2</span></p>
+      <p>Coins: <span id="coinDisplay">0</span> 🪙</p>
+    </div>
+
+    <div class="fall-area" id="fallArea"></div>
+
+    <div class="controls">
+      <div class="controls">
+  <button onclick="popStack()">Pop</button>
+  <button onclick="checkResult()">Submit</button>
+  <button onclick="resetPuzzle()">Reset</button>
+  <button onclick="useHint()">Hint (-2🪙)</button>
+  <button onclick="skipPuzzle()">Skip (-5🪙)</button>
+</div>
+
+    </div>
+
+    <div class="stack-box" id="stackBox"></div>
+
+    <div class="result-box">
+      <p>Result: <span id="resultText">_ _ _</span></p>
+    </div>
+  </div>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/game1.js"></script>
+</body>
+</html>

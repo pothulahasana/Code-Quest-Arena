@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Code Quest Arena</title>
+  <link rel="stylesheet" href="../css/signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="image-container">
+      <lottie-player
+    src="https://assets2.lottiefiles.com/packages/lf20_jtbfg2nb.json"
+    background="transparent"
+    speed="1"
+    style="width:100%; max-width: 400px;"
+    loop
+    autoplay>
+  </lottie-player>
+    </div>
+
+    <div class="form-container">
+      <form id="signup-form">
+        <h2>Create Account</h2>
+
+        <div class="input-icon">
+          <i class="fas fa-user"></i>
+          <input type="text"  id="signup-name" placeholder="User Name" required />
+        </div>
+
+        <div class="input-icon">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="signup-email" placeholder="Email Address" required />
+        </div>
+
+        <div class="input-icon">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="signup-password" placeholder="Password" required />
+        </div>
+
+        <div class="input-icon">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="signup-confirm" placeholder="Confirm Password" required />
+        </div>
+
+        <button type="submit" class="login-btn">Sign Up</button>
+
+        <div class="signup-text">
+          Already have an account? <a href="../html/signin.html">Login here</a>
+        </div>
+
+        <div class="divider">or sign up with</div>
+
+        <div class="social-buttons">
+          <button class="google-btn"><i class="fab fa-google"></i> Google</button>
+          <button class="facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+        </div>
+      </form>
+    </div>
+  </div>
+   <script src="../js/Signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 12 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Greedy Algorithm</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 12;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is the main idea behind a greedy algorithm?",
+    options: [
+      "Try all possible solutions and pick the best",
+      "Make the locally optimal choice at each step",
+      "Divide the problem into smaller subproblems",
+      "Use recursion to solve problems"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which property must a problem have to be solved correctly by a greedy algorithm?",
+    options: [
+      "Overlapping subproblems",
+      "Optimal substructure",
+      "Greedy choice property",
+      "Both 2 and 3"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which of these problems can be solved optimally using a greedy algorithm?",
+    options: [
+      "0/1 Knapsack Problem",
+      "Fractional Knapsack Problem",
+      "Longest Common Subsequence",
+      "Matrix Chain Multiplication"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of the Fractional Knapsack greedy algorithm when sorting is included?",
+    options: [
+      "O(n^2)",
+      "O(n log n)",
+      "O(n)",
+      "O(log n)"
+    ],
+    answer: 1
+  },
+  {
+    question: "In which of the following problems is a greedy algorithm NOT guaranteed to find the optimal solution?",
+    options: [
+      "Huffman Coding",
+      "Prim's Minimum Spanning Tree",
+      "0/1 Knapsack Problem",
+      "Activity Selection Problem"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which greedy algorithm is used for finding the Minimum Spanning Tree of a graph?",
+    options: [
+      "Dijkstra's Algorithm",
+      "Kruskal's Algorithm",
+      "Floyd-Warshall Algorithm",
+      "Bellman-Ford Algorithm"
+    ],
+    answer: 1
+  },
+  {
+    question: "What does the greedy choice property mean?",
+    options: [
+      "A globally optimal solution can be arrived at by choosing locally optimal solutions",
+      "Solutions can be combined from subproblems",
+      "All subproblems overlap",
+      "Every problem has multiple optimal solutions"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which data structure is commonly used in the Huffman coding algorithm?",
+    options: [
+      "Queue",
+      "Stack",
+      "Priority Queue (Min-Heap)",
+      "Linked List"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which problem does Prim’s algorithm solve?",
+    options: [
+      "Shortest path in weighted graph",
+      "Minimum Spanning Tree",
+      "Topological sort",
+      "Cycle detection"
+    ],
+    answer: 1
+  },
+  {
+    question: "Greedy algorithms do not always guarantee an optimal solution for which type of problem?",
+    options: [
+      "Problems with the greedy choice property",
+      "Problems without optimal substructure",
+      "Problems with overlapping subproblems",
+      "All problems"
+    ],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

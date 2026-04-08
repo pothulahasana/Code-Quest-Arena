@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preorder Traversal Game</title>
+  <link rel="stylesheet" href="../css/pre-order.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Drag nodes from the tree to form Preorder Traversal</h2>
+
+   
+    <div class="tree-display" id="tree">
+      <div class="level">
+        <div class="tree-node" draggable="true" data-value="50">50</div>
+      </div>
+      <div class="level">
+        <div class="tree-node" draggable="true" data-value="30">30</div>
+        <div class="tree-node" draggable="true" data-value="70">70</div>
+      </div>
+      <div class="level">
+        <div class="tree-node" draggable="true" data-value="20">20</div>
+        <div class="tree-node" draggable="true" data-value="40">40</div>
+        <div class="tree-node" draggable="true" data-value="60">60</div>
+        <div class="tree-node" draggable="true" data-value="80">80</div>
+      </div>
+    </div>
+
+    
+    <div id="drop-row"></div>
+
+    <div class="buttons">
+      <button id="submit-btn">Submit</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <div class="score">Coins: <span id="coins">50</span> 🪙</div>
+  </div>
+<script src="../js/auth.js"></script>
+<script src="../js/pre-order.js"></script>
+</body>
+</html>

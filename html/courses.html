@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capstone</title>
+  <link rel="stylesheet" href="../css/coursehome.css" />
+  <link rel="stylesheet" href="../css/headfoot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo-text">Code Quest Arena</div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">search</span>
+      <input id="searchInput" class="search_input" placeholder="Search for and more">
+    </div>
+    <nav class="nav_bar">
+      <a href="/index.html">Home</a>
+      <a href="../html/courses.html">Courses</a>
+      <a href="../html/compilers.html">Compilers</a>
+      <a href="../html/funzone.html">Fun Zone</a>
+    </nav>
+    <div class="action_bar">
+      <div class="action_container1">
+        <img src="../images/react_coin.png" alt="Coin" class="icon_coin">
+        <span class="action_name1">0</span>
+      </div>
+      <div class="action_container">
+        <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
+        <span class="action_name"><a href="../html/signin.html" style="text-decoration: none;color: white; font-weight: 500;">Login</a></span>
+      </div>
+    </div>
+    <div class="menu_toggle">
+      <div class="parent" style="position: relative;">
+        <span class="material-symbols-outlined">menu</span>
+        <div class="mobile_nav" style="position: absolute;">
+         <div class="nav-item" onclick="location.href='/index.html'">Home</div>
+            <div class="nav-item" onclick="location.href='../html/courses.html'">Courses</div>
+            <div class="nav-item" onclick="location.href='../html/compilers.html'">Compilers</div>
+            <div class="nav-item" onclick="location.href='../html/funzone.html'">Fun Zone</div>
+            <div class="nav-item" onclick="location.href='../html/signin.html'">Sign In</div>
+            <div class="nav-item" onclick="location.href='../html/signup.html'">Sign Up</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="courses-section" id="courses">
+      <div class="courses-header">
+        <h2>Explore Our Courses</h2>
+        <p>Focused tracks to accelerate your learning</p>
+      </div>
+    </section>
+    <div class="track-group fsd-section">
+      <h3 class="track-title">Full Stack Development</h3>
+      <div class="courses-grid">
+        <div class="course-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>HTML</h3>
+          <p>Structure the web with semantic and accessible markup.</p>
+          <a href="../html/htmlcourse.html" class="course-btn">Start Learning</a>
+        </div>
+        <div class="course-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <h3>CSS</h3>
+          <p>Style beautiful websites with powerful layouts and animations.</p>
+          <a href="../html/csscourse.html" class="course-btn">Start Learning</a>
+        </div>
+        <div class="course-card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Bring engaging interactivity and vibrant life to your web projects.</p>
+          <a href="../html/jscourse.html" class="course-btn">Start Learning</a>
+        </div>
+        <div class="course-card coming-soon">
+          <h3>Coming Soon...</h3>
+          <p>React, Node.js, and MongoDB modules launching soon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="track-group dsa-section">
+      <h3 class="track-title">DSA Track</h3>
+      <div class="courses-grid">
+        <div class="course-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>DSA</h3>
+          <p>Master Data Structures and Algorithms for coding interviews.</p>
+          <a href="../html/dsacourse.html" class="course-btn">Start Learning</a>
+        </div>
+        <div class="course-card coming-soon">
+          <h3>Coming Soon...</h3>
+          <p>More DSA topics like Graphs, and DP on the way.</p>
+        </div>
+      </div>
+    </div>
+    <div class="track-group explore-section">
+      <h3 class="track-title">Quizzes</h3>
+      <div class="courses-grid">
+        <div class="course-card">
+          <i class="fas fa-brain"></i>
+          <h3>DSA Quiz</h3>
+          <p>Test your Data Structures & Algorithms knowledge.</p>
+          <a href="../html/DSA-levels.html">Start Quiz</a>
+        </div>
+        <div class="course-card">
+          <i class="fab fa-html5"></i>
+          <h3>HTML Quiz</h3>
+          <p>Assess your understanding of HTML basics and beyond.</p>
+          <a href="../html/HTML-levels.html">Start Quiz</a>
+        </div>
+        <div class="course-card">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS Quiz</h3>
+          <p>Challenge yourself with styling and layout questions.</p>
+          <a href="../html/CSS-levels.html">Start Quiz</a>
+        </div>
+
+        <div class="course-card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Bring interactivity and life to your web projects.</p>
+          <a href="../html/js-levels.html">Start Quiz</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">Code Quest Arena</div>
+        <p>Learn. Play. Code. A fun way to become a coding pro!</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <span style="display: flex;flex-direction: row; gap: 1rem;">
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Compilers</a>
+          <a href="#">Funzone</a>
+          <a href="#">Profile</a>
+        </span>
+        <div style="margin-top: 1rem;">
+          <h4>Follow Us</h4>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem; align-content: center; justify-content: center;">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="color: #ccc;">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="color: #ccc;">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://google.com" target="_blank" aria-label="Google" style="color: #ccc;">
+              <i class="fab fa-google fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@codedelight.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Code Quest Arena. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

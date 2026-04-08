@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 6 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Searching</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 6;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is the worst-case time complexity of linear search?",
+    options: ["O(log n)", "O(n)", "O(1)", "O(n log n)"],
+    answer: 1
+  },
+  {
+    question: "Which searching algorithm requires the array to be sorted?",
+    options: ["Linear Search", "Binary Search", "Hash Search", "Jump Search"],
+    answer: 1
+  },
+  {
+    question: "What is the best-case time complexity of binary search?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n^2)"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is NOT a searching algorithm?",
+    options: ["Linear Search", "Quick Sort", "Binary Search", "Jump Search"],
+    answer: 1
+  },
+  {
+    question: "In binary search, how is the search space reduced?",
+    options: [
+      "By removing the last element",
+      "By removing the first element",
+      "By dividing the array into three parts",
+      "By halving the search space at each step"
+    ],
+    answer: 3
+  },
+  {
+    question: "What is the time complexity of binary search in the worst case?",
+    options: ["O(n)", "O(1)", "O(log n)", "O(n^2)"],
+    answer: 2
+  },
+  {
+    question: "Which of the following searches is best suited for small datasets?",
+    options: ["Binary Search", "Hashing", "Linear Search", "Exponential Search"],
+    answer: 2
+  },
+  {
+    question: "Which data structure is ideal for fast searching using keys?",
+    options: ["Array", "Stack", "Hash Table", "Queue"],
+    answer: 2
+  },
+  {
+    question: "What condition must be true for binary search to work?",
+    options: [
+      "Array must be unsorted",
+      "Array must be sorted",
+      "Array must have only positive integers",
+      "Array must have unique elements"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which search algorithm jumps ahead by fixed steps and then performs linear search?",
+    options: ["Binary Search", "Jump Search", "Linear Search", "Ternary Search"],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

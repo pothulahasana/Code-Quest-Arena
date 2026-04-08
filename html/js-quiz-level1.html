@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 1 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 1 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 1;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What keyword is used to declare a variable in JavaScript?",
+    options: ["var", "let", "const", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "What does JS stand for?",
+    options: ["Java Source", "Just Style", "JavaScript", "Java Setup"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a comparison operator?",
+    options: ["+", "==", "=", "&&"],
+    answer: 1
+  },
+  {
+    question: "What will 5 > 3 && 2 < 4 return?",
+    options: ["true", "false", "NaN", "Error"],
+    answer: 0
+  },
+  {
+    question: "Which loop runs at least once even if the condition is false?",
+    options: ["for", "while", "do-while", "foreach"],
+    answer: 2
+  },
+  {
+    question: "How do you define a function in JavaScript?",
+    options: ["function = myFunc() {}", "define function myFunc()", "function myFunc() {}", "func myFunc()"],
+    answer: 2
+  },
+  {
+    question: "How do you access a property from an object?",
+    options: ["object.property", "object(property)", "object->property", "object[property]"],
+    answer: 0
+  },
+  {
+    question: "Which keyword is used to return a value from a function?",
+    options: ["output", "return", "result", "function"],
+    answer: 1
+  },
+  {
+    question: "How do you access the first element of an array arr?",
+    options: ["arr(1)", "arr.0", "arr[0]", "arr{0}"],
+    answer: 2
+  },
+  {
+    question: "Which method adds an element to the end of an array?",
+    options: ["shift()", "pop()", "push()", "unshift()"],
+    answer: 2
+  },
+  {
+    question: "What does str.length return?",
+    options: ["Number of words", "Number of vowels", "Length of string", "Nothing"],
+    answer: 2
+  },
+  {
+    question: "Which event occurs when a user clicks on an HTML element?",
+    options: ["onchange", "onmouseover", "onclick", "onmouseclick"],
+    answer: 2
+  },
+  {
+    question: "Which object is used to work with dates and time?",
+    options: ["Timer", "Clock", "Date", "Time"],
+    answer: 2
+  },
+  {
+    question: "What is hoisting in JavaScript?",
+    options: ["Lifting elements in HTML", "Moving functions and variables to the top", "Deleting variables", "Skipping undefined values"],
+    answer: 1
+  },
+  {
+    question: "Which of the following handles asynchronous operations?",
+    options: ["setInterval", "prompt()", "Promise", "alert()"],
+    answer: 2
+  },
+  {
+    question: "Closures allow a function to access variables from...",
+    options: ["The HTML file", "A different JS file", "Its outer function", "Local storage"],
+    answer: 2
+  },
+  {
+    question: "Which keyword declares a block-scoped variable?",
+    options: ["var", "let", "function", "const"],
+    answer: 1
+  },
+  {
+    question: "What is the syntax for an arrow function?",
+    options: ["() => {}", "function => {}", "-> () {}", "() -> {}"],
+    answer: 0
+  },
+  {
+    question: "What does DOM stand for?",
+    options: ["Document Object Model", "Data Object Method", "Display Output Model", "Document Output Module"],
+    answer: 0
+  },
+  {
+    question: "Which method selects an element by ID?",
+    options: ["getElementByTag()", "queryElement()", "getElementById()", "selectId()"],
+    answer: 2
+  }
+];
+  </script>
+  <script src="../js/js-quiz-script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 7 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Trees</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 7;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is a binary tree?",
+    options: [
+      "A tree with at most two children per node",
+      "A tree with exactly two children per node",
+      "A tree with nodes having binary values",
+      "A tree with only leaf nodes"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the maximum number of nodes at level 'l' in a binary tree?",
+    options: ["2^l", "2^(l-1)", "l", "l^2"],
+    answer: 1
+  },
+  {
+    question: "In a Binary Search Tree (BST), where are values smaller than the root stored?",
+    options: ["Right subtree", "Left subtree", "Both sides", "In the leaves only"],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of searching in a balanced BST?",
+    options: ["O(n)", "O(n^2)", "O(log n)", "O(1)"],
+    answer: 2
+  },
+  {
+    question: "Which tree traversal method visits nodes in the order: left, root, right?",
+    options: ["Preorder", "Postorder", "Inorder", "Level Order"],
+    answer: 2
+  },
+  {
+    question: "Which data structure is used in Level Order Traversal of a binary tree?",
+    options: ["Stack", "Queue", "Array", "Linked List"],
+    answer: 1
+  },
+  {
+    question: "What is the height of a tree with a single node?",
+    options: ["0", "1", "2", "-1"],
+    answer: 0
+  },
+  {
+    question: "What is a leaf node in a tree?",
+    options: [
+      "A node with no children",
+      "A node with two children",
+      "The root node",
+      "A node with only one child"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which traversal method is used for copying a tree?",
+    options: ["Inorder", "Preorder", "Postorder", "Level Order"],
+    answer: 1
+  },
+  {
+    question: "Which property is true for all nodes in a Binary Search Tree?",
+    options: [
+      "All children are greater than the parent",
+      "Left child < Parent < Right child",
+      "Parent < Left child < Right child",
+      "All nodes have equal values"
+    ],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

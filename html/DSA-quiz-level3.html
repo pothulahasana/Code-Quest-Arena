@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 3 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 3 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 3;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is a linked list?",
+    options: [
+      "A collection of elements stored in contiguous memory locations",
+      "A linear data structure with fixed size",
+      "A linear data structure where each element points to the next",
+      "A tree-based data structure"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is not a type of linked list?",
+    options: [
+      "Singly Linked List",
+      "Doubly Linked List",
+      "Circular Linked List",
+      "Ternary Linked List"
+    ],
+    answer: 3
+  },
+  {
+    question: "What does each node in a singly linked list contain?",
+    options: ["Data only", "Pointer only", "Data and two pointers", "Data and one pointer"],
+    answer: 3
+  },
+  {
+    question: "What is the time complexity of inserting an element at the beginning of a singly linked list?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 0
+  },
+  {
+    question: "What is the time complexity of accessing the nth element in a singly linked list?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 1
+  },
+  {
+    question: "Which pointer in a doubly linked list helps in backward traversal?",
+    options: ["Next", "Prev", "Head", "Tail"],
+    answer: 1
+  },
+  {
+    question: "Which condition indicates the end of a singly linked list?",
+    options: ["Node is NULL", "Node's data is 0", "Next pointer is NULL", "Head is NULL"],
+    answer: 2
+  },
+  {
+    question: "What happens when you insert into an empty linked list?",
+    options: [
+      "A node is created and becomes the head",
+      "An error occurs",
+      "A node is appended at the end",
+      "The list is automatically sorted"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which of the following operations is easier in a linked list than in an array?",
+    options: [
+      "Accessing the ith element",
+      "Deleting a node from the middle",
+      "Binary search",
+      "Finding the maximum element"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is a circular linked list?",
+    options: [
+      "A list where each node points to itself",
+      "A list where the last node points to the first node",
+      "A list that uses an array",
+      "A list with only one node"
+    ],
+    answer: 1
+  }
+];
+
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

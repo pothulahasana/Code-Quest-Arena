@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 4 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 4 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 4;
+    const coinsPerStar = 10;
+    const questions = [
+  // Stack Questions
+  {
+    question: "What is the basic principle of a stack?",
+    options: [
+      "First In First Out (FIFO)",
+      "Last In First Out (LIFO)",
+      "Last In First Served",
+      "Random Access"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation removes the top element of a stack?",
+    options: ["Pop", "Push", "Shift", "Delete"],
+    answer: 0
+  },
+  {
+    question: "Which method retrieves the top element of a stack without removing it?",
+    options: ["Top()", "Peek()", "Show()", "Head()"],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of push and pop operations in a stack?",
+    options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+    answer: 0
+  },
+  {
+    question: "Which data structure is used for backtracking, like undo in text editors?",
+    options: ["Queue", "Array", "Stack", "Hash Table"],
+    answer: 2
+  },
+
+  // Queue Questions
+  {
+    question: "What is the basic principle of a queue?",
+    options: [
+      "Last In First Out (LIFO)",
+      "First In First Out (FIFO)",
+      "Random In Random Out",
+      "Sorted Access"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which operation inserts an element in a queue?",
+    options: ["Insert()", "Push()", "Enqueue()", "Append()"],
+    answer: 2
+  },
+  {
+    question: "What is the operation that removes an element from the front of a queue?",
+    options: ["Pop()", "Delete()", "Dequeue()", "RemoveFirst()"],
+    answer: 2
+  },
+  {
+    question: "Which type of queue allows insertion and deletion from both ends?",
+    options: ["Circular Queue", "Linear Queue", "Deque", "Priority Queue"],
+    answer: 2
+  },
+  {
+    question: "What is the time complexity of enqueue and dequeue operations in a simple queue?",
+    options: ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    answer: 2
+  }
+];
+
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

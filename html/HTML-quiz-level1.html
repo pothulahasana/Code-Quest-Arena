@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 1 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 1 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 1;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What does HTML stand for?",
+    options: [
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyper Text Markup Language",
+      "Hyper Tool Markup Language"
+    ],
+    answer: 2
+  },
+  {
+    question: "Who is the inventor of HTML?",
+    options: [
+      "Tim Berners-Lee",
+      "Bill Gates",
+      "Brendan Eich",
+      "Dennis Ritchie"
+    ],
+    answer: 0
+  },
+  {
+    question: "Choose the correct HTML element for the largest heading:",
+    options: [
+      "&lt;h6&gt;",
+      "&lt;h1&gt;",
+      "&lt;heading&gt;",
+      "&lt;head&gt;"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the correct HTML element for inserting a line break?",
+    options: [
+      "&lt;break&gt;",
+      "&lt;br&gt;",
+      "&lt;lb&gt;",
+      "&lt;newline&gt;"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which HTML tag is used to display an image?",
+    options: [
+      "&lt;pic&gt;",
+      "&lt;img&gt;",
+      "&lt;src&gt;",
+      "&lt;image&gt;"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the correct HTML for creating a hyperlink?",
+    options: [
+      "&lt;a>http://example.com&lt;/a&gt;",
+      "&lt;link href='http://example.com'&gt;",
+      "&lt;a href='http://example.com'>Link&lt;/a&gt;",
+      "&lt;url>http://example.com&lt;/url&gt;"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which tag is used to create a list with bullets?",
+    options: [
+      "&lt;ol&gt;",
+      "&lt;list&gt;",
+      "&lt;ul&gt;",
+      "&lt;li&gt;"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the correct HTML element to define emphasized text?",
+    options: [
+      "&lt;i&gt;",
+      "&lt;bold&gt;",
+      "&lt;em&gt;",
+      "&lt;strong&gt;"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which HTML element defines the title of a document?",
+    options: [
+      "&lt;meta&gt;",
+      "&lt;title&gt;",
+      "&lt;head&gt;",
+      "&lt;header&gt;"
+    ],
+    answer: 1
+  },
+  {
+    question: "Where does the <title> tag belong?",
+    options: [
+      "Inside the &lt;body&gt;",
+      "After &lt;html&gt;",
+      "Inside the &lt;head&gt;",
+      "Before &lt;html&gt;"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which tag is used to define a table row?",
+    options: [
+      "&lt;tr&gt;",
+      "&lt;row&gt;",
+      "&lt;td&gt;",
+      "&lt;table&gt;"
+    ],
+    answer: 0
+  },
+  {
+    question: "How can you make text bold in HTML?",
+    options: [
+      "&lt;strong&gt;",
+      "&lt;bld&gt;",
+      "&lt;text bold&gt;",
+      "&lt;bold&gt;"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which attribute is used to provide alternative text for an image?",
+    options: [
+      "title",
+      "alt",
+      "src",
+      "href"
+    ],
+    answer: 1
+  },
+  {
+    question: "How do you create a checkbox in HTML?",
+    options: [
+      "&lt;input type='checkbox'&gt;",
+      "&lt;check&gt;",
+      "&lt;checkbox&gt;",
+      "&lt;input checkbox&gt;"
+    ],
+    answer: 0
+  },
+  {
+    question: "How do you create a numbered list?",
+    options: [
+      "&lt;ol&gt;",
+      "&lt;ul&gt;",
+      "&lt;dl&gt;",
+      "&lt;list&gt;"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which HTML tag is used to define an internal style sheet?",
+    options: [
+      "&lt;style&gt;",
+      "&lt;css&gt;",
+      "&lt;script&gt;",
+      "&lt;link&gt;"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which tag is used to define a cell in a table?",
+    options: [
+      "&lt;th&gt;",
+      "&lt;tr&gt;",
+      "&lt;td&gt;",
+      "&lt;table&gt;"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which attribute is used to open a link in a new tab?",
+    options: [
+      "target='_self'",
+      "target='_blank'",
+      "new='true'",
+      "open='tab'"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which tag is used for inserting a comment in HTML?",
+    options: [
+      "&lt;comment&gt;",
+      "// this is a comment",
+      "&lt;!-- This is a comment --&gt;",
+      "# This is a comment"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which tag represents a section of navigation links?",
+    options: [
+      "&lt;nav&gt;",
+      "&lt;section&gt;",
+      "&lt;menu&gt;",
+      "&lt;navigate&gt;"
+    ],
+    answer: 0
+  }
+];
+  </script>
+  <script src="../js/HTML-quiz-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 2 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 2 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 2;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "Which CSS property controls the text size?",
+    options: ["font-size", "text-style", "text-size", "font-style"],
+    answer: 0
+  },
+  {
+    question: "Which property is used to change the background color?",
+    options: ["bgcolor", "color", "background-color", "background"],
+    answer: 2
+  },
+  {
+    question: "Which property is used to make text bold?",
+    options: ["font-style", "font-weight", "text-style", "bold"],
+    answer: 1
+  },
+  {
+    question: "What does z-index control?",
+    options: ["Zoom level", "Element stacking order", "Font size", "Opacity"],
+    answer: 1
+  },
+  {
+    question: "What is the default position of an HTML element?",
+    options: ["absolute", "fixed", "static", "relative"],
+    answer: 2
+  },
+  {
+    question: "How can you select an element with id='demo'?",
+    options: [".demo", "*demo", "#demo", "$demo"],
+    answer: 2
+  },
+  {
+    question: "How do you apply styles to all <p> elements?",
+    options: ["#p", ".p", "*p", "p"],
+    answer: 3
+  },
+  {
+    question: "Which property is used to control spacing between lines?",
+    options: ["spacing", "line-spacing", "line-height", "text-spacing"],
+    answer: 2
+  },
+  {
+    question: "How do you center text in CSS?",
+    options: ["text-align: center;", "align: center;", "text-center: true;", "center-text: yes;"],
+    answer: 0
+  },
+  {
+    question: "Which property is used to change the font of an element?",
+    options: ["font", "font-family", "font-style", "font-weight"],
+    answer: 1
+  },
+  {
+    question: "Which value makes an element invisible but still takes up space?",
+    options: ["display: none", "visibility: hidden", "opacity: 0", "none of the above"],
+    answer: 1
+  },
+  {
+    question: "How do you make a box model include padding and border in its total width?",
+    options: ["box-sizing: content-box", "box-sizing: border-box", "box-size: border", "box: full"],
+    answer: 1
+  },
+  {
+    question: "How do you add a shadow to text?",
+    options: ["text-style", "font-shadow", "text-shadow", "shadow-text"],
+    answer: 2
+  },
+  {
+    question: "What is the correct syntax for a CSS comment?",
+    options: ["// comment", "# comment", "/* comment */", "&lt;!-- comment -->"],
+    answer: 2
+  },
+  {
+    question: "Which property sets the space between letters?",
+    options: ["letter-spacing", "word-spacing", "text-spacing", "font-spacing"],
+    answer: 0
+  },
+  {
+    question: "What pseudo-class targets the first child?",
+    options: [":first-child", ":first", ":child-first", "::first"],
+    answer: 0
+  },
+  {
+    question: "Which property changes the color of text?",
+    options: ["text-color", "color", "font-color", "text-style"],
+    answer: 1
+  },
+  {
+    question: "How do you apply a style only when hovering over an element?",
+    options: ["element:active", "element:visited", "element:hover", "element:focus"],
+    answer: 2
+  },
+  {
+    question: "What property adds space inside the border of an element?",
+    options: ["margin", "padding", "border-spacing", "gap"],
+    answer: 1
+  },
+  {
+    question: "Which value of position fixes an element in the same place on screen?",
+    options: ["relative", "absolute", "sticky", "fixed"],
+    answer: 3
+  }
+    ];
+  </script>
+  <script src="../js/CSS-quiz-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FunZone | Code Quest Arena</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../css/funzone.css">
+    <link rel="stylesheet" href="../css/headfoot.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo-text">Code Quest Arena</div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">search</span>
+      <input id="searchInput" class="search_input" placeholder="Search for and more">
+    </div>
+    <nav class="nav_bar">
+      <a href="/index.html" onclick="navigate('home')">Home</a>
+      <a href="../html/courses.html">Courses</a>
+      <a href="../html/compilers.html">Compilers</a>
+      <a href="../html/funzone.html">Fun Zone</a>
+    </nav>
+    <div class="action_bar">
+      <div class="action_container1">
+        <img src="../images/react_coin.png" alt="Coin" class="icon_coin">
+        <span class="action_name1">0</span>
+      </div>
+      <div class="action_container">
+        <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
+        <span class="action_name"><a href="../html/signin.html" style="color: white; text-decoration: none; font-weight: 500;">Login</a></span>
+      </div>
+    </div>
+    <div class="menu_toggle">
+      <div class="parent" style="position: relative;">
+        <span class="material-symbols-outlined">menu</span>
+        <div class="mobile_nav" style="position: absolute;">
+         <div class="nav-item" onclick="location.href='/index.html'">Home</div>
+            <div class="nav-item" onclick="location.href='../html/courses.html'">Courses</div>
+            <div class="nav-item" onclick="location.href='../html/compilers.html'">Compilers</div>
+            <div class="nav-item" onclick="location.href='../html/funzone.html'">Fun Zone</div>
+            <div class="nav-item" onclick="location.href='../html/signin.html'">Sign In</div>
+            <div class="nav-item" onclick="location.href='../html/signup.html'">Sign Up</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+  <h1 class="title">🎮 Welcome to FunZone</h1>
+  <p class="subtitle">Sharpen your DSA skills through fun, interactive games!</p>
+  <div class="coin-counter">💰 Coins: <span id="coinDisplay">100</span></div>
+
+  <div class="game-grid">
+   
+    <div class="game-card">
+      <div>
+        <div class="game-icon"><i class="fas fa-layer-group"></i></div>
+        <h2>Stack Simulator</h2>
+        <p>Push, pop, and visualize how stacks work!</p>
+      </div>
+      <button onclick="playGame('game1.html', 10)">Play (10🪙)</button>
+    </div>
+
+    
+    <div class="game-card">
+      <div>
+        <div class="game-icon"><i class="fas fa-code-branch"></i></div>
+        <h2>Preorder Builder</h2>
+        <p>Rebuild tree using preorder & inorder sequences.</p>
+      </div>
+      <button onclick="playGame('pre-order.html', 10)">Play (10🪙)</button>
+    </div>
+
+   
+    <div class="game-card">
+      <div>
+        <div class="game-icon"><i class="fas fa-sitemap"></i></div>
+        <h2>Inorder Builder</h2>
+        <p>Rebuild tree using inorder traversal logic.</p>
+      </div>
+      <button onclick="playGame('in-order.html', 10)">Play (10🪙)</button>
+    </div>
+
+    
+    <div class=" game-card">
+      <div>
+        <div class="game-icon"><i class="fas fa-project-diagram"></i></div>
+        <h2>Postorder Builder</h2>
+        <p>Use postorder traversal to recreate the tree.</p>
+      </div>
+      <button onclick="playGame('post-order.html', 10)">Play (10🪙)</button>
+    </div>
+  </div>
+</div>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="footer-logo">Code Quest Arena</div>
+        <p>Learn. Play. Code. A fun way to become a coding pro!</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <span style="display: flex;flex-direction: row
+        ; gap: 1rem;">
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Compilers</a>
+          <a href="#">Funzone</a>
+          <a href="#">Profile</a>
+        </span>
+        <div style="margin-top: 1rem;">
+          <h4>Follow Us</h4>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem; align-content: center; justify-content: center;">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="color: #ccc;">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="color: #ccc;">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://google.com" target="_blank" aria-label="Google" style="color: #ccc;">
+              <i class="fab fa-google fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: support@codedelight.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Code Quest Arena. All rights reserved.
+    </div>
+  </footer>
+
+   <script src="../js/funzone.js"></script>
+
+</body>
+</html>

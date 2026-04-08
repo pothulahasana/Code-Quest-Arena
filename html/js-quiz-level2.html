@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 2 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 2 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 2;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "What is the output of typeof null?",
+    options: ["'null'", "'object'", "'undefined'", "'number'"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to convert a JSON string into a JavaScript object?",
+    options: ["JSON.stringify()", "JSON.parse()", "JSON.toObject()", "parse.JSON()"],
+    answer: 1
+  },
+  {
+    question: "Which symbol is used for strict equality comparison?",
+    options: ["=", "==", "===", "!=="],
+    answer: 2
+  },
+  {
+    question: "Which array method creates a new array with only the elements that pass a test?",
+    options: ["forEach()", "map()", "filter()", "reduce()"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is not a JavaScript data type?",
+    options: ["string", "boolean", "float", "undefined"],
+    answer: 2
+  },
+  {
+    question: "What will be the result of '2' + 2 in JavaScript?",
+    options: ["4", "22", "'4'", "'2' + 2"],
+    answer: 1
+  },
+  {
+    question: "Which keyword is used to prevent variable re-declaration?",
+    options: ["var", "const", "let", "static"],
+    answer: 1
+  },
+  {
+    question: "What does the spread operator (...) do in JavaScript?",
+    options: ["Merges arrays or objects", "Hides properties", "Multiplies values", "None of the above"],
+    answer: 0
+  },
+  {
+    question: "Which function is used to delay execution of code?",
+    options: ["setTimeout()", "delay()", "sleep()", "pause()"],
+    answer: 0
+  },
+  {
+    question: "What will be the result of typeof NaN?",
+    options: ["'NaN'", "'undefined'", "'number'", "'object'"],
+    answer: 2
+  },
+  {
+    question: "Which method adds new elements to the beginning of an array?",
+    options: ["push()", "shift()", "unshift()", "concat()"],
+    answer: 2
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    options: ["Function inside a class", "Function with private variables", "Function accessing outer scope", "None"],
+    answer: 2
+  },
+  {
+    question: "How do you write an arrow function with one parameter?",
+    options: ["x => {}", "(x) => {}", "function(x) => {}", "Both a and b"],
+    answer: 3
+  },
+  {
+    question: "Which keyword is used to define a class in JavaScript?",
+    options: ["object", "function", "class", "constructor"],
+    answer: 2
+  },
+  {
+    question: "What does the 'this' keyword refer to in a regular function?",
+    options: ["Global object", "Function itself", "Parent scope", "Undefined"],
+    answer: 0
+  },
+  {
+    question: "Which method calls a function for every array element and returns a new array?",
+    options: ["map()", "filter()", "reduce()", "forEach()"],
+    answer: 0
+  },
+  {
+    question: "What will '5' - 2 return in JavaScript?",
+    options: ["3", "52", "NaN", "undefined"],
+    answer: 0
+  },
+  {
+    question: "Which method is used to combine two or more arrays?",
+    options: ["push()", "merge()", "concat()", "join()"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT a valid loop in JavaScript?",
+    options: ["for", "while", "foreach", "loop"],
+    answer: 3
+  },
+  {
+    question: "Which object in JavaScript lets you work with dates and times?",
+    options: ["Clock", "Time", "Date", "Moment"],
+    answer: 2
+  }
+    ];
+  </script>
+  <script src="../js/js-quiz-script.js"></script>
+</body>
+</html>

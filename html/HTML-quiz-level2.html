@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 2 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 2 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 2;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "Which tag is used to define a table row?",
+    options: ["&lt;td&gt;", "&lt;tr&gt;", "&lt;th&gt;", "&lt;table&gt;"],
+    answer: 1
+  },
+  {
+    question: "What is the correct HTML tag for inserting a line break?",
+    options: ["&lt;break&gt;", "&lt;br&gt;", "&lt;lb&gt;", "&lt;newline&gt;"],
+    answer: 1
+  },
+  {
+    question: "Which tag is used to define an unordered list?",
+    options: ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;list&gt;", "&lt;li&gt;"],
+    answer: 1
+  },
+  {
+    question: "How can you open a link in a new tab?",
+    options: ["target='_blank'", "href='_new'", "open='_tab'", "newwindow='true'"],
+    answer: 0
+  },
+  {
+    question: "Which tag is used to define a table header?",
+    options: ["&lt;thead&gt;", "&lt;th&gt;", "&lt;header&gt;", "&lt;td&gt;"],
+    answer: 1
+  },
+  {
+    question: "What does the <em> tag do?",
+    options: ["Highlights text", "Italicizes text", "Emphasizes text", "Boldens text"],
+    answer: 2
+  },
+  {
+    question: "Which tag defines a caption for a table?",
+    options: ["&lt;label>", "&lt;caption>", "&lt;head>", "&lt;title>"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a semantic HTML element?",
+    options: ["&lt;div&gt;", "&lt;span&gt;", "&lt;section&gt;", "&lt;b&gt;"],
+    answer: 2
+  },
+  {
+    question: "What is the default method for submitting an HTML form?",
+    options: ["get", "post", "submit", "send"],
+    answer: 0
+  },
+  {
+    question: "Which input type is used for selecting files?",
+    options: ["file", "upload", "choose", "select"],
+    answer: 0
+  },
+  {
+    question: "How do you make a text input field required?",
+    options: ["required", "mandatory", "mustfill", "necessary"],
+    answer: 0
+  },
+  {
+    question: "Which tag defines a dropdown list?",
+    options: ["&lt;select>", "&lt;dropdown>", "&lt;input type='list'>", "&lt;list>"],
+    answer: 0
+  },
+  {
+    question: "What does the <iframe> tag do?",
+    options: ["Adds images", "Embeds a page", "Plays video", "Displays footer"],
+    answer: 1
+  },
+  {
+    question: "Which tag defines preformatted text?",
+    options: ["&lt;pre&gt;", "&lt;code&gt;", "&lt;format&gt;", "&lt;p&gt;"],
+    answer: 0
+  },
+  {
+    question: "What does the autofocus attribute do?",
+    options: ["Adds bold", "Sets focus on load", "Centers text", "Inserts image"],
+    answer: 1
+  },
+  {
+    question: "Which input type is used for picking a date?",
+    options: ["date", "calendar", "datetime", "time"],
+    answer: 0
+  },
+  {
+    question: "Which tag is used to group form elements?",
+    options: ["&lt;group&gt;", "&lt;fieldset&gt;", "&lt;formgroup&gt;", "&lt;bundle&gt;"],
+    answer: 1
+  },
+  {
+    question: "What does the <label> tag do?",
+    options: ["Submits form", "Creates text field", "Defines caption for input", "Adds styling"],
+    answer: 2
+  },
+  {
+    question: "Which tag defines the document's body content?",
+    options: ["&lt;main&gt;", "&lt;content&gt;", "&lt;body&gt;", "&lt;page&gt;"],
+    answer: 2
+  },
+  {
+    question: "What attribute is used to define an image’s tooltip text?",
+    options: ["title", "alt", "tooltip", "hover"],
+    answer: 0
+  }
+    ];
+  </script>
+  <script src="../js/HTML-quiz-script.js"></script>
+</body>
+</html>

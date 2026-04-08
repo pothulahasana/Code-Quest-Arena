@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 1 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 1 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 1;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "What does CSS stand for?",
+    options: [
+      "Creative Style Sheets",
+      "Computer Style Sheets",
+      "Cascading Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which HTML tag is used to link an external CSS file?",
+    options: ["&lt;script>", "&lt;style>", "&lt;css>", "&lt;link>"],
+    answer: 3
+  },
+  {
+    question: "Where in an HTML document is the correct place to refer to an external CSS file?",
+    options: ["In the body", "At the end", "In the head", "After the HTML"],
+    answer: 2
+  },
+  {
+    question: "Which property is used to change the text color in CSS?",
+    options: ["font-color", "text-color", "color", "text-style"],
+    answer: 2
+  },
+  {
+    question: "How do you make text bold in CSS?",
+    options: ["font-style: bold;", "text-weight: bold;", "font-weight: bold;", "style: bold;"],
+    answer: 2
+  },
+  {
+    question: "Which property controls the size of text?",
+    options: ["font-size", "text-size", "size", "text-style"],
+    answer: 0
+  },
+  {
+    question: "What does 'px' stand for in CSS?",
+    options: ["points", "pixels", "parts", "percent"],
+    answer: 1
+  },
+  {
+    question: "How do you select an element with the id 'main'?",
+    options: ["#main", ".main", "*main", "main"],
+    answer: 0
+  },
+  {
+    question: "How do you select elements with class 'title'?",
+    options: [".title", "#title", "*title", "$title"],
+    answer: 0
+  },
+  {
+    question: "Which CSS property is used for background color?",
+    options: ["color", "background", "bgcolor", "background-color"],
+    answer: 3
+  },
+  {
+    question: "How do you center text in CSS?",
+    options: [
+      "text-align: center;",
+      "text-center: true;",
+      "text-style: center;",
+      "text-align: middle;"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which property adds space inside the border of an element?",
+    options: ["padding", "margin", "border", "spacing"],
+    answer: 0
+  },
+  {
+    question: "Which property adds space outside the border?",
+    options: ["padding", "margin", "border-spacing", "spacing"],
+    answer: 1
+  },
+  {
+    question: "How do you make a list without bullets?",
+    options: [
+      "list-type: none;",
+      "text-style: none;",
+      "list-style: none;",
+      "bullet: none;"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which is the correct CSS syntax?",
+    options: [
+      "{body:color=black;}",
+      "body:color=black;",
+      "body {color: black;}",
+      "{body;color:black;}"
+    ],
+    answer: 2
+  },
+  {
+    question: "How do you add a comment in CSS?",
+    options: [
+      "// this is a comment",
+      "/* this is a comment */",
+      "&lt;!-- this is a comment -->",
+      "# this is a comment"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which property is used to round the corners of an element?",
+    options: ["border-radius", "corner", "radius", "curve"],
+    answer: 0
+  },
+  {
+    question: "Which value makes an element invisible but keeps its space?",
+    options: ["display: none;", "visibility: hidden;", "opacity: 0;", "hidden: true;"],
+    answer: 1
+  },
+  {
+    question: "What unit is used for percentage-based widths?",
+    options: ["px", "em", "%", "rem"],
+    answer: 2
+  },
+  {
+    question: "Which CSS property changes the font type?",
+    options: ["font-weight", "font-style", "font-family", "font-type"],
+    answer: 2
+  }
+    ];
+  </script>
+  <script src="../js/CSS-quiz-script.js"></script>
+</body>
+</html>

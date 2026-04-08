@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 11 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Dynamic Programming</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 11;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is dynamic programming primarily used for?",
+    options: [
+      "Sorting data",
+      "Solving problems by breaking them down into overlapping subproblems",
+      "Searching data",
+      "Graph traversal"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which two properties must a problem have to be solved by dynamic programming?",
+    options: [
+      "Recursion and iteration",
+      "Overlapping subproblems and optimal substructure",
+      "Greedy choice property and sorting",
+      "Backtracking and divide-and-conquer"
+    ],
+    answer: 1
+  },
+  {
+    question: "In dynamic programming, what is 'memoization'?",
+    options: [
+      "Storing results of subproblems to avoid recomputation",
+      "Sorting subproblems before solving",
+      "Dividing the problem into independent parts",
+      "Applying recursion without optimization"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the main difference between memoization and tabulation?",
+    options: [
+      "Memoization uses bottom-up approach, tabulation uses top-down",
+      "Memoization uses top-down approach, tabulation uses bottom-up",
+      "Memoization uses recursion, tabulation doesn’t",
+      "Both are same"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which problem is a classic example of dynamic programming?",
+    options: [
+      "Binary Search",
+      "Fibonacci sequence calculation",
+      "Bubble Sort",
+      "Stack operations"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the time complexity of calculating the nth Fibonacci number using simple recursion?",
+    options: [
+      "O(n)",
+      "O(log n)",
+      "O(2^n)",
+      "O(n^2)"
+    ],
+    answer: 2
+  },
+  {
+    question: "Using dynamic programming, what is the time complexity of calculating the nth Fibonacci number?",
+    options: [
+      "O(n)",
+      "O(log n)",
+      "O(2^n)",
+      "O(n^2)"
+    ],
+    answer: 0
+  },
+  {
+    question: "In the 0/1 Knapsack problem, what is the main decision at each step?",
+    options: [
+      "To include the current item or not",
+      "Sort items by weight",
+      "Divide items into smaller groups",
+      "Ignore item weight"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which data structure is commonly used to store solutions to subproblems in DP?",
+    options: [
+      "Stack",
+      "Queue",
+      "Array or Table",
+      "Linked List"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following problems cannot be solved using dynamic programming?",
+    options: [
+      "Longest Common Subsequence",
+      "Tower of Hanoi",
+      "Matrix Chain Multiplication",
+      "Coin Change Problem"
+    ],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

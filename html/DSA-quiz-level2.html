@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 2 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Strings</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 2;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is the output of this Python code?\ns = 'hello'\nprint(s[1])",
+    options: ["h", "e", "l", "o"],
+    answer: 1
+  },
+  {
+    question: "Which method in JavaScript returns the length of a string?",
+    options: ["size()", "count()", "length", "len()"],
+    answer: 2
+  },
+  {
+    question: "Which operator is used to concatenate two strings in Java?",
+    options: ["+", "*", "&", "."],
+    answer: 0
+  },
+  {
+    question: "What does the `toUpperCase()` method do in JavaScript?",
+    options: [
+      "Converts string to uppercase",
+      "Removes all whitespaces",
+      "Converts string to lowercase",
+      "Reverses the string"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the index of the last character in a string of length `n`?",
+    options: ["n", "n+1", "n-1", "0"],
+    answer: 2
+  },
+  {
+    question: "Which method is used to get a part of a string in Python?",
+    options: ["cut()", "slice()", "substring()", "strip()"],
+    answer: 1
+  },
+  {
+    question: "What is the output of this JavaScript code?\nlet str = 'code';\nconsole.log(str.charAt(2));",
+    options: ["c", "o", "d", "e"],
+    answer: 2
+  },
+  {
+    question: "In C, which library function is used to find the length of a string?",
+    options: ["strlen()", "size()", "count()", "length()"],
+    answer: 0
+  },
+  {
+    question: "Which function in Python removes whitespace from both ends of a string?",
+    options: ["strip()", "trim()", "remove()", "cut()"],
+    answer: 0
+  },
+  {
+    question: "Which method is used in Java to compare two strings for equality?",
+    options: ["compare()", "==", "equals()", "match()"],
+    answer: 2
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

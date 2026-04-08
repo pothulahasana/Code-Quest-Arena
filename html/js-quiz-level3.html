@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 3 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 3 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 3;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "What is the output of: console.log([] + []);",
+    options: ["[]", "'[object Object][object Object]'", "''", "NaN"],
+    answer: 2
+  },
+  {
+    question: "Which of the following will NOT create a new object?",
+    options: ["Object.create({})", "{}", "new Object()", "Object.assign()"],
+    answer: 3
+  },
+  {
+    question: "What is the output of: typeof function(){}?",
+    options: ["'object'", "'function'", "'undefined'", "'method'"],
+    answer: 1
+  },
+  {
+    question: "What is the result of: '5' - - '2'?",
+    options: ["3", "7", "'52'", "NaN"],
+    answer: 1
+  },
+  {
+    question: "Which concept allows functions to remember their lexical scope?",
+    options: ["Encapsulation", "Closure", "Hoisting", "Prototyping"],
+    answer: 1
+  },
+  {
+    question: "What will be the result of: typeof NaN === 'number'?",
+    options: ["true", "false", "undefined", "NaN"],
+    answer: 0
+  },
+  {
+    question: "Which method can be used to flatten a nested array?",
+    options: ["map()", "reduce()", "flat()", "join()"],
+    answer: 2
+  },
+  {
+    question: "How can you make an object immutable?",
+    options: ["Object.seal()", "Object.freeze()", "Object.preventExtensions()", "delete object"],
+    answer: 1
+  },
+  {
+    question: "What will the following return: [...new Set([1,2,2,3])]",
+    options: ["[1,2,3]", "[1,2,2,3]", "[1,3]", "Set {1,2,3}"],
+    answer: 0
+  },
+  {
+    question: "What is the output of: console.log(typeof null)?",
+    options: ["'null'", "'object'", "'undefined'", "'NaN'"],
+    answer: 1
+  },
+  {
+    question: "Which method is used to bind 'this' permanently to a function?",
+    options: ["call()", "bind()", "apply()", "setThis()"],
+    answer: 1
+  },
+  {
+    question: "Which statement is true about arrow functions?",
+    options: ["They have their own 'this'", "They are hoisted", "They inherit 'this' from parent scope", "They are constructors"],
+    answer: 2
+  },
+  {
+    question: "What does the optional chaining operator (?.) do?",
+    options: ["Checks type", "Throws error on null", "Safely accesses nested properties", "Creates a deep clone"],
+    answer: 2
+  },
+  {
+    question: "What is the output of: '10' == 10 && '10' === 10?",
+    options: ["true", "false", "TypeError", "undefined"],
+    answer: 1
+  },
+  {
+    question: "How can you detect if a variable is not a number (NaN)?",
+    options: ["typeof", "Number.isNaN()", "isNaN()", "isNumber()"],
+    answer: 1
+  },
+  {
+    question: "Which built-in method executes a reducer function on each array element?",
+    options: ["map()", "reduce()", "forEach()", "filter()"],
+    answer: 1
+  },
+  {
+    question: "Which of the following can be used to deep clone an object?",
+    options: ["Object.assign()", "JSON.stringify() + JSON.parse()", "spread operator", "slice()"],
+    answer: 1
+  },
+  {
+    question: "What is the output of: 0.1 + 0.2 === 0.3?",
+    options: ["true", "false", "undefined", "TypeError"],
+    answer: 1
+  },
+  {
+    question: "Which property defines the prototype chain of an object?",
+    options: ["prototype", "_proto_", "constructor", "Object.getPrototype()"],
+    answer: 1
+  },
+  {
+    question: "How can you defer script execution until the document is fully parsed?",
+    options: ["Use async", "Place script at top", "Use defer", "Use await"],
+    answer: 2
+  }
+    ];
+  </script>
+  <script src="../js/js-quiz-script.js"></script>
+</body>
+</html>
+

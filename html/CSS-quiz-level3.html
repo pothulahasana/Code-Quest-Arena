@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 3 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 3 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 3;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "Which CSS property is used to specify how a block-level element is displayed?",
+    options: ["display", "position", "visibility", "overflow"],
+    answer: 0
+  },
+  {
+    question: "What value of the position property will position the element relative to the browser window?",
+    options: ["relative", "fixed", "absolute", "static"],
+    answer: 1
+  },
+  {
+    question: "Which pseudo-class selects the last child element?",
+    options: [":last", ":last-child", ":nth-last-child", ":end"],
+    answer: 1
+  },
+  {
+    question: "What does the z-index property control?",
+    options: ["Font size", "Layer order", "Background opacity", "Line spacing"],
+    answer: 1
+  },
+  {
+    question: "Which of the following units is relative to the viewport height?",
+    options: ["em", "vh", "vw", "%"],
+    answer: 1
+  },
+  {
+    question: "Which value of the overflow property clips the content and hides the rest?",
+    options: ["visible", "hidden", "scroll", "auto"],
+    answer: 1
+  },
+  {
+    question: "Which CSS feature allows using a variable name for a value?",
+    options: ["Custom properties", "Preprocessor", "Functions", "Hooks"],
+    answer: 0
+  },
+  {
+    question: "Which shorthand property sets margin values?",
+    options: ["spacing", "box-model", "margin", "edge"],
+    answer: 2
+  },
+  {
+    question: "Which media feature is used to apply styles for dark mode?",
+    options: ["color-mode", "prefers-color-scheme", "theme", "dark-mode"],
+    answer: 1
+  },
+  {
+    question: "What is the initial value of z-index?",
+    options: ["1", "0", "auto", "none"],
+    answer: 2
+  },
+  {
+    question: "Which property is used to animate transitions in CSS?",
+    options: ["animation", "transition", "transform", "change"],
+    answer: 1
+  },
+  {
+    question: "Which CSS method places an element exactly where you want it?",
+    options: ["float", "flex", "absolute positioning", "static"],
+    answer: 2
+  },
+  {
+    question: "What is the correct order of box model layers from inside out?",
+    options: ["content > padding > margin > border", "margin > padding > border > content", "content > padding > border > margin", "padding > content > margin > border"],
+    answer: 2
+  },
+  {
+    question: "Which of these is not a valid display value?",
+    options: ["inline-block", "block", "none", "box"],
+    answer: 3
+  },
+  {
+    question: "How do you apply styles only when printing?",
+    options: ["@media printer", "@media screen", "@media print", "@media only"],
+    answer: 2
+  },
+  {
+    question: "Which CSS unit is based on the width of the 0 character?",
+    options: ["em", "ex", "ch", "rem"],
+    answer: 2
+  },
+  {
+    question: "Which of the following defines a grid container?",
+    options: ["display: flex", "display: grid", "display: block", "display: inline"],
+    answer: 1
+  },
+  {
+    question: "What is the effect of visibility: hidden;?",
+    options: ["Element is removed", "Element is hidden but takes space", "Element is blurred", "Element becomes inline"],
+    answer: 1
+  },
+  {
+    question: "How do you define a CSS variable?",
+    options: ["var-name", "--name", "define --name", "@name"],
+    answer: 1
+  },
+  {
+    question: "Which property helps to apply multiple background images?",
+    options: ["background-layer", "background-images", "background", "bg-stack"],
+    answer: 2
+  }
+    ];
+  </script>
+  <script src="../js/CSS-quiz-script.js"></script>
+</body>
+</html>

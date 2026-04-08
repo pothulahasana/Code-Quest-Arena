@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course Page</title>
+        <link rel="stylesheet" href="../css/course.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/material-darker.min.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <script src="../js/course.js"></script>
+    </head>
+    <body>
+        <div class="parent">
+        <div class="sidebar">
+            <span class="cross" onclick="Close()">&times;</span>
+            <h2>Course Content</h2>
+             <div class="line"></div>
+        <ul class="nav-links">
+            <li onclick="showContent('introduction')" class="diff">
+             Introduction to HTML
+            </li>
+            <li onclick="toggleSubmenu(this)" class="diff">
+            HTML Basics<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('basics')"><li>HTML Basics</li></a>
+            <a href="#" onclick="showContent('editors')"><li>HTML Editors</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+            Structure and Elements<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('elements')"><li>HTML Elements</li></a>
+            <a href="#" onclick="showContent('attributes')"><li>HTML Attributes</li></a>
+            <a href="#" onclick="showContent('block_inline')"><li>Block vs. Inline</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+            Headings & Paragraphs<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('headings')"><li>Headings</li></a>
+            <a href="#" onclick="showContent('parag')"><li>Paragraphs</li></a>
+            <a href="#" onclick="showContent('format')"><li>Text Formatting</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+            Lists<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('lists')"><li>Lists</li></a>
+             <a href="#" onclick="showContent('types')"><li>Types of Lists</li></a>
+          </ul>
+           <li onclick="toggleSubmenu(this)" class="diff">
+           Visuals and Media<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('hyper')"><li>Hyperlinks</li></a>
+            <a href="#" onclick="showContent('au_vi')"><li>video & Audio</li></a>
+          </ul>
+          <li onclick="toggleSubmenu(this)" class="diff">
+            Iframes and Forms<span class="arrow"><i style="font-size: 10px;" class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <ul class="submenu" onclick="Close()">
+            <a href="#" onclick="showContent('ifram')"><li>Iframes</li></a>
+            <a href="#" onclick="showContent('forms')"><li>Forms</li></a>
+          </ul>
+            <li onclick="showContent('tasks')" class="diff">
+            Tasks
+            </li>
+            <a href="../html/HTML-levels.html"><li style="border-bottom:3px solid #00f2fe ;" class="diff">
+             Check Your Knowledge
+            </li></a>
+         </ul>
+        </div>
+        <div class="main">
+        <div class="header">
+         <div class="heading">
+                <div class="menu" onclick="Open()"><i class="fa-solid fa-bars"></i></div>
+                <h1>Learn HTML the Right Way</h1>
+                <h2>Your Journey Into Web Development Starts Here</h2>
+                <!-- <a href="#"><input type="button" value="Back to Home"></a> -->
+                <input type="button" value="Back to Home" onclick="history.back()">
+         </div>
+         </div>
+          <div id="introduction" class="content-section">
+                   <h1>HTML Introduction</h1>
+                   <p>HTML stands for <b>Hyper Text Markup Language,</b> which is the core language used to structure content on the web. 
+                    It organizes text, images, links, and media using tags and elements that browsers can interpret. 
+                    As of 2025, over 95% of websites rely on HTML alongside CSS and JavaScript, making it a fundamental tool in modern web development.</p>
+                    <ul>
+                      <li>It is a markup language, not a programming language. 
+                      This means it annotates text to define how it is structured and displayed by web browsers.</li>
+                      <li>It is a static language, meaning it does not inherently provide interactive features 
+                      but can be combined with CSS for styling and JavaScript for interactivity.</li>
+                    </ul>
+                   <h2>Basic HTML Code Example</h2>
+                  <textarea id="editor-introduction">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-introduction" class="output-box" scrolling="no"></iframe>
+             <h2>HTML Page Structure</h2>
+             <p>The basic structure of an HTML page is shown below. It contains the essential building-block elements
+               (i.e. doctype declaration, HTML, head, title, and body elements)
+               upon which all web pages are created.</p>
+               <center><img src="../images/page_struct.png"/></center>
+               <ul>
+                <li>&lt;!DOCTYPE html&gt; - This is the document type declaration, not a tag. 
+                  It declares that the document is an HTML5 document.</li>
+                <li>&lt;html&gt; - This is called the HTML root element. 
+                  All other elements are contained within it.</li>
+                  <li>&lt;head&gt; - The head tag contains the "behind the scenes" elements for a webpage. Elements within the head aren't visible on the front end of a webpage. 
+                   </li>
+                    <li>Typical elements inside the &lt;head&gt; include:</li>
+                  <ul>
+                    <li>&lt;title&gt;: Defines the title displayed on the browser tab.</li>
+                    <li>&lt;meta&gt;: Provides information like the character set or viewport settings.</li>
+                    <li>&lt;link&gt;: Links external stylesheets or resources.</li>
+                    <li>&lt;style&gt;: Embeds internal CSS styles.</li>
+                    <li>&lt;script&gt;: Embeds JavaScript for functionality.</li>
+                  </ul>
+                  <li>&lt;title&gt; - The title is what is displayed on the top of your browser when you visit a website and contains 
+                    the title of the webpage that you are viewing.</li>
+                  <li>&lt;h2&gt; - The &lt;h2&gt; tag is a second-level heading tag.</li>
+                  <li>&lt;p&gt; - The &lt;p&gt; tag represents a paragraph of text.</li>
+                  <li>&lt;body&gt; - The body tag is used to enclose all the visible content of a webpage.
+                     In other words, the body content is what the browser will show on the front end.</li>
+               </ul>
+               <p>An HTML document can be created using an HTML text editor. 
+                Save the text file using the ".html" or ".htm" extension. Once saved as an HTML document, 
+                the file can be opened as a webpage in the browser.</p>
+              <h1>HTML Elements and HTML Tag</h1>
+              <p>HTML Elements and HTML Tags are related but distinct. An HTML element is the 
+                complete structure, including the opening tag, content 
+                (if any), and the closing tag (if applicable).</p>
+              <p>On the other hand, A tag is the actual keyword or name enclosed in angle brackets (&lt; &gt;) that tells 
+                the browser what kind of content to expect.</p>
+              <center><img src="../images/element.png"/></center>
+          <div class="scroll-wrapper">
+              <table border="1" >
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;html&gt;</td>
+      <td>The root element of an HTML document</td>
+    </tr>
+    <tr>
+      <td>&lt;head&gt;</td>
+      <td>Contains meta-information about the webpage</td>
+    </tr>
+    <tr>
+      <td>&lt;body&gt;</td>
+      <td>Contains the visible content of the webpage</td>
+    </tr>
+    <tr>
+      <td>&lt;h1&gt; to &lt;h6&gt;</td>
+      <td>Headings of various levels (h1 being the largest)</td>
+    </tr>
+    <tr>
+      <td>&lt;p&gt;</td>
+      <td>Defines a paragraph</td>
+    </tr>
+    <tr>
+      <td>&lt;a&gt;</td>
+      <td>Defines a hyperlink</td>
+    </tr>
+    <tr>
+      <td>&lt;img&gt;</td>
+      <td>Embed an image</td>
+    </tr>
+    <tr>
+      <td>&lt;ul&gt;</td>
+      <td>Defines an unordered list</td>
+    </tr>
+    <tr>
+      <td>&lt;ol&gt;</td>
+      <td>Defines an ordered list</td>
+    </tr>
+    <tr>
+      <td>&lt;li&gt;</td>
+      <td>Defines a list item</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>Web Browser</h2>
+<p>Unlike other programming languages, HTML does not show output on the any compiler.
+   Web browsers is an compiler
+   which show the results of an your HTML code.</p>
+   <p>It reads HTML files and determines how to show content with the help of HTML tags. 
+    Any web browser (Google, Safari, Mozilla Firefox, etc) can be used to open a .
+     HTML file and view the results.</p>
+     <center><img src="../images/web_browse.png"/></center>
+     <h2>Why Learn HTML?</h2>
+     <p>Here are 5 common reasons to learn HTML:</p>
+     <ol>
+      <li><b>Build Websites:</b> HTML is the basic building block for creating any website. Learning HTML can 
+        help you pursue a career in web development.</li>
+      <li><b>Customize Content:</b> Allows you to edit or tweak web pages, 
+        emails, or templates to fit your needs.</li>
+      <li><b>Understand how the web works:</b> This helps you grasp how the internet works
+         and how web pages are structured.</li>
+      <li><b>Employment Opportunities:</b> According to the Bureau of Labor Statistics, projects that employment 
+        for web developers will grow 16% between 2022 and 2032, which is much 
+        faster than the average across all occupations.</li>
+      <li><b>Learn Easily:</b> HTML is beginner-friendly, making it a great first step into the world of coding and technology.</li>
+     </ol>
+     <h2>Applications of HTML</h2>
+     <ul>
+      <li><b>Web Development:</b> HTML is the backbone of every webpage. It structures the content and integrates multimedia, hyperlinks, and more.</li>
+      <li><b>Web Applications:</b> HTML, in combination with CSS and JavaScript, powers complex web applications (e.g., Google Docs, Trello).</li>
+      <li><b>Emails:</b> HTML emails use table-based layouts and embedded media to deliver rich, interactive content.</li>
+      <li><b>Mobile App Development:</b> HTML5 is used with frameworks like PhoneGap to build mobile apps for iOS and Android.</li>
+     </ul>
+     <h2>Limitations of HTML</h2>
+     <ul>
+      <li><b>No Logic or Functionality:</b> HTML cannot handle complex logic, interactivity, or dynamic content on its own. 
+        It requires JavaScript for such tasks.</li>
+      <li><b>SEO Limitations:</b> While HTML provides structure, it’s not enough by itself for search engine 
+        optimization (SEO). Proper metadata and content structuring, 
+        as well as external SEO practices, are necessary.</li>
+      <li><b>Limited Styles:</b> While HTML can handle basic styles via the style attribute, it is typically complemented by CSS for complex styling and layout.</li>
+     </ul>
+              <div class="nav-buttons">
+                    <a href="#" onclick="showContent('basics')"><button >Next &gt;</button></a>
+              </div>
+           </div>
+           <div id="tasks" class="content-section">
+          <h1>HTML Tasks</h1>
+          <div class="tasks-container">
+            <a href="../pdfs/task1.pdf" target="_blank"><div class="task-item">Task 1</div></a>
+            <a href="../pdfs/task2.pdf" target="_blank"><div class="task-item">Task 2</div></a>
+            <div class="task-item">Task 3</div>
+            <div class="task-item">Task 4</div>
+            <div class="task-item">Task 5</div>
+          </div>
+          <div class="nav-buttons">
+            <a href="#"><button>🏁 End of Module</button></a>
+          </div>
+          </div>
+           <div id="basics" class="content-section">
+            <h1>HTML Basics</h1>
+            <p>HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.</p>
+            <ul>
+                <li>It defines the layout of a webpage using elements and tags, allowing for the display of text, images, links, and multimedia content.</li>
+                <li>As the foundation of nearly all websites, HTML is used in over 95% of all web pages today, making it an essential part of modern web development.</li>
+            </ul>
+            <p>In this guide, we learn the basics of HTML, which includes HTML tags ( &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;, etc), attributes, elements, 
+              and document structure which collectively form a working web page.</p>
+            <h1>HTML Basic Document and Structure</h1>
+            <p>Every HTML document begins with a document type declaration, setting the foundation for the webpage. 
+              This section introduces basic HTML tags that structure the page, such as &lt;head&gt;, &lt;body&gt;, and &lt;title&gt;. Although this is not mandatory, it is a good convention to start the document with the below-mentioned tag. </p>
+            <center><img src="../images/structure_html.png"/></center>
+            <p>Below mentioned are the basic HTML tags that divide the whole page into various parts like head, body, etc. </p>
+             <ul>
+                <li>&lt;html&gt; -- Encloses the entire HTML document, serving as the root element for all HTML content.</li>
+                <li>&lt;head&gt; -- Contains header information about the webpage, including title, meta tags, and linked stylesheets. 
+                  It is part of the document's structure but is not displayed on the webpage.</li>
+                <li>&lt;title&gt; -- Used within the &lt;head&gt;section to define the title of the HTML document. It appears in the browser tab or window and provides a brief description of the webpage's content.</li>
+                <li>&lt;body&gt; -- Encloses the visible content of the webpage, such as text, images, audio, videos, and links. All elements within this tag are displayed on the actual webpage when viewed in a browser.</li>
+            </ul>
+            <h2>Example:</h2>
+             <textarea id="editor-basics">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;!-- Enter to run the code --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-basics" class="output-box" scrolling="no"></iframe>
+             <h2>HTML Headings</h2>
+            <p>The HTML heading tags are used to create headings for the content of a webpage. 
+              These tags are typically placed inside the body tag. HTML offers six heading tags, 
+              from &lt;h1&gt; to &lt;/h6&gt;, each displaying the heading in a different font size.</p>
+            <h3>Syntax:</h3>
+            <div class="syntax">
+              <p>&lt;h1&gt;&lt;/h1&gt;</p>
+              <p>&lt;h2&gt;&lt;/h2&gt;</p>
+              <p>&lt;h3&gt;&lt;/h3&gt;</p>
+              <p>&lt;h4&gt;&lt;/h4&gt;</p>
+              <p>&lt;h5&gt;&lt;/h5&gt;</p>
+              <p>&lt;h6&gt;&lt;/h6&gt;</p>
+            </div>
+             <h2>Example:</h2>
+            <textarea id="editor-heading">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      &lt;h1&gt;Heading1&lt;/h1&gt;
+      &lt;h2&gt;Heading2&lt;/h2&gt;
+      &lt;h3&gt;Heading3&lt;/h3&gt;
+      &lt;h4&gt;Heading4&lt;/h4&gt;
+      &lt;h5&gt;Heading5&lt;/h5&gt;
+      &lt;h6&gt;Heading6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-heading" class="output-box" scrolling="no"></iframe>
+             <h3>Code Overview:</h3>
+             <ul>
+              <li>This code displays six headings (&lt;h1&gt; to &lt;/h6&gt;) on the webpage, with &lt;h1&gt; 
+                being the largest and most prominent and &lt;h6&gt; being the smallest.</li>
+                <li>The headings are used to define text hierarchy and emphasize content based on importance.</li>
+             </ul>
+             <h2>HTML Paragraph and Break Elements</h2>
+             <p>HTML &lt;p&gt; tags are used to write paragraph statements on a webpage. 
+              They start with the &lt;p&gt; tag and end with &lt;/p&gt;. 
+              The HTML &lt;br&gt; tag is used to insert a single line break and does not require a closing tag. 
+              In HTML, the break tag is written as &lt;br&gt;.</p>
+              <h3>Syntax:</h3>
+              <div class="syntax">
+                <p>// for paragraph</p>
+                <p>&lt;p&gt; Content... &lt;/p&gt;</p>
+                <p>// for Break</p>
+                <p>&lt;br&gt;</p>
+              </div>
+              <h3>Example:</h3>
+              <textarea id="editor-para">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      &lt;p&gt;
+            HTML stands for HyperText Markup Language.&lt;br&gt;
+            It is used to design web pages using a markup
+            language.&lt;br&gt;HTML is a combination of Hypertext
+            and Markup language.&lt;br&gt;Hypertext defines the
+            link between web pages.&lt;br&gt;A markup language
+            is used to define the text document within the
+            tag which defines the structure of web pages.
+      &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-para" class="output-box" scrolling="no"></iframe>
+             <h3>Code Overview:</h3>
+             <ul>
+              <li>This HTML code uses a  &lt;p&gt; tag to display a paragraph of text, providing an overview of what HTML is and its purpose.</li>
+              <li>The &lt;br&gt;tags are used to insert line breaks, making the text more readable by separating each sentence onto a new line within the paragraph.</li>
+             </ul>
+             <h2>HTML Horizontal Line</h2>
+             <p>The HTML &lt;hr&gt; tag is used to divide a page into sections by creating a horizontal line that spans
+               from the left to the right side of the page. This is an empty tag and does not require a closing tag 
+               or any additional attributes.</p>
+               <h3>Syntax:</h3>
+               <div class="syntax">
+                <p>&lt;hr&gt;</p>
+               </div>
+                <textarea id="editor-hr">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+      &lt;h1&gt;The Main Languages of the Web&lt;/h1&gt;
+
+&lt;p&gt;HTML is the standard markup language for creating Web pages. 
+HTML describes the structure of a Web page, and consists of a series of elements. 
+HTML elements tell the browser how to display the content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;CSS is a language that describes how HTML elements are to be displayed 
+on screen, paper, or in other media. CSS saves a lot of work, 
+because it can control the layout of multiple web pages all at once.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;JavaScript is the programming language of HTML and the Web. 
+JavaScript can change HTML content and attribute values. JavaScript can change CSS. 
+JavaScript can hide and show HTML elements, and more.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-hr" class="output-box" scrolling="no"></iframe>
+             <h2>HTML Comments</h2>
+             <p>HTML comments are annotations in your code that are not displayed in the browser. 
+              They are enclosed within &lt;!-- and --&gt; tags and are primarily used for documentation, 
+              explanation, or temporarily disabling code during debugging.</p>
+              <h3>Syntax of HTML Comments</h3>
+              <ul>
+                <li>Single-line comment:</li>
+              </ul>
+              <div class="syntax">
+                <p>&lt;!-- This is a single-line comment --&gt;</p>
+              </div>
+              <ul>
+                <li>Multi-line comment:</li>
+              </ul>
+              <div class="syntax">
+                <p>&lt;!-- This is a multi-line comment<br> spanning multiple lines<br>--&gt;</p> 
+              </div>
+               <textarea id="editor-comment">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- This is a heading tag --&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+     &lt;!-- This is a paragraph tag --&gt;
+      &lt;p&gt;Learn HTML, CSS, and JavaScript here.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-comment" class="output-box" scrolling="no"></iframe>
+             <h2>HTML Images</h2>
+             <p>The &lt;img&gt; tag is used to insert an image into a webpage. 
+              The source of the image is specified within the src attribute, 
+              like this: &lt;img src="source_of_image"&gt;.</p>
+              <h3>Syntax</h3>
+              <div class="syntax">
+                <p>&lt;img src="fruits.png"&gt;</p>
+              </div>
+              <ul>
+                <li>This HTML code uses the &lt;img&gt; tag to display an image on a webpage.</li>
+                <li>The src attribute specifies the URL of the image, 
+                  which is loaded and displayed when the page is rendered in the browser.</li>
+              </ul>
+              <h2>Conclusion</h2>
+              <p>Understanding HTML is the first step in becoming a web developer. 
+                By learning the basic tags and structure, you can create well-organized and functional web pages. 
+                The more you practice and experiment with HTML, 
+                the better you'll understand how to create interactive, engaging, and well-optimized websites.</p>
+              <div class="nav-buttons">
+                   <a href="#" onclick="showContent('introduction')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('editors')"><button >Next &gt;</button></a>
+              </div>
+           </div>
+           <div id="editors" class="content-section">
+             <h1>HTML Editors</h1>
+             <p>An HTML Editor is a software application designed to help users create and modify HTML code. 
+              It often includes features like syntax highlighting, tag completion, and error detection, 
+              which facilitate the coding process.</p>
+              <p>There are two main types of HTML editors:</p>
+              <ol>
+                <li><strong>Text-Based Editors</strong> - Allow direct coding with features like syntax 
+                  highlighting and code completion for full control over the webpage structure. 
+                  Example - Sublime Text, Visual Studio Code, etc.</li>
+                <li><strong>WYSIWYG (What You See Is What You Get) Editors -</strong> Offer a graphical interface
+                   to design web pages visually, automatically generating the corresponding HTML code. 
+                   Example - Adobe Dreamweaver, etc.</li>
+              </ol>
+              <h2>HTML Editors List</h2>
+              <p>There are various free and paid HTML editors available in the market, 
+                but in this article, we will be covering some renowned free HTML editors 
+                that you can use as a beginner or switch to if you are an experienced developer.</p>
+                <div class="content">
+                  <h3>Table of Content</h3>
+                  <ul>
+                      <li>1. Notepad</li>
+                      <li>2. Brackets</li>
+                      <li>3. Sublime Text Editor</li>
+                      <li>4. Atom</li>
+                      <li>5. Visual Studio Code</li>
+                    </ul>
+                </div>
+                <h2>1. Notepad</h2>
+                <p>Notepad is a simple text editor that is also used to write HTML code. 
+                  It is an inbuilt desktop application available in Windows OS. </p>
+                <h3>Steps to Write HTML Code in Text Editor:</h3>
+                <p><strong>Step 1:</strong> Open any of the text editors of your choice. Here we are using the <strong>Notepad</strong> text editor. </p>
+                <center><img src="../images/note_edit.png"/></center>
+                <p><strong>Step 2:</strong> Create new file: File->New File or Ctrl+N.</p>
+                <center><img src="../images/step-2.png"/></center>
+                <p><strong>Step 3:</strong> Write HTML code in text editor.</p>
+                <center><img src="../images/step-3.png"/></center>
+                <p><strong>Step 4:</strong>Save the file with a suitable name of your choice and a .html extension. </p>
+                <center><img src="../images/step-4.png"/></center>
+                <p><strong>Step 5:</strong>Open the saved HTML file in your favorite browser (double-click on the file, or right-click - and choose "Open with"). </p>
+                <center><img src="../images/step-5.png"/></center>
+                <h2>2. Brackets</h2>
+                <p>Brackets is an open-source software primarily used for Web development. 
+                  It provides live HTML, CSS, and JavaScript editing functionality. 
+                  Similar to the Notepad editor, create a new file and save it with a 
+                  .html extension to run the HTML file.</p>
+                  <center><img src="../images/brack-edit.png"/></center>
+                <h2>3. Sublime Text Editor</h2>
+                <p>Sublime is a cross-platform code editor tool. 
+                  It supports all markup languages and is used as an editor for HTML. 
+                  Similar to the Notepad editor, create a new file and save it with a 
+                  .html extension to run an HTML file.
+                </p>
+                 <center><img src="../images/sublime-edit.png"/></center>
+                 <h2>4. Atom</h2>
+                 <p>Atom is an open-source code editor tool for MAC, Linux, and Windows.
+                   We can use Atom to write and edit HTML code. 
+                   Similar to the Notepad editor, create a new file and save it with a 
+                   .html extension to run an HTML file.</p>
+                  <center><img src="../images/atom-edit.png"/></center>
+                 <h2>5. Visual Studio Code</h2>
+                 <p>It is one of the most popular code editors of today's generation.
+                   Many companies and software developers prefer this online HTML code editor.</p>
+                 <p><strong>Step 1:</strong>Open the VS code Editor and Install the Live Server. 
+                  By clicking the extension button simply search live server on the search bar and download.
+                   Live server extension helps to run the code and display output.</p>
+                    <center><img src="../images/vs-edit.png"/></center>
+                  <p><strong>Step 2:</strong>Create a new File and save it with the 
+                    .html extension and use the open live server button to click the right button.</p>
+                    <center><img src="../images/vs_step-2.png"/></center>
+                    <h2>HTML Editors Comparison</h2>
+<div class="scroll-wrapper">
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Editor</th>
+      <th>Platform</th>
+      <th>Key Features</th>
+      <th>Ideal For</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Notepad</b></td>
+      <td>Windows</td>
+      <td>Basic text editing, lightweight</td>
+      <td>Beginners</td>
+      <td>Pre-installed, simple to use</td>
+      <td>No advanced features like syntax highlighting or debugging</td>
+    </tr>
+    <tr>
+      <td><b>VS Code</b></td>
+      <td>Cross-Platform</td>
+      <td>Live Server, Extensions, Debugging, Git Integration</td>
+      <td>Professionals</td>
+      <td>Highly extensible, supports multiple languages, great debugging tools</td>
+      <td>Can be resource-heavy for basic tasks</td>
+    </tr>
+    <tr>
+      <td><b>Atom</b></td>
+      <td>Cross-Platform</td>
+      <td>Open-source, Collaborative Editing, Customizable UI</td>
+      <td>Advanced Learners</td>
+      <td>Flexible and extensible, integrates well with GitHub</td>
+      <td>Slower performance compared to other editors</td>
+    </tr>
+    <tr>
+      <td><b>Brackets</b></td>
+      <td>Cross-Platform</td>
+      <td>Live Preview, Lightweight, Focused on Web Design</td>
+      <td>Frontend Developers</td>
+      <td>Real-time preview, supports web-centric workflows</td>
+      <td>Discontinued updates, limited community support</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+          <h2>How to Choose the Right HTML Editor?</h2>
+          <p>When selecting an HTML editor, consider the following factors:</p>
+           <p>1. <strong>Skill level: </strong>Beginners might prefer WYSIWYG editors for ease of use, whereas advanced users may opt 
+            for text-based editors for better control.</p>
+            <p>2. <strong>Project needs:</strong>Larger projects might benefit from a more robust 
+              editor with extensive features and integrations.</p>
+            <p>3. <strong>Compatibility:</strong>Ensure the editor supports other technologies you plan 
+              to use like CSS, JavaScript, or various frameworks.</p>
+              <h2>Conclusion</h2>
+              <p>By choosing the right editor for your needs and skill level, you can greatly enhance the efficiency and quality of your web development projects.
+                Whether you’re just starting out or are a seasoned developer, 
+                there’s an HTML editor out there that’s perfect for you.</p>
+                <div class="nav-buttons">
+                  <a href="#" onclick="showContent('basics')"><button>Previous</button></a>
+                    <a href="#" onclick="showContent('elements')"><button >Next &gt;</button></a>
+              </div>
+           </div>
+           <div id="elements" class="content-section">
+             <h1>HTML Elements</h1>
+             <p>An <b>HTML Element</b> consists of a <b>start tag, content,</b> and an <b>end tag,</b>
+              which together define the element's structure and functionality. Elements are the basic building blocks of a webpage and can represent different types of content, 
+              such as text, links, images, or headings.</p>
+              <p>For example, the &lt;p&gt; element for paragraphs includes opening and 
+                closing tags with text content in between.</p>
+                <center><img src="../images/element.png"/></center>
+                <h3 class="above">Syntax</h3>
+                <div class="syntax">&lt;tagname&gt; Your Contents... &lt;/tagname&gt;</div>
+                <h3>HTML Element Code Example:</h3>
+                <p>In this example &lt;p&gt; is a starting tag, &lt;/p&gt; is an ending tag and it contains some content between the 
+                tags, which form an element</p>
+                 <textarea id="editor-element">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Welcome to HTML!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-element" class="output-box" scrolling="no"></iframe>
+                  <h2>Some Key Points About HTML Elements</h2>
+                  <h3>1. Syntax:</h3>
+                  <ul>
+                    <li>An opening tag indicates where the content begins: &lt;tagname&gt;.</li>
+                    <li>A closing tag indicates where the content ends: &lt;tagname&gt;.</li>
+                    <li>The actual content resides between the opening and closing tags.</li>
+                  </ul>
+                  <h3>2. Case Sensitivity:</h3>
+                  <ul>
+                    <li>HTML tags are not case-sensitive. For example, &lt;B&gt; and  &lt;b&gt; both represent bold text.</li>
+                    <li>However, it’s a best practice to use lowercase tags for consistency and readability.</li>
+                  </ul>
+                  <h2>Nested HTML Elements</h2>
+                  <p>Nested HTML Elements occur when one element is placed inside another, creating a hierarchical structure. 
+                    This structure is crucial for organizing content on web pages effectively, 
+                    ensuring that different elements relate logically and visually to each other.</p>
+                  <p><b>Example:</b>Here, the &lt;html&gt;tag contains the  &lt;head&gt; and  &lt;body&gt; tags, forming a nested structure.</p>
+                   <textarea id="editor-nestedelement">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body style="text-align: center" &gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+                   <h3>Output Preview</h3>
+             <iframe id="preview-nestedelement" class="output-box" scrolling="no"></iframe>
+             <p>Here, the &lt;html&gt;tag contains the&lt;head&gt;and &lt;body&gt;. The &lt;head&gt; and &lt;body&gt;tag contain other elements so it is called a nested element.</p>
+             <h2>Necessary to Add an End Tag</h2>
+             <p>For non-empty HTML elements, if you forget to add a closing or end tag, modern browsers may automatically add it in some cases.</p>
+             <p>However, this can cause issues when you add additional HTML elements later on. Therefore, it is best practice to always 
+              include the closing tag for non-void HTML elements.</p>
+               <textarea id="editor-endtag">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+                   <h3>Output Preview</h3>
+             <iframe id="preview-endtag" class="output-box" scrolling="no"></iframe>
+             <P><b>Output:</b>This Image is showing the Browser's Developer Tools and you can see that the missing closing tag of the paragraph element in the above-written code is automatically added by the browser without showing any error.</P>
+             <h2>HTML Empty Element</h2>
+             <p>HTML Elements without any content i.e., that do not print anything are called Empty elements. Empty HTML elements do not have an ending tag. For instance.
+              &lt;br&gt;, &lt;hr&gt;, &lt;link&gt;,&lt;input&gt; etc are HTML elements.</p>
+             <p><b>Example:</b>In this example  &lt;br&gt; tag doesn't print anything. It is used as a line break 
+              that breaks the line between  &lt;h2&gt;and &lt;p&gt; tags.</p>
+               <textarea id="editor-empty">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body style="text-align: center" &gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+    &lt;br /&gt;
+    &lt;p&gt;Hello.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+             <h3>Output Preview</h3>
+             <iframe id="preview-empty" class="output-box" scrolling="no"></iframe>
+             <h2>Block-Level Elements and Inline Elements</h2>
+             <p>In HTML, elements are broadly categorized into two main types based on how they display in the document layout: 
+              block-level elements and inline elements.</p>
+              <p><b>1. Block-Level Elements</b></p>
+              <p>Block-level elements typically start on a new line and take up the full width available to them, regardless of their actual content width. This means they stack vertically and can contain other block-level elements as well as inline elements. 
+                Here are some examples of block-level elements:</p>
+              <p><b>Examples:</b></p>
+              <ul>
+                <li>&lt;div&gt;: A general-purpose container for other elements.</li>
+                <li>&lt;p&gt;:Defines a paragraph.</li>
+                <li>&lt;h1&gt;,&lt;h2&gt;, ..., &lt;h6&gt;: Heading elements of different levels.</li>
+                <li>&lt;ol&gt;,&lt;ul&gt;: Ordered and unordered lists.</li>
+                <li>&lt;table&gt;: Defines a table.</li>
+                <Li>&lt;form&gt;: Used for HTML forms to collect user inputs.</Li>
+                <li>&lt;section&gt;, &lt;article&gt;, &lt;nav&gt;, &lt;aside&gt;, &lt;header&gt;, &lt;footer&gt;: Semantic elements 
+                  that define areas of a webpage.</li>
+              </ul>
+              <p><b>2. Inline Elements</b></p>
+              <p>Inline elements do not start on a new line; they appear 
+                on the same line as adjacent content, as long as there is space. They only take up as much width as their content requires.
+                 Inline elements are typically used within block-level elements to add content or style.
+                Here are some examples of inline elements:</p>
+                <p><b>Examples:</b></h3>
+                <ul>
+                  <li>&lt;span&gt;: A general-purpose inline container for phrasing content.</li>
+                  <li>&lt;a&gt;: Creates hyperlinks.</li>
+                  <li>&lt;img&gt;: Embeds an image.</li>
+                  <li>&lt;strong&gt;, &lt;b&gt;: Used for strong emphasis and bold text, respectively.</li>
+                  <li>&lt;em&gt;, &lt;i&gt;: Used for emphasis and italic text, respectively.</li>
+                  <li>&lt;br&gt;: Inserts a line break within text.</li>
+                  <li>&lt;input&gt;: Creates interactive controls for forms.</li>
+                </ul>
+                <h2>Best Practices When Using HTML Elements</h2>
+                <ul>
+                  <li><b>Semantic HTML:</b>Use HTML elements according to their intended purpose. For example, use heading elements for headings, 
+                    &lt;p&gt; for paragraphs, and &lt;a&gt; for links.</li>
+                  <li><b>Accessibility:</b>Enhance accessibility by using proper elements like &lt;main&gt;, &lt;aside&gt;, &lt;header&gt;, and &lt;footer&gt;. 
+                    Also, always include alt text for images.</li>
+                    <li><b>Keep it Simple:</b>Avoid unnecessary complexity in HTML structure. Use the simplest possible elements to achieve the 
+                      desired layout and functionality.</li>
+                </ul>
+                <div class="nav-buttons">
+                <a href="#" onclick="showContent('editors')"><button>Previous</button></a>
+                <a href="#" onclick="showContent('attributes')"><button>Next &gt;</button></a>
+                </div>
+           </div>
+           <div id="attributes" class="content-section">
+            <h1>HTML Attributes</h1>
+            <p><b>HTML Attributes</b> are special words <b>used within the opening tag of an HTML element. </b>They provide additional information 
+              about HTML elements. HTML attributes are used to configure and adjust the element's behavior, appearance, 
+              or functionality in a variety of ways.</p>
+            <p>Each attribute has a name and a value, formatted as <b>name="value".</b> Attributes tell the browser how to render the element or how it s
+              hould behave during user interactions.</p>
+            <h3>Syntax:</h3>
+            <div class="syntax">
+              <p>&lt;tagname attribute_name = "attribute_value"&gt; content... &lt;/tagname&gt;</p>
+            </div>
+            <h2>Code Example of Using HTML Attributes</h2>
+            <p>This HTML code demonstrates the use of the <b>src attribute</b> within the &lt;img&gt;tag to display an image.</p>
+              <textarea id="editor-attribute">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML img src Attribute&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src= "https://m.media-amazon.com/images/I/81OXEQrFPTL._UF1000,1000_QL80_.jpg"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-attribute" class="output-box" scrolling="no"></iframe>
+             <h4>In this example:</h4>
+             <ul>
+              <li><b>Tag:</b>&lt;img&gt;</li>
+              <li><b>Attribute:</b>src</li>
+              <li><b>Value of Attribute : </b>"https://m.media-amazon.com/images/I/81OXEQrFPTL._UF1000,1000_QL80_.jpg"</li>
+              <li><b>Purpose:</b>The &lt;img&gt; tag is used for embedding images in an HTML page. 
+                The src attribute within the &lt;img&gt; tag specifies the path to the image file you wish to display. This attribute is crucial as it directs the browser to the image’s
+                 location on the internet or a local directory.</li>
+             </ul>
+             <h2>Components of Attribute</h2>
+             <p>An HTML attribute consists of two primary components:</p>
+             <p><b>1. attribute_name:</b> This is the name of the attribute, which specifies what kind of additional information or property you are defining for the element. 
+              Common attribute names include href, src, class, id, etc.</p>
+             <p><b>2. attribute_value: </b>The value is assigned to the attribute to define the specific setting or behavior. 
+              It is always placed in quotes.</p>
+              <h2>Common HTML Attributes</h2>
+              <p>Let's take look at some of the most commonly used HTML attributes:</p>
+              <h2>1. HTML alt Attribute</h2>
+              <p>The alt attribute in HTML provides alternative text for an image if the image cannot be displayed. 
+                It improves accessibility and provides context for screen readers.</p>
+              <p><b>Example:</b> This example explains the HTML <b>alt Attributes</b> to specify
+                 the name of the file when the image is not loaded properly.</p>
+              <textarea id="editor-alt">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML img src Attribute&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src= "https://m.media-amazon.com/images/I/81OXEQrFPTL._UF1000,1000_QL80_.jpg" alt="The Logo"&gt;&lt;br&gt;
+    &lt;img src="" 
+         alt="Since the src value is blank,the alt value is displayed"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-alt" class="output-box" scrolling="no"></iframe>
+             <h2>2. HTML width and height Attribute</h2>
+             <p>The <b>width</b> and <b>height Attribute</b> is used to adjust the width 
+              and height of an image(in pixels).</p>
+             <p><b>Example:</b> This example explains the HTML <b>width & height</b> Attributes to specify the 
+              different sizes of the images.</p>
+              <textarea id="editor-width">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML img src Attribute&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src= "https://m.media-amazon.com/images/I/81OXEQrFPTL._UF1000,1000_QL80_.jpg "
+    width="300px"
+    height="100px" &gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-width" class="output-box" scrolling="no"></iframe>
+             <h2>3. HTML id Attribute</h2>
+             <p>The <b>id attribute</b> in HTML assigns a unique identifier to an element, allowing it to be targeted by CSS and JavaScript for
+               styling and manipulation purposes.</p>
+              <p><b>Example: </b>This example explains the HTML <b>id Attribute</b> to specify the unique value for the specific element.</p>
+               <textarea id="editor-id">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;style&gt;
+        #geeks {
+            color: green;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1 id="geeks"&gt;Welcome to GeeksforGeeks&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                  </textarea>
+              <h3>Output Preview</h3>
+             <iframe id="preview-id" class="output-box" scrolling="no"></iframe>
+             <h2>4. HTML title Attribute</h2>
+             <p>The<b>title attribute</b>is used to explain an element by hovering the mouse over it. The behavior differs with various elements but generally, the value is displayed while loading 
+              or hovering the mouse pointer over it.</p>
+              <p><b>Example:</b>This example explains the HTML <b>title Attributes</b> to specify the metadata for the element by hovering 
+                the mouse over it.</p>
+              <textarea id="editor-titlee">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;HTML title Attribute&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h3 title="Hello World"&gt;
+        Hover to see the effect
+    &lt;/h3&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-titlee" class="output-box" scrolling="no"></iframe>
+             <h2>5. HTML href Attribute</h2>
+             <p>The <b>href attribute</b> in HTML, used with the &lt;a&gt; tag, specifies a link destination. Clicking the linked text navigates to this address. Adding `target="_blank"` 
+              opens it in a new tab.</p>
+              <p><b>Example:</b>This example explains the HTML <b>href Attributes</b> specify the 
+                link address of the file.</p>
+              <textarea id="editor-hre">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;link Attribute&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;a href="https://www.geeksforgeeks.org/"&gt;
+        Click to open in the same tab
+    &lt;/a&gt;&lt;br&gt;
+    &lt;a href="https://www.geeksforgeeks.org/" 
+       target="_blank"&gt;
+        Click to open in a different tab
+    &lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-hre" class="output-box" scrolling="no"></iframe>
+             <h2>Important Points About HTML Attributes</h2>
+             <h3>1. Always Use Lowercase Attributes:</h3>
+             <p>You can use either uppercase or lowercase letters for defining attributes. For example, both alt and ALT in an img tag are valid. However, it is recommended to use lowercase attributes as per 
+              W3C guidelines for consistency and better readability.</p>
+            <h3>2. Always Quote Attribute Values:</h3>
+            <p>The HTML standard does not require quotes around attribute values in certain situations. However, W3C recommends always using quotes 
+              for attribute values, and quotes are mandatory for stricter document types like XHTML. Using quotes helps avoid errors, especially 
+              when the attribute value contains spaces or special characters.</p>
+            <h3>3. Declare Quote as an Attribute Value:</h3>
+            <p>You can use either <b>single (')</b> or <b>double (")</b> quotes for attribute values in HTML, but it is essential to be consistent throughout your document. 
+              If the attribute value contains a <b>double quote</b>, then use single quotes to enclose it, and vice versa.
+              For simplicity, it is a good practice to consistently use double quotes, as it aligns 
+              with the convention used in many HTML examples and tutorials.</p>
+            <h3>4. Boolean Attributes Should Be Written Without Values:</h3>
+            <p>Boolean attributes do not require a value. If the attribute is present, it is considered true. 
+              For example, the checked attribute of an &lt;input&gt; element is 
+              correctly written as:</p>
+              <h3>Example:</h3>
+              <div class="syntax">&lt;input type="checkbox" checked&gt;</div>
+              <p>Writing <b>checked="checked"</b> also works, but it is redundant. Simply including the attribute 
+                is enough to represent a true state.</p>
+                <h2>Summing up!</h2>
+                <p>Understanding HTML attributes is essential for creating well-structured and accessible web pages. By using these attributes effectively, you can enhance user 
+                  experience and optimize your content for search engines.</p>
+                  <div class="nav-buttons">
+                <a href="#" onclick="showContent('elements')"><button>Previous</button></a>
+                <a href="#" onclick="showContent('block_inline')"><button>Next &gt;</button></a>
+                </div>
+           </div>
+           <div id="block_inline" class="content-section">
+            <h1>HTML Block and Inline Elements</h1>
+            <p>HTML elements are either block-level, which structure the layout and 
+              span full width (like &lt;div&gt; or &lt;p&gt;), or inline, which styles content within blocks 
+                without breaking the flow (like &lt;span&gt; or &lt;a&gt;). 
+              This distinction covers 80–90% of common HTML usage.</p>
+              <center><img src="../images/block.webp"></center>
+              <p><b>Example: </b>Here, we illustrate the use of the block-level element(Div) 
+                and the inline element(&lt;a&gt;).</p>
+               <textarea id="editor-bl">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div&gt;Welcome&lt;/div&gt;
+    Hello
+    &lt;a href="www.youtube.com" alt="GeeksforGeeks youtube"&gt; official &lt;/a&gt;
+    youtube for the videoes on various courses.
+  &lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                <h3>Output Preview</h3>
+             <iframe id="preview-bl" class="output-box" scrolling="no"></iframe>
+             <h3>Code Overview:</h3>
+             <p>In the above example, we have used the &lt;div&gt; tag that always starts 
+              in a new line & captures the full width available. and We have used the inline element anchor tag &lt;a&gt; that is used to provide a link to a text that doesn't start in a new line 
+              & captures only the space around the element.</p>
+              <h2>HTML Block Elements</h2>
+              <p>A block-level element always starts on a new line and
+                 stretches out to the left and right as far as it can i.e, it occupies the whole horizontal space of its parent element 
+                & the height is equal to the content's height.</p>
+                <ul>
+                  <li> &lt;address&gt;</li>
+                  <li> &lt;dd&gt;</li>
+                  <li> &lt;div&gt;</li>
+                  <li> &lt;form&gt;</li>
+                  <li> &lt;hr&gt;</li>
+                  <li> &lt;li&gt;</li>
+                  <li> &lt;main&gt;</li>
+                  <li> &lt;nav&gt;</li>
+                  <li> &lt;noscript&gt;</li>
+                  <li> &lt;ol&gt;</li>
+                  <li> &lt;figcaption&gt;</li>
+                  <li> &lt;header&gt;</li>
+                  <li> &lt;footer&gt;</li>
+                </ul>
+                <h3>div element:</h3>
+                <p>The &lt;div&gt; element is used as a container for other HTML elements. It has no required attributes. 
+                  Style, class, and id are the commonly used attributes.</p>
+                <h3>Syntax:</h3>
+                <div class="syntax">
+                   &lt;div&gt;HelloWorld&lt;/div&gt;
+                </div>
+                <p><b>Example: </b>The below code illustrates the implementation of &lt;div&gt;tag. </p>
+                 <textarea id="editor-bloc">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Block-level Element&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;h1&gt;GeeksforGeeks&lt;/h1&gt;
+        &lt;h3&gt;GeeksforGeeks is a science portal for geeks.&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-bloc" class="output-box" scrolling="no"></iframe>
+             <h2>Inline Elements</h2>
+             <p>An inline element is the opposite of the block-level element. 
+              It does not start on a new line and takes up only the necessary width ie., 
+              it only occupies the space bounded by the tags defining the HTML element,
+              instead of breaking the flow of the content. </p>
+              <ul>
+                 <li> &lt;br&gt;</li>
+                  <li> &lt;button&gt;</li>
+                  <li> &lt;time&gt;</li>
+                  <li> &lt;tt&gt;</li>
+                  <li> &lt;a&gt;</li>
+                  <li> &lt;abbr&gt;</li>
+                  <li> &lt;b&gt;</li>
+                  <li> &lt;code&gt;</li>
+                  <li> &lt;cite&gt;</li>
+                  <li> &lt;sub&gt;</li>
+                  <li> &lt;sup&gt;</li>
+                  <li> &lt;input&gt;</li>
+                  <li> &lt;textarea&gt;</li>
+              </ul>
+              <h3>span element:</h3>
+              <p>The &lt;span&gt; tag is used as a container for text. It has no required attributes. 
+                Style, class, and id are the commonly used attributes.</p>
+              <h3>Syntax:</h3>
+              <div class="syntax">
+                &lt;span&gt;HelloWorld&lt;/span&gt;
+              </div>
+              <p><b>Example:</b> The below code illustrates the implementation of &lt;span&gt; tag. </p>
+               <textarea id="editor-inli">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;HTML span element&lt;/title&gt;
+    &lt;style&gt;
+        h1 {
+            color: green;
+        }
+        span {
+            color: black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello
+        &lt;span&gt; World&lt;/span&gt;
+    &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                  </textarea>
+                  <h3>Output Preview</h3>
+             <iframe id="preview-inli" class="output-box" scrolling="no"></iframe>
+             <div class="nav-buttons">
+                <a href="#" onclick="showContent('attributes')"><button>Previous</button></a>
+                <a href="#" onclick="showContent('headings')"><button>Next &gt;</button></a>
+                </div>
+           </div>
+      <div id="headings" class="content-section">
+        <h1>HTML Headings</h1>
+        <p>
+          <b>HTML headings</b> are used to define the titles and subtitles of sections on a webpage. 
+          They help organize 
+          the content and create a structure that is easy to navigate.
+        </p>
+        <ul>
+          <li>Proper use of headings enhances readability by 
+            organizing content into clear sections.</li>
+          <li>Search engines utilize headings to understand page structure,
+            aiding in SEO.</li>
+        </ul>
+      <textarea id="editor-headings">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      &lt;h1&gt;Heading1&lt;/h1&gt;
+      &lt;h2&gt;Heading2&lt;/h2&gt;
+      &lt;h3&gt;Heading3&lt;/h3&gt;
+      &lt;h4&gt;Heading4&lt;/h4&gt;
+      &lt;h5&gt;Heading5&lt;/h5&gt;
+      &lt;h6&gt;Heading6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-headings" class="output-box" scrolling="no"></iframe>
+             <h3>Code Overview:</h3>
+             <ul>
+              <li>This code displays six headings (&lt;h1&gt; to &lt;/h6&gt;) on the webpage, with &lt;h1&gt; 
+                being the largest and most prominent and &lt;h6&gt; being the smallest.</li>
+                <li>Each tag shoes the hierarchy of the content, helping organize the structure of the webpage.</li>
+             </ul>
+              <p><b>Note:</b>the 'h' inside the tag should always be in lowercase.</p>
+              <h2>Levels of HTML Heading Tags</h2>
+              <p>HTML offers <b>six levels of heading tags,</b> each serving a different purpose in structuring your content:</p>
+              <center><img src="../images/heading.png"/></center>
+              <div>
+                <h2>&lt;h1&gt; -  Main Heading (Largest)</h2>
+                <ul>
+                  <li>Represents the primary focus of the page,
+                     usually used for the main title.</li>
+                  <li>Use only one &lt;h1&gt; tag per page for the best SEO practices.</li>
+                  <li>Makes it clear to both users and search engines what the main topic is.</li>
+                </ul>
+              </div>
+              <div>
+                <h2>&lt;h2&gt; - Subheadings</h2>
+                <ul>
+                  <li>deal for dividing the content into major sections.</li>
+                  <li>If the content has further subsections, use &lt;h3&gt; to create a logical flow.</li>
+                  <li>Makes it clear to both users and search engines what the main topic is.</li>
+                </ul>
+              </div>
+              <div>
+                <h2>&lt;h3&gt; to &lt;h6&gt; - Smaller Headings</h2>
+                <ul>
+                  <li>These heading levels are used for finer subdivisions, gradually decreasing in size and importance.</li>
+                  <li>&lt;h3&gt; is used for subsections under &lt;h2&gt;, while &lt;h4&gt; to &lt;h6&gt; are used for additional, less important subdivisions.</li>
+                  <li>&lt;h6&gt; defines the least important heading.</li>
+                </ul>
+              </div>
+              <h2>Best Practices for Using HTML Headings</h2>
+              <ul>
+                <li><b>Use Only One &lt;h1&gt; per Page:</b> &lt;h1&gt; tag should be reserved for the main title of the page. Too many  &lt;h1&gt; tags can confuse both users 
+                  and search engines about the content’s priority.</li>
+                <li><b>Maintain a Logical Structure:</b> Follow a logical hierarchy of headings (&lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt;) to ensure content is organized. 
+                  Don't jump directly from &lt;h1&gt; to &lt;h4&gt;,
+                   as it can make the content harder to navigate.</li>
+                  <li><b>Keep Headings Descriptive:</b> Headings should clearly describe the content that follows. This makes it easier for 
+                    readers to understand what each section is about.</li>
+                  <li><b>Avoid Overusing Heading Tags:</b> Headings are for organizing content, not for styling text. Use them where appropriate and avoid using 
+                    heading tags for emphasis or styling alone.</li>
+              </ul>
+               <div class="nav-buttons">
+                   <a href="#" onclick="showContent('block_inline')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('parag')"><button >Next &gt;</button></a>
+              </div>
+      </div>
+      <div id="parag" class="content-section">
+        <h1>HTML Paragraphs</h1>
+        <p>A paragraph in HTML is simply a block of text enclosed within the &lt;p&gt;tag. 
+          The &lt;p&gt;,tag helps divide content into manageable, readable sections. It’s the go-to element for wrapping text in a web page that is meant 
+          to be displayed as a distinct paragraph.</p>
+        <h3>Syntax:</h3>
+        <div class="syntax">
+          <p>&lt;p&gt; Some Content... &lt;/p&gt;</p>
+        </div>
+        <h3>How HTML Paragraphs are Rendered?</h3>
+        <p>In HTML, when you wrap text inside the &lt;p&gt;tag, it automatically:</p>
+        <ul>
+          <li>Adds space before and after the paragraph to visually separate it from other content.</li>
+          <li>Breaks the text into a single block, creating an easy-to-read section.</li>
+        </ul>
+        <h2>HTML Paragraph Code Example</h2>
+        <p>Here’s an example showing two paragraphs in HTML:</p>
+        <textarea id="editor-parag">
+&lt;p&gt;A Computer Science portal for geeks.&lt;/p&gt;
+&lt;p&gt;It contains well written, well thought articles.&lt;/p&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-parag" class="output-box" scrolling="no"></iframe>
+             <h3>Properties of the paragraph Tag</h3>
+             <ul>
+              <li>The browser reduces multiple spaces added by users to a single space.</li>
+              <li>If a user adds various lines, the browser compresses them into one line.</li>
+              <li>By default, the display of the paragraph element is set to "block," meaning each new paragraph is placed on a new line. (Note: This behavior can be modified using CSS.)</li>
+             </ul>
+        <h2>
+          The &lt;br&gt; tag
+        </h2>
+        <p>The HTML &lt;br&gt; tag element creates a line break, giving you a new line without starting a new paragraph. Use &lt;br&gt; 
+          when you want to move to the next line without beginning a whole new paragraph.</p>
+        <h3>Syntax:</h3>
+        <div class="syntax">
+          <p>&lt;br&gt;</p>
+        </div>
+        <p>Example: This example explains the &lt;br&gt; tag inside the &lt;p&gt; tag to add the line-break.</p>
+        <textarea id="editor-break">
+&lt;p&gt;
+    This paragraph has multiple
+    &lt;br /&gt;lines. But HTML reduces them
+    &lt;br /&gt;to a single line, omitting
+    &lt;br /&gt;the carriage return we have used.
+&lt;/p&gt;
+
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-break" class="output-box" scrolling="no"></iframe>
+             <h3>The Horizontal Rules &lt;hr&gt; tag</h3>
+      <p>The HTML &lt;hr&gt; tag is used to create a horizontal rule or line,
+         visually separating content on a webpage. Use &lt;hr&gt; when you want to insert a horizontal line 
+         to signify a division between sections or elements, 
+        providing a clear visual break in the page.</p>
+        <h3>Syntax:</h3>
+        <div class="syntax">
+          <p>&lt;hr&gt;</p>
+        </div>
+        <p>Example: In this example we will use the &lt;hr&gt; tag with an example by using &lt;p&gt; tag also.</p>
+        <h3>Align attribute</h3>
+        <p>The &lt;p&gt; tag specifically supports the alignment attribute and allows us to align our paragraphs in left, right, or center alignment. </p>
+        <h3>Syntax:</h3>
+        <div class="syntax">
+          <p>&lt;p align ="value"&gt;</p>
+        </div>
+        <h2>Avoiding Common Mistakes with Paragraphs</h2>
+        <ol>
+          <li>Avoid Nested Paragraphs: You cannot nest paragraphs within one another. Each &lt;p&gt; 
+            tag should contain only the text for one block of content.</li>
+          <li>Avoid Using &lt;p&gt; for Non-Textual Content: The <p> tag is meant for text-based content. If you need to wrap images, tables, or other elements,
+             use appropriate tags like &lt;img&gt; , &lt;table&gt;or &lt;div&gt;.</li>
+        </ol>
+         <div class="nav-buttons">
+                   <a href="#" onclick="showContent('headings')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('format')"><button >Next &gt;</button></a>
+              </div>
+      </div>
+      <div id="format" class="content-section">
+        <h1>HTML Text Formatting</h1>
+        <p>HTML text formatting refers to the use of specific HTML tags to modify
+           the appearance and structure of text on a webpage. It allows you to style text in different ways,
+            such as making it bold,
+          italic, underlined, highlighted, or struck-through.</p>
+        <h2>Categories of HTML Text Formatting</h2>
+        <p>HTML text formatting can be divided into two main categories: 
+          <b>Logical Tags</b> and <b>Physical Tags.</b></p>
+        <h3>1. Logical Tags</h3>
+        <p>Logical tags convey the meaning or importance of the text without necessarily altering its visual appearance. 
+          These tags help browsers, search engines, and assistive 
+          technologies understand the purpose of the text.</p>
+          <ul>
+            <li><b>&lt;em&gt;</b> Emphasizes text, typically rendered in italics. It implies that the text carries special 
+              importance or requires emphasis.</li>
+            <li><b>&lt;strong&gt;</b>Marks text as important, often displayed in bold. 
+              It implies the content is of strong importance.</li>
+          </ul>
+          <h3>2. Physical Tags</h3>
+          <p>Physical tags directly affect how text looks on the webpage by changing the font,
+             size, or style.</p>
+          <ul>
+            <li>&lt;b&gt;: Displays text in bold without implying importance.</li>
+            <li>&lt;i&gt;: Italicizes text without any implied emphasis.</li>
+          </ul>
+          <p>Here’s a list of commonly used HTML text formatting tags and their description:</p>
+          <h3>HTML Formatting Elements</h3>
+          <h4>1. &lt;i&gt; – Italicizes text</h4>
+          <p>Use the &lt;i&gt; tag to display text in italics without implying emphasis.</p>
+          <div class="syntax">&lt;i&gt;This is italic text.&lt;/i&gt;</div>
+          <h4>2. &lt;small&gt; – Reduces the font size of the text</h4>
+          <p>The &lt;small&gt; tag renders text in a smaller font than the surrounding text.</p>
+          <div class="syntax">&lt;small&gt;This text is smaller than the rest.&lt;/small&gt;</div>
+          <h4>3. &lt;ins&gt; – Highlights inserted text</h4>
+          <p>The &lt;ins&gt; tag marks text as newly added or inserted, often displayed with an underline.</p>
+          <div class="syntax">&lt;ins&gt;This is inserted text.&lt;/ins&gt;</div>
+          <h4>
+            4. &lt;sub&gt; – Displays subscript text
+          </h4>
+          <p>Use the &lt;sub&gt; tag for subscripted text, often used in chemical formulas or footnotes.</p>
+          <div class="syntax">H&lt;sub&gt;2&lt;sub&gt;O</div>
+          <h4>5. &lt;mark&gt; – Highlights text with a background color</h4>
+          <p>The &lt;mark&gt; tag highlights text with a background color, similar to using a highlighter on paper.</p>
+          <div class="syntax">&lt;mark&gt;This text is highlighted.&lt;/mark&gt;</div>
+          <h2>Examples of HTML Text Formatting</h2>
+          <h3>Example 1: Basic Text Formatting</h3>
+           <textarea id="editor-format">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      &lt;p&gt;
+        &lt;strong&gt;Strong:&lt;/strong&gt; 
+        This text is important and bold.
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;em&gt;Emphasized:&lt;/em&gt; 
+        This text is emphasized and italic.
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;b&gt;Bold:&lt;/b&gt; 
+        This text is bold.
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;i&gt;Italic:&lt;/i&gt; 
+        This text is italic.
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;mark&gt;Marked:&lt;/mark&gt; 
+        This text is highlighted.
+    &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-format" class="output-box" scrolling="no"></iframe>
+              <div class="nav-buttons">
+                   <a href="#" onclick="showContent('parag')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('lists')"><button >Next &gt;</button></a>
+              </div>
+      </div>
+ <div id="hyper" class="content-section">
+  <h1>HTML Links Hyperlinks</h1>
+  <p><b>HTML Links,</b> also known as<b>hyperlinks,</b> are defined by the <b>&lt;a&gt;</b> tag in HTML, 
+    which stands for "anchor." These links are essential for navigating between web pages and directing users to different sites,
+     documents, or sections within the same page.</p>
+  <p>The basic attributes of the <b>&lt;a&gt;</b> tag include <b>href,</b> <b>title,</b> and <b>target,</b> among others.</p>
+  <h3>Basic Syntax of an HTML Link:</h3>
+  <div class="syntax">
+    &lt;a href="https://www.example.com///">Visit Example&lt;/a&gt;
+  </div>
+  <p><b>Note:</b> A hyperlink can be represented by an image or any other HTML element, not just text.</p>
+  <h2>A Simple HTML Link Example</h2>
+  <p>In this example, we contains a paragraph instructing users to click on the link labeled "Google," which directs to the website
+     "https://www.google.com/".</p>
+  <textarea id="editor-hyper">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;HTML Links&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt;Click on the following link&lt;/p&gt;
+    &lt;a href="https://www.google.com/"&gt;
+        Google
+    &lt;/a&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-hyper" class="output-box" scrolling="no"></iframe>
+    <p>By default, links will appear as follows in all browsers:</p>
+    <ul>
+      <li>An unvisited link is underlined and blue.</li>
+      <li>A visited link is underlined and purple.</li>
+      <li>An active link is underlined and red.</li>
+    </ul>
+    <h2>HTML Links - Target Attribute</h2>
+    <p>The target attribute in the &lt;a&gt; tag specifies where to open the 
+      linked document. It controls whether the link opens in the same window,
+       a new window, or a specific frame.</p>
+       <div class="scroll-wrapper">
+    <table border="1">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>_blank</code></td>
+      <td>Opens the linked document in a new window or tab.</td>
+    </tr>
+    <tr>
+      <td><code>_self</code></td>
+      <td>Opens the linked document in the same frame or window as the link. (Default behavior)</td>
+    </tr>
+    <tr>
+      <td><code>_parent</code></td>
+      <td>Opens the linked document in the parent frame.</td>
+    </tr>
+    <tr>
+      <td><code>_top</code></td>
+      <td>Opens the linked document in the full body of the window.</td>
+    </tr>
+    <tr>
+      <td><code>framename</code></td>
+      <td>Opens the linked document in a specified frame. The frame’s name is specified in the attribute.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>Linking Different HTML Elements</h2>
+<p>Below are examples of how to link different HTML elements with their respective code snippets</p>
+<div class="scroll-wrapper">
+<table border="1">
+  <thead>
+    <tr>
+      <th>Element to Interlink</th>
+      <th>Specific Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linking to an image</td>
+      <td>
+        &lt;a href="image.jpg"&gt;&lt;img src="image.jpg" alt="Image"&gt;&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>Link to an Email Address</td>
+      <td>
+        &lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>Phone Number</td>
+      <td>
+        &lt;a href="tel:+1234567890"&gt;Call Now&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>Button</td>
+      <td>
+        &lt;a href="https://www.example.com///"&gt;&lt;button&gt;Visit Example&lt;/button&gt;&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>Link to Download File</td>
+      <td>
+        &lt;a href="file.pdf" download&gt;Download File&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>Link Title</td>
+      <td>
+        &lt;a href="https://www.example.com///" title="Visit Example"&gt;Link Text&lt;/a&gt;
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ <div class="nav-buttons">
+                   <a href="#" onclick="showContent('types')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('au_vi')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="au_vi" class="content-section">
+<h1>HTML Video</h1>
+<p>The &lt;video&gt; element in HTML is used to show video content on web pages. It supports various video formats, including MP4, WebM, and Ogg. 
+  It is introduced in HTML5.</p>
+<p>Scroll down to the End, there is a Tutorial Video which is a live example of the Video Element 
+  displaying on this webpage.</p>
+<h3>Syntax:</h3>
+<div class="syntax">
+  &lt;video src=&quot; &quot; controls&gt;&lt;/video&gt;
+
+&lt;!-- OR --&gt;
+
+&lt;video controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;video_filename&quot; type=&quot;video_type&quot;&gt;
+&lt;/video&gt;
+
+</div>
+<p>Generally, we prefer the syntax with the &lt;source&gt;tag wrapped between the video tag because:</p>
+<ul>
+  <li>It allows you to specify multiple <source> elements for different formats of the video (e.g., MP4, WebM, Ogg), improving cross-browser compatibility.</li>
+  <li>By including the type attribute, you can tell the browser the exact MIME type of the video file, helping it determine whether it can play the file.</li>
+</ul>
+<h3>Key Attributes of the &lt;video&gt; Element</h3>
+<p>The following attributes can be used with the &lt;video&gt; tag to enhance video playback:</p>
+<div class="scroll-wrapper">
+  <table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>controls</td>
+      <td>Adds playback controls such as play, pause, volume, etc.</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>Specifies the width of the video player.</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>Specifies the height of the video player.</td>
+    </tr>
+    <tr>
+      <td>autoplay</td>
+      <td>Automatically starts playing the video when it's loaded.</td>
+    </tr>
+    <tr>
+      <td>muted</td>
+      <td>Mutes the video by default.</td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td>Specifies the video file's path.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>Defines the format of the video (e.g., &lt;code&gt;video/mp4&lt;/code&gt;, &lt;code&gt;video/webm&lt;/code&gt;).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1>HTML Audio</h1>
+<p>The HTML &lt;audio&gt; element is used to play an audio file on a web page.</p>
+<h2 style="color: rgb(40, 39, 39);">The HTML &lt;audio&gt; Element</h2>
+<p>To play an audio file in HTML, use the &lt;audio&gt; element:</p>
+<textarea id="editor-audi">
+&lt;audio controls&gt;
+  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</textarea>
+<h3>Output Preview</h3>
+<iframe id="preview-audi" class="output-box" scrolling="no"></iframe>
+<h2>HTML Audio - How It Works</h2>
+<p>The controls attribute adds audio controls, like play, pause, and volume.</p>
+<p>The &lt;source&gt; element allows you to specify alternative audio files which the browser may choose from. 
+  The browser will use the first recognized format.</p>
+<p>The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element.</p>
+<div class="nav-buttons">
+                   <a href="#" onclick="showContent('hyper')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('ifram')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="lists" class="content-section">
+<h1>HTML Lists</h1>
+<p>An HTML List allows you to organize data on web pages into an ordered or 
+  unordered format to make the information easier to read and visually appealing. 
+  HTML Lists are very helpful for creating structured, 
+  accessible content in web development.</p>
+<h1>Types of HTML Lists</h1>
+<p>There are three main types of lists in HTML:</p>
+<ol>
+  <li>Unordered Lists (&lt;ul&gt;): These lists are used for items that do not need to be in any specific order.
+     The list items are typically marked with bullets.</li>
+  <li>Ordered Lists (&lt;ol&gt;): These lists are used when the order of the items is important.
+    Each item in an ordered list is 
+    typically marked with numbers or letters.</li>
+  <li>Description Lists (&lt;dl&gt;): These lists are used to contain terms and 
+    their corresponding descriptions.</li>
+  <h2>Basic Example of HTML Lists</h2>
+</ol>
+ <textarea id="editor-li_ex">
+&lt;h5&gt;List of available courses&lt;/h5&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Data Structures and Algorithm&lt;/li&gt;
+        &lt;li&gt;Web Technology&lt;/li&gt;
+    &lt;/ul&gt;
+ &lt;h5&gt;Data Structures topics&lt;/h5&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Array&lt;/li&gt;
+        &lt;li&gt;Linked List&lt;/li&gt;
+        &lt;li&gt;Stacks&lt;/li&gt;
+     &lt;/ol&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-li_ex" class="output-box" scrolling="no"></iframe>
+  <h2>HTML List Tags</h2>
+  <div class="scroll-wrapper">
+  <table border="1">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;ul&gt;</td>
+      <td>Defines an unordered list.</td>
+    </tr>
+    <tr>
+      <td>&lt;ol&gt;</td>
+      <td>Defines an ordered list.</td>
+    </tr>
+    <tr>
+      <td>&lt;li&gt;</td>
+      <td>Defines a list item.</td>
+    </tr>
+    <tr>
+      <td>&lt;dl&gt;</td>
+      <td>Defines a description list.</td>
+    </tr>
+    <tr>
+      <td>&lt;dt&gt;</td>
+      <td>Defines a term in a description list.</td>
+    </tr>
+    <tr>
+      <td>&lt;dd&gt;</td>
+      <td>Details the term in a description list.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2>1. Using HTML Unordered List or Bulleted List</h2>
+<p>Unordered lists are ideal for scenarios where the sequence 
+  of the items is not important.</p>
+<p>The unordered list items are marked with bullets, also known as bulleted lists. An unordered list starts with the &lt;ul&gt; tag, 
+  and each list item begins with the &lt;li&gt; tag.</p>
+<h3>Syntax:</h3>
+<div class="syntax">
+ <p>&lt;ul&gt;<br>
+    &lt;li&gt;Item 1&lt;/li&gt;<br>
+    &lt;li&gt;Item 2&lt;/li&gt;<br>
+    &lt;li&gt;Item 3&lt;/li&gt;<br>
+&lt;/ul&gt;
+</p>
+</div>
+<p>Attribute: This tag contains two attributes which are listed below: </p>
+<ul>
+  <li>compact: It will render the list smaller.</li>
+  <li>type: It specifies which kind of marker is used in the list.</li>
+</ul>
+<h2>2. Using HTML Ordered List</h2>
+<p>Ordered lists are used when the items need to follow a specific sequence.</p>
+<p>In an ordered list, all list items are marked with numbers by default. An ordered list starts with the &lt;ol&gt; tag, and 
+  each list item begins with the &lt;li&gt; tag.</p>
+<h3>Syntax:</h3>
+<div class="syntax">
+  <p>&lt;ol&gt;<br>
+   &lt;li&gt;Item1&lt;/li&gt;<br>
+   &lt;li&gt;Item2&lt;/li&gt;<br>
+   &lt;li&gt;Item3&lt;/li&gt;<br>
+&lt;/ol&gt;
+</p>
+</div>
+<h3>Attributes:</h3>
+<ul>
+  <li>compact: It defines the list should be compacted 
+    (compact attribute is not supported in HTML5. Use CSS instead.).</li>
+  <li>reversed: It defines that the order will be descending.</li>
+  <li>start: It defines from which number or alphabet the order will start.</li>
+  <li>type: It defines which type(1, A, a, I, and i) of the order you want in your list of numeric, alphabetic, or roman numbers.</li>
+</ul>
+<h2>3. Using HTML Description List</h2>
+<p>A description list is a list of terms, with a description of each term. Description lists are less common but very useful for definitions, glossaries, 
+  or any other key-value pairs of items.</p>
+<p>The &lt;dl&gt; tag defines the description list, the &lt;dt&gt; tag defines the term name, and the &lt;dd&gt; tag describes each term.</p>
+<h3>Syntax:</h3>
+<div class="syntax">
+  <p>
+  &lt;dl&gt;<br>
+    &lt;dt&gt;Item 1&lt;/dt&gt;<br>
+    &lt;dd&gt;Description of Item 1&lt;/dd&gt;<br>
+    &lt;dt&gt;Item 2&lt;/dt&gt;<br>
+    &lt;dd&gt;Description of Item 2&lt;/dd&gt;<br>
+&lt;/dl&gt;
+</div>
+<p>Here, &lt;dt&gt; (description term) is used for the term being defined, and &lt;dd&gt;(description details) is used for the description.</p>
+ <div class="nav-buttons">
+                   <a href="#" onclick="showContent('format')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('types')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="types" class="content-section">
+  <h1>HTML Ordered Lists</h1>
+  <p>An HTML Ordered List is created using the  &lt;ol&gt; tag to display items in a specific sequence, 
+    typically numbered or alphabetically ordered. Each list item is defined using the &lt;ol&gt;  (list item) tag.
+       Ordered lists are widely used for instructions, rankings, and step-by-step guides—appearing in over 60% of structured 
+    web content that requires clear, sequential formatting.</p>
+  <p>This is how the HTML Ordered list will be displayed in a browser:</p>
+  <ul>
+    <li>Item a</li>
+    <li>Item b</li>
+    <li>Item c</li>
+  </ul>
+  <p>The list is automatically numbered by the browser, but the style of numbering can be adjusted using attributes and CSS.</p>
+  <h2>Basic Ordered List</h2>
+  <textarea id="editor-ol">
+&lt;h2&gt;My To-Do List&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Go grocery shopping&lt;/li&gt;
+        &lt;li&gt;Pay utility bills&lt;/li&gt;
+        &lt;li&gt;Prepare dinner&lt;/li&gt;
+    &lt;/ol&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ol" class="output-box" scrolling="no"></iframe>
+  <h2>Different Type Attributes in HTML Ordered List</h2>
+  <p>The type attribute of &lt;ol&gt; tag specifies the order we want to create.</p>
+  <div class="scroll-wrapper">
+  <table border="1">
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><ol type="1"><li>Item</li></ol></td>
+    <td>Numbered list (default)</td>
+  </tr>
+  <tr>
+    <td><ol type="A"><li>Item</li></ol></td>
+    <td>Uppercase letters</td>
+  </tr>
+  <tr>
+    <td><ol type="a"><li>Item</li></ol></td>
+    <td>Lowercase letters</td>
+  </tr>
+  <tr>
+    <td><ol type="I"><li>Item</li></ol></td>
+    <td>Uppercase Roman numerals</td>
+  </tr>
+  <tr>
+    <td><ol type="i"><li>Item</li></ol></td>
+    <td>Lowercase Roman numerals</td>
+  </tr>
+</table>
+</div>
+<h3>Nested Ordered Lists</h3>
+<p>Nested ordered lists use &lt;ol&gt; inside &lt;li&gt; tags to create sublists, 
+  making content more organized.</p>
+<p>Example: In this example we are creating nested ordered list, 
+  listing programming languages with their respective frameworks as subitems</p>
+<textarea id="editor-n_ol">
+&lt;ol&gt;
+        &lt;li&gt;
+            JavaScript
+            &lt;ol&gt;
+                &lt;li&gt;React&lt;/li&gt;
+                &lt;li&gt;Angular&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Python
+            &lt;ol&gt;
+                &lt;li&gt;Django&lt;/li&gt;
+                &lt;li&gt;Flask&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-n_ol" class="output-box" scrolling="no"></iframe>
+  <h1>HTML Unordered Lists</h1>
+  <p>An unordered list in HTML is used to group a set of list items that don't need to be in a specific order. The items in an unordered list are usually displayed with bullet points by default. 
+    Here are the some key features of HTML unordered lists:</p>
+  <ul>
+    <li>No Order: Lists items without a specific sequence.</li>
+    <li>Customizable Bullets: Bullets can be changed with CSS.</li>
+    <li>Nesting: Allows lists within lists.</li>
+    <li>Simple Syntax: Created with &lt;ul&gt; and &lt;li&gt;.</li>
+  </ul>
+  <textarea id="editor-ul">
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;Javascript&lt;/li&gt;
+    &lt;li&gt;React&lt;/li&gt;
+&lt;/ul&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ul" class="output-box" scrolling="no"></iframe>
+      <h2>Unordered Lists Style Types</h2>
+      <p>In HTML, unordered lists (&lt;ul&gt;) are used to display items without any specific order, 
+        and by default, they show bullet points. However, the appearance of these bullets 
+        can be changed using CSS with different styles.</p>
+      <p>Here are some common list-style-type values that you can apply to unordered lists 
+        to change the bullet style.</p>
+      <ol>
+        <li>Square Bullet Style</li>
+        <li>Circle Bullet Style</li>
+        <li>Removing Bullets</li>
+      </ol>
+  <h1>HTML Description Lists</h1>
+  <p>An HTML Description List is not as commonly used as unordered or ordered lists but serves an 
+    important purpose for displaying name-value pairs. This type of list 
+    is marked up using three tags: &lt;dl&gt;, &lt;dt&gt;, and &lt;dd&gt;.</p>
+  <ul>
+    <li>&lt;dl&gt;(Description List): This tag defines the description list itself and acts as a container for the list items.</li>
+    <li>&lt;dt&gt; (Description Term): Represents a term or a name within the list.</li>
+    <li>&lt;dd&gt; (Description Details): Provides the description or definition of the term.</li>
+  </ul>
+   <textarea id="editor-dl">
+&lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;
+            HyperText Markup Language
+        &lt;/dd&gt;
+
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;
+            Cascading Style Sheets
+        &lt;/dd&gt;
+
+        &lt;dt&gt;JavaScript&lt;/dt&gt;
+        &lt;dd&gt;
+           Scripting language for Web pages
+        &lt;/dd&gt;
+    &lt;/dl&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-dl" class="output-box" scrolling="no"></iframe>
+              <div class="nav-buttons">
+                   <a href="#" onclick="showContent('lists')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('hyper')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="ifram" class="content-section">
+  <h1>HTML Iframes</h1>
+  <p>An iframe, or Inline Frame, is an HTML element represented by the &lt;iframe&gt; tag. 
+    It functions as a 'window' on your webpage through which visitors can view and interact with another 
+    webpage from a different source.</p>
+  <p>Iframes are used for various purposes like:</p>
+  <ul>
+    <li>Embedding Multimedia: Easily integrate videos, audio, or animations from platforms like YouTube, etc.</li>
+    <li>Including Maps: Embed maps from services like Google Maps directly into your site.</li>
+    <li>Loading Forms and Widgets: Incorporate forms or widgets from other sources without writing complex code.</li>
+  </ul>
+  <h3>Syntax:</h3>
+  <div class="syntax">
+    <p>&lt;iframe src="URL" title="description"&gt;&lt;/iframe&gt;</p>
+  </div>
+  <ul>
+    <li>The src attribute specifies the URL of the document you want to embed.</li>
+    <li>Iframes can include videos, maps, or entire web pages from other sources.</li>
+  </ul>
+  <h2>HTML Iframes Examples</h2>
+  <p>Example 1: Basic Iframe Embedding</p>
+  <p>In this example, an iframe is used to display another webpage within 
+    the current webpage.</p>
+    <textarea id="editor-ifr">
+ &lt;h2&gt;HTML iframe Tag&lt;/h2&gt;
+    &lt;iframe src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html"
+            height="370"
+            width="400"&gt;
+    &lt;/iframe&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ifr" class="output-box" scrolling="no"></iframe>
+  <p>Example 2:  Using Height and Width attribute</p>
+  <p>The height and width attributes are used to specify the size of the iframe. 
+    The attribute values are specified in pixels by default. 
+    You can use pixels or percentages (e.g., “80%”).</p>
+    <textarea id="editor-ifr1">
+ &lt;iframe src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html"
+            height="395" 
+            width="400"&gt;
+    &lt;/iframe&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ifr1" class="output-box" scrolling="no"></iframe>
+<p>Example 3:  Removing Borders from Iframe</p>
+  <p>By default, iframe has a border around it. To remove the border, 
+    we must use the style attribute 
+    and use the CSS border property.</p>
+    <textarea id="editor-ifr2">
+ &lt;iframe src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20231227155729/jsonPrac3.html" 
+            height="300" 
+            width="400" 
+            style="border: none"&gt; 
+    &lt;/iframe&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ifr2" class="output-box" scrolling="no"></iframe>
+<p>Example 4: Styling Iframe Border Using CSS</p>
+  <p>You can change the size, style, and color of the iframe border using CSS.</p>
+    <textarea id="editor-ifr3">
+ &lt;iframe src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" 
+            height="400" 
+            width="400" 
+            style="border: 4px solid orange"&gt; 
+    &lt;/iframe&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-ifr3" class="output-box" scrolling="no"></iframe>
+<h3>Best Practices for Using Iframes</h3>
+<p>While iframes offer significant flexibility, they should be used wisely to ensure they enhance rather
+   than detract from the user experience.</p>
+<ul>
+  <li>Security: Always use the sandbox attribute to restrict the iframe's capabilities unless you fully trust the content. 
+    This can prevent malicious scripts from running.</li>
+  <li>Performance: Iframes can slow down your page loading times.
+     Only use them when necessary and ensure the embedded content is optimized for fast loading.</li>
+   <li>Accessibility: Provide alternative content for users who might not be able to interact with iframes. 
+    This can be done by placing text or links inside the &lt;iframe&gt; tags, 
+    which will only display if iframes are not supported.</li>
+</ul>
+ <div class="nav-buttons">
+                   <a href="#" onclick="showContent('vi')"><button >Previous</button></a>
+                    <a href="#" onclick="showContent('forms')"><button >Next &gt;</button></a>
+              </div>
+</div>
+<div id="forms" class="content-section">
+  <h1>HTML Forms</h1>
+  <p>HTML forms, defined using the &lt;form&gt;Tags are essential for collecting user input on web pages. 
+    They incorporate a variety of interactive controls such as text fields, numeric inputs, email fields, password fields, checkboxes, radio buttons, and submit buttons. 
+    Over 85% of websites rely on forms to gather data from users, making them a fundamental 
+    component of modern web development.</p>
+  <h3>Syntax</h3>
+  <div class="syntax">
+    <p>&lt;form&gt;<br>
+      form elements..<br>
+&lt;/form&gt;</p>
+  </div>
+  <h3>Basic HTML Forms Example</h3>
+   <textarea id="editor-forms">
+ &lt;form&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label for="password"&gt;Password:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </textarea>
+            <h3>Output Preview</h3>
+             <iframe id="preview-forms" class="output-box" scrolling="no"></iframe>
+<h3>Code Overview:</h3>
+<ul>
+  <li>HTML Structure:The code has a basic HTML structure with a title "HTML Forms."</li>
+  <li>Heading: The &lt;h2&gt;tag displays "HTML Forms" as the main heading on the page.</li>
+  <li>Form Tag: The &lt;form&gt; tag defines a form for user input.</li>
+  <li>Username Field: A text input field for the username with a label.</li>
+  <li>Password Field & Submit: A password input field and a submit button to send the form data.</li>
+</ul>
+<h3>Advance HTML Forms</h3>
+<p>This HTML form collects users personal information, including name, email, password, 
+  gender, date of birth, and address. It features proper styling for 
+  input fields and submission buttons.</p>
+<center><img src="../images/html_form.gif"/></center>
+<h3>Form Elements</h3>
+<div class="scroll-wrapper">
+<table border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Elements</th>
+      <th>Descriptions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;label&gt;</td>
+      <td>It defines labels for &lt;form&gt; elements.</td>
+    </tr>
+    <tr>
+      <td>&lt;input&gt;</td>
+      <td>It is used to get input data from various types such as text, password, email, etc by changing its type.</td>
+    </tr>
+    <tr>
+      <td>&lt;button&gt;</td>
+      <td>It defines a clickable button to control other elements or execute a functionality.</td>
+    </tr>
+    <tr>
+      <td>&lt;select&gt;</td>
+      <td>It is used to create a drop-down list.</td>
+    </tr>
+    <tr>
+      <td>&lt;textarea&gt;</td>
+      <td>It is used to get input long text content.</td>
+    </tr>
+    <tr>
+      <td>&lt;fieldset&gt;</td>
+      <td>It is used to draw a box around other form elements and group the related data.</td>
+    </tr>
+    <tr>
+      <td>&lt;legend&gt;</td>
+      <td>It defines a caption for fieldset elements.</td>
+    </tr>
+    <tr>
+      <td>&lt;datalist&gt;</td>
+      <td>It is used to specify pre-defined list options for input controls.</td>
+    </tr>
+    <tr>
+      <td>&lt;output&gt;</td>
+      <td>It displays the output of performed calculations.</td>
+    </tr>
+    <tr>
+      <td>&lt;option&gt;</td>
+      <td>It is used to define options in a drop-down list.</td>
+    </tr>
+    <tr>
+      <td>&lt;optgroup&gt;</td>
+      <td>It is used to define group-related options in a drop-down list.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="nav-buttons">
+ <a href="#" onclick="showContent('ifram')"><button >Previous</button></a>
+ <a href="#" onclick="showContent('tasks')"><button>Next></button></a>
+  </div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+<script>
+  function Open() {
+    document.getElementsByClassName("sidebar")[0].classList.add("active");
+  }
+  function Close() {
+    document.getElementsByClassName("sidebar")[0].classList.remove("active");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 3 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Level 3 Quiz</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <!-- <button class="back-btn" id="back-btn">Back</button> -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 3;
+    const coinsPerStar = 10;
+    const questions = [
+      {
+    question: "Which HTML element is used to declare metadata about an HTML document?",
+    options: ["&lt;meta&gt;", "&lt;head&gt;", "&lt;data&gt;", "&lt;link&gt;"],
+    answer: 0
+  },
+  {
+    question: "What is the purpose of the 'contenteditable' attribute in HTML?",
+    options: [
+      "Makes the content hidden",
+      "Allows editing of the content in the browser",
+      "Links to an external file",
+      "Specifies the charset"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which tag is used to define a client-side image-map?",
+    options: ["&lt;map&gt;", "&lt;area&gt;", "&lt;imgmap&gt;", "&lt;imagemap&gt;"],
+    answer: 0
+  },
+  {
+    question: "In HTML5, which attribute is used with <audio> to start playing automatically?",
+    options: ["play", "autoplay", "start", "auto"],
+    answer: 1
+  },
+  {
+    question: "What is the correct HTML element for playing video files?",
+    options: ["&lt;media&gt;", "&lt;movie&gt;", "&lt;video&gt;", "vvid&gt;"],
+    answer: 2
+  },
+  {
+    question: "What is the purpose of the 'sandbox' attribute in <iframe>?",
+    options: [
+      "Applies a background image",
+      "Allows fullscreen",
+      "Adds extra security restrictions",
+      "Adds a frame border"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which attribute is used to specify a short hint describing the expected value of an input field?",
+    options: ["label", "title", "alt", "placeholder"],
+    answer: 3
+  },
+  {
+    question: "What does the 'async' attribute in <script> tag do?",
+    options: [
+      "Delays script execution",
+      "Downloads the script in parallel and executes as soon as it's ready",
+      "Executes script after HTML parsing",
+      "Blocks the page until the script loads"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the use of the 'novalidate' attribute in forms?",
+    options: [
+      "To skip form submission",
+      "To disable auto-complete",
+      "To skip built-in validation",
+      "To skip required fields"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which tag is used to define a definition in a definition list?",
+    options: ["&lt;dl&gt;", "&lt;dt&gt;", "&lt;dd&gt;", "&lt;li&gt;"],
+    answer: 2
+  },
+  {
+    question: "What is the correct HTML element to define important text?",
+    options: ["&lt;b&gt;", "&lt;strong&gt;", "&lt;em&gt;", "&lt;mark&gt;"],
+    answer: 1
+  },
+  {
+    question: "Which attribute of <form> specifies where to send the form-data when submitted?",
+    options: ["action", "method", "submit", "href"],
+    answer: 0
+  },
+  {
+    question: "Which input type defines a slider control?",
+    options: ["input type='range'", "input type='slider'", "input type='scale'", "input type='scroll'"],
+    answer: 0
+  },
+  {
+    question: "What is the purpose of the <progress> tag in HTML5?",
+    options: [
+      "To display a bar chart",
+      "To show a completion progress bar",
+      "To create animation",
+      "To indicate file size"
+    ],
+    answer: 1
+  },
+  {
+    question: "What does the 'defer' attribute in <script> do?",
+    options: [
+      "Executes script after page load",
+      "Executes immediately after loading",
+      "Defers execution until HTML is fully parsed",
+      "Runs script only on reload"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which element is used to embed custom non-visible data into HTML?",
+    options: ["&lt;meta&gt;", "&lt;data&gt;", "&lt;embed&gt;", "&lt;script&gt;"],
+    answer: 1
+  },
+  {
+    question: "What is the correct element to group multiple options inside a <select> tag?",
+    options: ["&lt;selectgroup&gt;", "&lt;optgroup&gt;", "&lt;options&gt;", "&lt;group&gt;"],
+    answer: 1
+  },
+  {
+    question: "Which tag represents a scalar measurement within a known range?",
+    options: ["&lt;range&gt;", "&lt;meter&gt;", "&lt;progress&gt;", "&lt;scale&gt;"],
+    answer: 1
+  },
+  {
+    question: "Which HTML attribute prevents the user from modifying the value of the input field?",
+    options: ["readonly", "disable", "static", "freeze"],
+    answer: 0
+  },
+  {
+    question: "What does the 'spellcheck' attribute do?",
+    options: [
+      "Highlights text",
+      "Enables or disables spell checking",
+      "Checks grammar",
+      "Fixes typos automatically"
+    ],
+    answer: 1
+  }
+    ];
+  </script>
+  <script src="../js/HTML-quiz-script.js"></script>
+</body>
+</html>
+
+
+
+
+

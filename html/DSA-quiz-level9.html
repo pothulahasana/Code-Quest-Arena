@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Level 9 Quiz</title>
+  <link rel="stylesheet" href="../css/quiz.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Hashing</h2>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+    <div class="question" id="question-text">Loading question...</div>
+    <form id="options-form"></form>
+    <button class="submit-btn" onclick="submitAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const levelNum = 9;
+    const coinsPerStar = 10;
+    const questions = [
+  {
+    question: "What is hashing primarily used for?",
+    options: [
+      "Sorting data",
+      "Searching data efficiently",
+      "Storing data sequentially",
+      "Compressing data"
+    ],
+    answer: 1
+  },
+  {
+    question: "What does a hash function do?",
+    options: [
+      "Converts data into a fixed-size value or key",
+      "Sorts the data",
+      "Deletes data",
+      "Encrypts the data"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which data structure uses hashing?",
+    options: ["Array", "Stack", "Hash Table", "Linked List"],
+    answer: 2
+  },
+  {
+    question: "What problem occurs when two keys hash to the same index?",
+    options: ["Overflow", "Collision", "Underflow", "Deadlock"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a common method to resolve collisions?",
+    options: [
+      "Chaining",
+      "Sorting",
+      "Merging",
+      "Partitioning"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the average time complexity of searching in a well-implemented hash table?",
+    options: ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    answer: 2
+  },
+  {
+    question: "Which of these is NOT a good property of a hash function?",
+    options: [
+      "Deterministic output",
+      "Uniform distribution",
+      "High collision rate",
+      "Fast computation"
+    ],
+    answer: 2
+  },
+  {
+    question: "What does the load factor in a hash table represent?",
+    options: [
+      "Number of elements divided by the number of buckets",
+      "Number of collisions",
+      "Size of the hash table",
+      "Maximum number of keys"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which collision resolution technique uses linked lists at each index?",
+    options: ["Open addressing", "Chaining", "Double hashing", "Rehashing"],
+    answer: 1
+  },
+  {
+    question: "What happens during rehashing?",
+    options: [
+      "The hash table size is decreased",
+      "The hash table is rebuilt with a new hash function or size",
+      "All elements are deleted",
+      "Collision handling is disabled"
+    ],
+    answer: 1
+  }
+];
+  </script>
+  <script src="../js/DSA-quiz-script.js"></script>
+</body>
+</html>

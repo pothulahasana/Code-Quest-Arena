@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nothing+You+Could+Do&family=Playwrite+AU+QLD:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <script src="DSA-levels.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <div class="logo-text">Code Quest Arena</div>
+        
+        <nav class="nav_bar">
+            <a href="../html/homepage.html" onclick="navigate('Home.html')">Home</a>
+            <a href="../html/scourses.html">Courses</a>
+            <a href="../html/scompiler.html">Compilers</a>
+            <a href="../html/sfunzone.html">Fun Zone</a>
+        </nav>
+        <div class="action_bar">
+            <!-- <div class="action_container">
+                <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i> -->
+                <!-- <span class="action_name">Sign In / Sign Up</span> -->
+            <!-- </div> -->
+             <div class="user-name">
+                <i class="fa-solid fa-circle-user fa-xl" style="color: white;"></i>
+                  <a href="../html/profile.html" style="color: white; text-decoration: none; font-weight: 500; margin-left: 2px;">user1</a>
+             </div>
+        </div>
+        <div class="menu_toggle">
+            <div class="parent" style="position: relative;">
+                <span class="material-symbols-outlined">menu</span>
+                <div class="mobile_nav" style="position: absolute;">
+                    <!-- <div >Home</div>
+                    <div>Courses</div>
+                    <div>Compilers</div>
+                    <div>Fun Zone</div> -->
+
+                     <div class="nav-item" onclick="location.href='../html/profile.html'">Dashboard</div>
+                    <div class="nav-item" onclick="location.href='../html/homepage.html'">Home</div>
+                    <div class="nav-item" onclick="location.href='../html/scourses.html'">Courses</div>
+                    <div class="nav-item" onclick="location.href='../html/scompiler.html'">Compilers</div>
+                    <div class="nav-item" onclick="location.href='../html/sfunzone.html'">Fun Zone</div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <section class="container">
+        <!-- Flex Wrapper -->
+        <div class="flex-wrapper">
+    
+            <!-- Sidebar -->
+            <div class="rectangle">
+                <div class="card">
+                    <div class="user"><img src="../images/user.png" class="user" /></div>
+                    <h3>Profile</h3>
+                </div>
+    
+                <div class="dashboard">
+                    <h3><i class="fa-solid fa-chart-line"></i> Dashboard</h3>
+                    <h3><i class="fa-regular fa-user"></i> Company Profile</h3>
+                </div>
+    
+                <div class="courses-path">
+                    <h5>Courses Path</h5>
+                    <h3 onclick="window.location.href='../html/htmlcourse.html'"><i class="fa-brands fa-html5"></i> HTML</h3>
+                    <h3 onclick="window.location.href='../html/csscourse.html'"><i class="fa-brands fa-css3"></i> CSS</h3>
+                    <h3 onclick="window.location.href='../html/jscourse.html'"><i class="fa-brands fa-js"></i> JavaScript</h3>
+                    <h3 onclick="window.location.href='../html/csscourse.html'"><i class="fa-brands fa-bootstrap"></i> Bootstrap</h3>
+                    <h3 onclick="window.location.href='../html/dsacourse.html'"><i class="fa-solid fa-folder-tree"></i> DSA</h3>
+                </div>
+    
+                <div class="community">
+                    <h5>Community</h5>
+                    <h3><i class="fa-solid fa-user-group"></i> Find a Mentor</h3>
+                    <h3><i class="fa-solid fa-handshake-simple"></i> My Network</h3>
+                    <!-- <h3><i class="fa-solid fa-users"></i> Discussion Forum</h3> -->
+                </div>
+    
+                <div class="account">
+                    <h5>Account</h5>
+                    <h3><i class="fa-solid fa-gear"></i> Settings</h3>
+                    <h3><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</h3>
+                </div>
+            </div>
+    
+            <div class="right-side">
+                <div class="heading">
+                    <h1>PROFILE</h1>
+                </div>
+    
+                <div class="card1">
+                    <div class="photo">
+                        <div class="back-rectangle">
+                            <img src="../images/back-rectangle.jpg" class="back-rect-photo" />
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../images/Profile2.png" class="profile-photo" />
+                    </div>
+                </div>
+
+                <!-- <div class="box"></div> -->
+
+                <div class="dashboard1">
+                    <div class="dash-card">
+                        <h2>Quizes Solved</h2>
+                        <p>14</p>
+                    </div>
+                    <div class="dash-card">
+                        <h2>Streak</h2>
+                        <p>32 Days</p>
+                    </div>
+                    <div class="dash-card">
+                        <h2>Rating</h2>
+                        <p>4.7 ⭐</p>
+                    </div>
+                    <div class="dash-card">
+                        <h2>Courses Completed</h2>
+                        <p>2</p>
+                    </div>
+                </div>
+
+                <div class="achievements">
+
+                    <span>Achievements</span>
+                    <div class="badges-container">
+                            <img src="../images/Html_certified.png" class="html-badge"/>
+                            <img src="../images/Badge-certified.png" class="html-badge"/>
+                            <img src="../images/Badge-certified.png" class="html-badge" />
+                            <img src="../images/Badge-certified.png" class="html-badge" />
+                            <img src="../images/Badge-certified.png" class="html-badge" />            
+                    </div>                
+                </div>
+
+                <div class="inside-container">
+                    <div class="box">
+                        <span>Social Links</span>
+                        <ul style="list-style: none; padding: 10px;">
+                            <li>
+                                 <a href="https://www.hh.com" target="_blank">Website</a>
+                            </li>
+                            <li>
+                                 <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                            </li>
+                            <li>
+                                 <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                            </li>
+                            <li>
+                                 <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                            </li>
+                            <li>
+                                  <a href="https://github.com" target="_blank">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- <div class="box js-tip">
+                    <span>JavaScript Tip of the Day</span>
+                    <p><code>NaN === NaN</code> returns <b>false</b>! Use <code>Number.isNaN()</code> instead.</p>
+                </div> -->
+
+
+                <div class="box fun-zone">
+                    <span>Fun Zone</span>
+                    <p>Take a break and try our <a href="../html/sfunzone.html">JS Mini Game 🎮</a></p>
+                </div>
+            </div>
+
+            <div class="extra-block">
+                <div class="extra-heading">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h1 style="margin: 0;">Bio</h1>
+                        <button id="edit-bio-btn" style="padding: 5px 10px; background-color: #00f2fe; color: #0a1d3a; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Edit</button>
+                    </div>
+                    <p id="bio-display" style="padding: 10px; white-space: pre-wrap;"></p>
+                    <div id="bio-edit-form" style="display: none;">
+                        <textarea id="bio-textarea" style="width: 100%; height: 120px; padding: 10px; border: 1px solid #00f2fe; border-radius: 5px; background-color: #102944; color: white; font-family: 'Poppins', sans-serif; resize: none;"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px;">
+                            <button id="save-bio-btn" style="padding: 8px 16px; background-color: #00f2fe; color: #0a1d3a; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Save</button>
+                            <button id="cancel-bio-btn" style="padding: 8px 16px; background-color: #ff4444; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coins">
+                    <div class="how-many-coins">
+                        <img src="../images/Total_coins.png" class="tot-coins"/>
+                        <h1 id="coin-count">0</h1>
+                    </div>
+                </div>
+
+                <div class="badges">
+                    <h2>Badges</h2>
+                    <ul class="badge-list">
+                        <li><i class="fa-solid fa-medal" style="color: gold;"></i> HTML Expert</li>
+                        <li><i class="fa-solid fa-medal" style="color: silver;"></i> CSS Styler</li>
+                        <li><i class="fa-solid fa-medal" style="color: #cd7f32;"></i> JavaScript Rookie</li>
+                    </ul>
+                </div>
+                
+                <div class="interests">
+                    <h2>Interests</h2>
+                    <p>Reading books, Competitive Coding, Frontend Development</p>
+                </div>
+
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div class="skill">
+                        <label>HTML</label>
+                        <div class="progress-bar">
+                            <div class="progress html"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <label>CSS</label>
+                        <div class="progress-bar">
+                            <div class="progress css"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <label>JavaScript</label>
+                        <div class="progress-bar">
+                            <div class="progress js"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <label>Bootstrap</label>
+                        <div class="progress-bar">
+                            <div class="progress bootstrap"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goals">
+                    <h2>My Goals</h2>
+                    <ul>
+                        <li>🌐 Build a responsive portfolio website</li>
+                        <li>💻 Complete 50 DSA problems</li>
+                        <li>📚 Learn JavaScript basics</li>
+                        <li>📝 Solve Quizes daily</li>
+                    </ul>
+                </div>
+
+
+                <div class="quote">
+                    <h2>My Motivation</h2>
+                    <blockquote>
+                        "Push yourself, because no one else is going to do it for you."
+                    </blockquote>
+                </div>
+
+
+            </div>
+    
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">Code Quest Arena</div>
+                <p>Learn. Play. Code. A fun way to become a coding pro!</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <span style="display: flex;flex-direction: row
+            ; gap: 1rem;">
+                    <a href="../html/homepage.html" onclick="navigate('Home.html')">Home</a>
+                    <a href="../html/scourses.html">Courses</a>
+                    <a href="../html/scompiler.html">Compilers</a>
+                    <a href="../html/sfunzone.html">Fun Zone</a>
+                </span>
+                <div style="margin-top: 1rem;">
+                    <h4>Follow Us</h4>
+                    <div class="linking">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="color: #ccc;">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="color: #ccc;">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://google.com" target="_blank" aria-label="Google" style="color: #ccc;">
+                            <i class="fab fa-google fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="https://mail.google.com/mail/u/0/#inbox">Email: support@codedelight.com</a>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Code Quest Arena. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Direct update as fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Profile page loaded, checking localStorage...');
+            console.log('localStorage token:', localStorage.getItem('token'));
+            console.log('localStorage user:', localStorage.getItem('user'));
+
+            try {
+                const userData = localStorage.getItem('user');
+                if (userData) {
+                    const user = JSON.parse(userData);
+                    console.log('Direct update: found user', user);
+
+                    // Update the specific link in the header
+                    const userLink = document.querySelector('.user-name a');
+                    if (userLink && user.username) {
+                        userLink.textContent = user.username;
+                        console.log('Direct update: changed header link to', user.username);
+                    }
+
+                    // Update sidebar name
+                    const sidebarName = document.querySelector('.card h3');
+                    if (sidebarName && user.username) {
+                        sidebarName.textContent = user.username;
+                        console.log('Direct update: changed sidebar name to', user.username);
+                    }
+
+                    // Update profile heading
+                    const profileHeading = document.querySelector('.heading h1');
+                    if (profileHeading && user.username) {
+                        profileHeading.textContent = user.username.toUpperCase() + "'S PROFILE";
+                    }
+                } else {
+                    console.log('Direct update: no user data found in localStorage');
+                }
+            } catch (error) {
+                console.error('Direct update error:', error);
+            }
+        });
+    </script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
