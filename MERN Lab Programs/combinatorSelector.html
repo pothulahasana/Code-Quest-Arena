@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combinator Selector</title>
+        <style>
+            /*descendant selector*/
+            div p{
+                color:brown
+            }
+            /*Child selector(>) the h2 tag after creating div tag*/
+            div > h2{
+                color:red;
+            }
+            /*Adjacent selector,this will be color the immediate para of h1*/
+            h1 + p{
+                color:green;
+            }
+            /*General selector,for every p tag that is after h1 tag*/
+            h1 ~ p{
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>child selector</h2>
+            <p>descendant selector</p>
+        </div>
+        <h1>Heading</h1>
+        <p>adjacent selector</p>
+        <p>general selector</p>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maximum of 3 numbers</title>
+    </head>
+    <body>
+        <script>
+            var a=parseInt(prompt("Enter first number :"));
+            var b=parseInt(prompt("Enter second number :"));
+            var c=parseInt(prompt("Enter third number : "));
+            if(a==b && b==c){
+                document.write("Equal Numbers");
+            }
+            else if(b>=a && b>=c){
+                document.write(b+" is the largest number");
+                alert(b+" is the largest number");
+            }
+            else if(a>=b && a>=c){
+                document.write(a+" is the largest number");
+                alert(a+" is the largest number");
+            }
+            else if(c>=a && c>=b){
+                document.write(c+" is the largest number");
+                alert(c+" is the largest number");
+            }
+        </script>
+    </body>
+</html>

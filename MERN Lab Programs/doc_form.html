@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <title>Patient Details Form</title>
+</head>
+
+<body>
+<center>
+    <h2>Patient Registration Form</h2>
+    <p>Please fill the patient details</p>
+
+    <form>
+        <table cellpadding="10" cellspacing="5">
+            <tr bgcolor="pink">
+                <td><label>Patient Name :</label></td>
+                <td><input type="text"></td>
+
+                <td><label>Patient ID :</label></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr bgcolor="dark pink">
+                <td><label>Age :</label></td>
+                <td><input type="number"></td>
+
+                <td><label>Gender :</label></td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+
+            <tr bgcolor="dark black">
+                <td><label>Date of Birth :</label></td>
+                <td><input type="date"></td>
+
+                <td><label>Blood Group :</label></td>
+                <td>
+                    <select>
+                        <option>Select</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr bgcolor="violet">
+                <td><label>Contact Number :</label></td>
+                <td><input type="tel"></td>
+
+                <td><label>Email :</label></td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td><label>Address :</label></td>
+                <td colspan="3">
+                    <textarea rows="2" cols="50"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Guardian Name :</label></td>
+                <td><input type="text"></td>
+
+                <td><label>Emergency Contact Number :</label></td>
+                <td><input type="tel"></td>
+            </tr>
+
+            <tr>
+                <td><label>Existing Medical Conditions :</label></td>
+                <td colspan="3">
+                    <textarea rows="3" cols="50"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Doctor Assigned :</label></td>
+                <td><input type="text"></td>
+
+                <td><label>Appointment Date :</label></td>
+                <td><input type="date"></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <input type="checkbox">
+        <label>I confirm the above details are correct</label>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</center>
+</body>
+</html>
